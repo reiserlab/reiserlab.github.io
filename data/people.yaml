@@ -1,0 +1,103 @@
+# One entry per person. Required: name, role, status (current | alumni).
+# Optional: pillars, line (one sentence on what they work on), photo (file in media/people/),
+#           links: {scholar, github, orcid, website, bluesky}, where_now (alumni), years (alumni, e.g. "2019–2024")
+# Roles are shown as written; keep them short.
+
+- name: Michael Reiser
+  role: Senior Group Leader
+  status: current
+  pillars: [anatomy, behavior, neurophysiology, methods, modeling]
+  line: ""
+  links:
+    janelia: https://www.janelia.org/people/michael-reiser
+
+- name: Arthur Zhao
+  role: Research Scientist
+  status: current
+  pillars: [anatomy, modeling]
+  line: ""
+  links:
+    orcid: https://orcid.org/0000-0003-2869-4393
+
+- name: Edward Rogers
+  role: Research Specialist
+  status: current
+  pillars: [anatomy, methods]
+  line: ""
+
+- name: Frank Loesche
+  role: Senior Engineer
+  status: current
+  pillars: [methods]
+  line: ""
+  links:
+    github: https://github.com/floesche
+
+- name: Aljoscha Nern
+  role: Research Scientist
+  status: current
+  pillars: [anatomy]
+  line: ""
+
+- name: Pavithraa Seenivasan
+  role: Postdoctoral Scientist
+  status: current
+  pillars: [neurophysiology]
+  line: ""
+
+- name: Shubham Rathore
+  role: Postdoctoral Scientist
+  status: current
+  pillars: [behavior]
+  line: ""
+
+- name: Grace Biondi
+  role: Graduate Scholar
+  status: current
+  pillars: [neurophysiology]
+  line: ""
+
+- name: Hannah Marie Santos
+  role: Graduate Scholar
+  status: current
+  pillars: [behavior]
+  line: ""
+
+- name: Daniel Chavez-Clemente
+  role: Principal AI Robotics Engineer
+  status: current
+  pillars: [methods]
+  line: ""
+
+- name: Isabel Lehenbauer
+  role: Robotics Engineer
+  status: current
+  pillars: [methods]
+  line: ""
+
+- name: Dominic Evans
+  role: Visiting Postdoctoral Associate
+  status: current
+  line: ""
+
+- name: Ali Karimi
+  role: Visiting Postdoctoral Associate
+  status: current
+  line: ""
+
+- name: Elisa de Launoit
+  role: Visiting Postdoctoral Associate
+  status: current
+  line: ""
+
+- name: Dianne Pereira
+  role: Lab Administration Specialist
+  status: current
+  line: ""
+
+# Alumni: add entries like the one below (commented out until confirmed).
+# - name: Eyal Gruntman
+#   role: Postdoctoral Scientist
+#   status: alumni
+#   years: "2013–2020"
+#   where_now: ""

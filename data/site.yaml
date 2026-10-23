@@ -1,0 +1,47 @@
+# Site-wide settings. Edit freely; the build reads this on every run.
+title: Reiser Lab
+domain: reiserlab.org
+# Set to true only after the Cloudflare DNS records point at GitHub Pages (see docs/plan.md section 2).
+domain_live: false
+tagline: We study how flies see, from the structure of the eye to the circuits that drive behavior.
+institution: Janelia Research Campus, Howard Hughes Medical Institute
+address: 19700 Helix Drive, Ashburn, Virginia 20147, USA
+email: reiserm@janelia.hhmi.org
+
+# Appears as a line under the lab name on the home page.
+pillars:
+  - key: anatomy
+    name: Anatomy
+    line: Connectomes and cell types of the fly visual system.
+  - key: behavior
+    name: Behavior
+    line: Flight and walking in virtual worlds.
+  - key: neurophysiology
+    name: Neurophysiology
+    line: Recording neurons while the fly sees.
+  - key: methods
+    name: Methods
+    line: Instruments, displays and software we build and share.
+modeling_line: Modeling runs through all of it, from single dendrites to whole-brain pathways.
+
+nav:
+  - [Research, /research/]
+  - [Publications, /publications/]
+  - [Resources, /resources/]
+  - [People, /people/]
+  - [News, /news/]
+  - [Join, /join/]
+
+# Order of groups on the Resources page; groups not listed go last.
+resource_groups:
+  - Connectome explorers and galleries
+  - Displays and rigs
+  - Software and analysis code
+  - Datasets
+
+links:
+  github: https://github.com/reiserlab
+  youtube: https://www.youtube.com/@ReiserLab
+  scholar: https://scholar.google.com/citations?user=PLACEHOLDER
+  janelia: https://www.janelia.org/lab/reiser-lab
+  janelia_pi: https://www.janelia.org/people/michael-reiser

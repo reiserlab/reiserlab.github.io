@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mockup {{ variant | upper }} · {{ v.name }} · Reiser Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ v.fonts }}">
+<link rel="stylesheet" href="../shared/base.css">
+<link rel="stylesheet" href="../shared/{{ v.css }}">
+</head>
+<body class="variant-{{ variant }}">
+
+<div class="mock-bar">
+  <span><strong>Mockup {{ variant | upper }}</strong> · {{ v.name }}</span>
+  <span class="mock-bar-links"><a href="../a/">A</a> <a href="../b/">B</a> <a href="../c/">C</a> <a href="../">about these mockups</a></span>
+</div>
+
+<header class="nav">
+  <a class="wordmark" href="#top"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
+  <nav class="nav-links">
+    {% for label, href in site.nav %}<a href="#{{ label | lower }}">{{ label }}</a>{% endfor %}
+  </nav>
+</header>
+
+<section class="hero" id="top" data-scrub data-frames="192" data-pattern="../hero-frames/f_%04d.webp">
+  <div class="hero-sticky">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <img class="hero-poster" src="../hero-frames/f_0001.webp" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
+    <div class="hero-scrim"></div>
+    <div class="hero-stops">
+      <div class="stop" data-from="0.00" data-to="0.16">
+        <p class="eyebrow">{{ site.institution }}</p>
+        <h1 class="display">How does a fly see?</h1>
+        <p class="lede">We study vision in <em>Drosophila</em>, from the optics of the eye to the circuits that turn what the fly sees into what it does.</p>
+      </div>
+      <div class="stop" data-from="0.24" data-to="0.50">
+        <p class="eyebrow">Anatomy</p>
+        <h2 class="display">Every lens, every cell</h2>
+        <p class="lede">Micro-CT of the eye and electron-microscopy connectomes let us map the whole visual system, one neuron at a time.</p>
+      </div>
+      <div class="stop" data-from="0.66" data-to="0.96">
+        <p class="eyebrow">From eye to brain</p>
+        <h2 class="display">Structure predicts function</h2>
+        <p class="lede">The geometry of the eye shapes how motion-detecting neurons respond. We test such predictions with recordings and behavior.</p>
+      </div>
+    </div>
+    <div class="hero-hint" aria-hidden="true">Scroll</div>
+  </div>
+</section>
+
+<section class="statement">
+  <p class="statement-text">{{ site.tagline }} <span class="statement-modeling">{{ site.modeling_line }}</span></p>
+</section>
+
+<section class="pillars" id="research">
+  <div class="section-head">
+    <p class="eyebrow">What we do</p>
+    <h2 class="h2">Four ways in</h2>
+  </div>
+  <div class="pillar-grid">
+    {% set imgs = {'anatomy': 'eyemap_columns-neurons', 'behavior': 'eyemap_head', 'neurophysiology': 't4_t4-direction', 'methods': 'eyemap_eye-fan'} %}
+    {% for p in site.pillars %}
+    <a class="pillar pillar-{{ p.key }}" href="#research">
+      <img src="../img/{{ imgs[p.key] }}.jpg" alt="" loading="lazy">
+      <div class="pillar-text">
+        <span class="pillar-num">0{{ loop.index }}</span>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.line }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="resources" id="resources">
+  <div class="section-head">
+    <p class="eyebrow">Resources</p>
+    <h2 class="h2">Tools and data we share</h2>
+    <p class="section-lede">Explorers for every cell type in the fly visual system and brain, galleries of visual pathways, the LED displays and rigs we build, and the code behind our papers.</p>
+  </div>
+  <div class="resource-grid">
+    {% set rimgs = ['eyemap_medulla-columns', 't4_lobula-plate', 't4_eye-closeup-column', 'eyemap_lens-field'] %}
+    {% for r in resources if r.get("featured") %}
+    <a class="resource" href="{{ r.url }}">
+      <img src="../img/{{ rimgs[loop.index0] }}.jpg" alt="" loading="lazy">
+      <div class="resource-text">
+        <h3>{{ r.name }}</h3>
+        <p>{{ r.line }}</p>
+        {% if r.version %}<span class="mono">{{ r.version }}</span>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  <p class="more"><a href="#resources">All resources</a></p>
+</section>
+
+<section class="papers" id="publications">
+  <div class="section-head">
+    <p class="eyebrow">Recent papers</p>
+    <h2 class="h2">Selected work</h2>
+  </div>
+  <div class="paper-grid">
+    {% set pimgs = ['t4_brain-neuropil', 'eyemap_neurons-medulla', 'eyemap_lens-directions', 't4_t4-cells'] %}
+    {% for p in selected[:4] %}
+    <article class="paper">
+      <a class="paper-fig" href="{{ p.links.doi }}"><img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy"></a>
+      <div class="paper-text">
+        <p class="paper-venue"><span class="mono">{{ p.venue }} · {{ p.year }}</span></p>
+        <h3><a href="{{ p.links.doi }}">{{ p.title }}</a></h3>
+        <p class="paper-authors">{{ p.authors }}</p>
+        <p class="paper-links">
+          {% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}
+          <a href="{{ p.links.doi }}">journal</a>
+        </p>
+        <p class="tags">{% for t in p.pillars %}<span class="tag tag-{{ t }}">{{ t }}</span>{% endfor %}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="more"><a href="#publications">All publications</a></p>
+</section>
+
+<section class="news" id="news">
+  <div class="section-head">
+    <p class="eyebrow">News</p>
+    <h2 class="h2">Recently</h2>
+  </div>
+  <ul class="news-list">
+    {% for n in news[:4] %}
+    <li>
+      <span class="news-date mono">{{ n.date | long_date }}</span>
+      <span class="news-body"><span class="tag">{{ n.tag }}</span> <a href="{{ n.link }}">{{ n.title }}</a><span class="news-text"> {{ n.text }}</span></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="join" id="join">
+  <div class="join-inner">
+    <div>
+      <p class="eyebrow">Join</p>
+      <h2 class="h2">We are hiring</h2>
+      <p class="section-lede">Postdoctoral scientists, engineers and students who want to work across anatomy, behavior, physiology and instrument building. Janelia also hosts visiting scientists and a graduate program.</p>
+      <p><a class="button" href="mailto:{{ site.email }}">Write to Michael</a></p>
+    </div>
+    <div class="join-meta">
+      <p><strong>Reiser Lab</strong><br>{{ site.institution }}<br>{{ site.address }}</p>
+      <p><a href="{{ site.links.github }}">GitHub</a> · <a href="{{ site.links.youtube }}">YouTube</a> · <a href="{{ site.links.janelia }}">Janelia</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="people">
+  <p>© {{ built.year }} Reiser Lab · Images from the lab's own data; see credits. Updated {{ built | month_year }}.</p>
+</footer>
+
+<script src="../shared/hero.js"></script>
+</body>
+</html>

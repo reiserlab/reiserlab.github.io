@@ -1,0 +1,16 @@
+# One entry per image or video used on the site.
+# file: path under media/ (or mockups/ for the design mockups)
+# source: paper DOI and figure/movie, or "lab, unpublished"
+# creator, license, attribution (text to show on the credits page)
+
+- file: mockups/hero-frames/
+  source: Zhao et al. 2025, Nature, doi:10.1038/s41586-025-09276-5, eye-map animation (first 64 s)
+  creator: Marisa Dreher
+  license: CC BY 4.0
+  attribution: Eye-map animation by Marisa Dreher, from Zhao et al. 2025. Mockup frames only; final frames will be re-rendered from the Blender scene.
+
+- file: mockups/img/
+  source: Zhao et al. 2025, Nature, eye-map and T4 animations
+  creator: Marisa Dreher
+  license: CC BY 4.0
+  attribution: Stills from the eye-map and T4 animations by Marisa Dreher, Zhao et al. 2025. Mockup placeholders.

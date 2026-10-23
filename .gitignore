@@ -1,4 +1,9 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
+# build output
+site/
+
+# python
+.venv/
+__pycache__/
+
+# editors and OS
+.DS_Store

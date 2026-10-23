@@ -1,0 +1,26 @@
+# One entry per item. Required: date (YYYY-MM-DD), title. Optional: tag, text (one or two sentences), link.
+# Tags in use: paper, preprint, resource, people, course, talk, award
+
+- date: 2026-09-03
+  tag: paper
+  title: Two papers in Cell on the male CNS connectome and the organization of visual pathways
+  text: Hoeller et al. map how visual information travels from the eye into the central brain; Berg et al. describe the complete male CNS connectome and its sexual dimorphism.
+  link: https://doi.org/10.1016/j.cell.2026.08.014
+
+- date: 2026-06-08
+  tag: resource
+  title: Male CNS Cell Type Explorer v1.0 released
+  text: Browsable pages for 11,751 cell types and 164,838 neurons of the male central nervous system.
+  link: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
+
+- date: 2025-07-23
+  tag: paper
+  title: Eye structure shapes neuron function in Drosophila motion vision, in Nature
+  text: Zhao et al. show how the geometry of the compound eye predicts the tuning of T4 motion detectors.
+  link: https://doi.org/10.1038/s41586-025-09276-5
+
+- date: 2025-03-26
+  tag: paper
+  title: A complete cell-type inventory of the fly visual system, in Nature
+  text: Nern et al. catalog every cell type of the optic lobe from the connectome, with a companion Cell Type Explorer.
+  link: https://doi.org/10.1038/s41586-025-08746-0

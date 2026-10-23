@@ -1,0 +1,38 @@
+/* reiserlab.org — site styles. The placeholder page uses the .ph-* rules;
+   the full design lands here once a mockup direction is chosen. */
+
+:root {
+  --ground: #f7f5f0;
+  --ink: #16181b;
+  --muted: #5d6468;
+  --rule: rgba(22, 24, 27, 0.14);
+  --accent: #b7331e;
+  --max: 760px;
+  --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 17px/1.55 var(--sans);
+}
+a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+
+.ph { max-width: var(--max); margin: 0 auto; padding: 64px 20px 48px; }
+.ph-eyebrow { margin: 0 0 10px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.ph-title { margin: 0; font-size: clamp(40px, 7vw, 64px); font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+.ph-tagline { margin: 18px 0 0; font-size: 20px; color: var(--muted); max-width: 34em; }
+.ph-section { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.ph-h2 { margin: 0 0 8px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.ph-h3 { margin: 24px 0 6px; font-size: 16px; font-weight: 600; }
+.ph-list { list-style: none; margin: 0; padding: 0; }
+.ph-list li { padding: 7px 0; border-bottom: 1px solid var(--rule); }
+.ph-list a { font-weight: 600; }
+.ph-line { color: var(--muted); }
+.ph-foot { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
+.ph-foot p { margin: 6px 0; }
+.ph-built { font-size: 13px; }

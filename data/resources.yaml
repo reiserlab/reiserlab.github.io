@@ -1,0 +1,100 @@
+# One entry per shared resource. Required: group, name, url, line.
+# Optional: repo, version, license, image (file in media/resources/), pillars, featured (true for the home page).
+# Groups are ordered by resource_groups in site.yaml.
+
+- group: Connectome explorers and galleries
+  name: Optic Lobe Cell Type Explorer
+  url: https://reiserlab.github.io/male-drosophila-visual-system-connectome/
+  repo: https://github.com/reiserlab/male-drosophila-visual-system-connectome
+  line: Every cell type of the male fly visual system, with morphology, connectivity and spatial coverage. Companion to Nern et al. 2025.
+  version: optic-lobe v1.1
+  pillars: [anatomy]
+  featured: true
+
+- group: Connectome explorers and galleries
+  name: Male CNS Cell Type Explorer
+  url: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
+  repo: https://github.com/reiserlab/celltype-explorer-drosophila-male-cns
+  line: 11,751 cell types and 164,838 neurons of the complete male central nervous system.
+  version: male-cns v1.0
+  pillars: [anatomy]
+
+- group: Connectome explorers and galleries
+  name: Female Adult Fly Brain Cell Type Explorer
+  url: https://reiserlab.github.io/celltype-explorer-drosophila-female-adult-fly-brain/
+  line: Cell types of the FlyWire female brain (FAFB v783b), in the same format as the other explorers.
+  pillars: [anatomy]
+
+- group: Connectome explorers and galleries
+  name: Visual pathways galleries
+  url: https://reiserlab.github.io/visualpathways/gallery_vpn/
+  repo: https://github.com/reiserlab/visualpathways
+  line: Cell-type pages for visual projection neurons and visual central brain neurons, with input barcodes and predicted receptive fields. Companion to Hoeller et al. 2026.
+  pillars: [anatomy, modeling]
+  featured: true
+
+- group: Connectome explorers and galleries
+  name: neuDiff
+  url: https://reiserlab.github.io/neuDiff/
+  repo: https://github.com/reiserlab/neuDiff
+  line: Compare two cell types side by side.
+  pillars: [anatomy]
+
+- group: Connectome explorers and galleries
+  name: Cell type videos
+  url: https://www.youtube.com/@ReiserLab
+  line: A rendered video for each optic lobe cell type, on the lab's YouTube channel.
+  pillars: [anatomy]
+
+- group: Displays and rigs
+  name: Modular LED Displays
+  url: https://reiserlab.github.io/Modular-LED-Display/
+  repo: https://github.com/reiserlab/Modular-LED-Display
+  line: "Documentation for the G3, G4 and G6 generations of LED arena displays for visual neuroscience: hardware, firmware and software."
+  pillars: [methods]
+  featured: true
+
+- group: Displays and rigs
+  name: Display web tools
+  url: https://reiserlab.github.io/webDisplayTools/
+  repo: https://github.com/reiserlab/webDisplayTools
+  line: Browser-based Pattern Designer, Arena Studio, arena layout and 3D view, and a WebUSB flash programmer for G6 panels.
+  pillars: [methods]
+
+- group: Displays and rigs
+  name: Fly Lab Gear
+  url: https://reiserlab.github.io/Fly-Lab-Gear/
+  repo: https://github.com/reiserlab/Fly-Lab-Gear
+  line: "Open hardware for fly experiments: spherical treadmill, tethering station, fly holders, sarcophagus, and more, as 3D-print, laser-cut and PCB files."
+  pillars: [methods, behavior]
+  featured: true
+
+- group: Software and analysis code
+  name: maDisplayTools
+  url: https://github.com/reiserlab/maDisplayTools
+  line: MATLAB tools for G4 and later displays.
+  pillars: [methods]
+
+- group: Software and analysis code
+  name: neuView
+  url: https://github.com/reiserlab/neuView
+  line: The static page generator behind the Cell Type Explorers.
+  pillars: [methods, anatomy]
+
+- group: Software and analysis code
+  name: Paper code
+  url: https://github.com/reiserlab
+  line: Analysis code for individual papers (eye map, LC6, T5 conductance model, optic lobe connectome) on the lab's GitHub.
+  pillars: [modeling]
+
+- group: Datasets
+  name: Optic lobe connectome (optic-lobe v1.1)
+  url: https://neuprint.janelia.org/?dataset=optic-lobe%3Av1.1&qt=findneurons
+  line: The male optic lobe connectome in neuPrint, CC-BY 4.0; bulk download on Google Cloud Storage.
+  pillars: [anatomy]
+
+- group: Datasets
+  name: Male CNS connectome
+  url: https://male-cns.janelia.org/
+  line: The complete male central nervous system connectome portal.
+  pillars: [anatomy]

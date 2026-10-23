@@ -1,0 +1,41 @@
+/* Variant B — Dark lab. Dark throughout, condensed uppercase display, gold and teal accents. */
+:root {
+  --ground: #0c0e11;
+  --ink: #eceef0;
+  --muted: #9aa1a7;
+  --rule: rgba(255, 255, 255, 0.12);
+  --accent: #e0b35a;
+  --accent-2: #6ec3d1;
+  --band: #14171b;
+  --band-ink: #eceef0;
+  --band-muted: #9aa1a7;
+  --band-accent: #6ec3d1;
+  --nav-ink: #eceef0;
+  --nav-bg: rgba(12, 14, 17, 0.55);
+  --hero-scrim: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 50%, rgba(12,14,17,0.9) 100%);
+  --hero-accent: #e0b35a;
+  --hero-muted: rgba(255,255,255,0.8);
+  --stop-align: end;
+
+  --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --cond: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --wordmark-font: 600 20px/1 var(--cond);
+  --wordmark-tracking: 0.02em;
+  --wordmark-case: none;
+  --display-font: 600 clamp(48px, 7.5vw, 112px)/0.92 var(--cond);
+  --display-tracking: -0.015em;
+  --h2-font: 600 clamp(32px, 4vw, 54px)/0.98 var(--cond);
+  --h2-tracking: -0.01em;
+  --h3-font: 600 20px/1.2 var(--cond);
+  --statement-font: 300 clamp(22px, 2.6vw, 34px)/1.35 var(--sans);
+  --radius: 0px;
+}
+.display, .h2 { text-transform: uppercase; }
+.eyebrow { font-family: var(--mono); font-weight: 500; letter-spacing: 0.14em; }
+.pillar { border: 1px solid var(--rule); }
+.pillar-num { color: var(--accent); opacity: 1; }
+.paper-venue { color: var(--accent-2); }
+.resources .mono { color: var(--accent); }
+.tag { border-color: rgba(255,255,255,0.2); }
+.mock-bar { background: #222; }

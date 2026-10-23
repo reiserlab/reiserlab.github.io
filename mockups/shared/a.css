@@ -1,0 +1,34 @@
+/* Variant A — Paper and ink. Light pages, dark media bands, one warm accent. */
+:root {
+  --ground: #f6f3ec;
+  --ink: #17191c;
+  --muted: #5e6469;
+  --rule: rgba(23, 25, 28, 0.14);
+  --accent: #b7331e;
+  --band: #15171a;
+  --band-ink: #f2efe8;
+  --band-muted: #a9adb0;
+  --band-accent: #e0665a;
+  --nav-ink: #f2efe8;
+  --nav-bg: rgba(10, 11, 12, 0.35);
+  --hero-scrim: linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.1) 100%);
+  --hero-accent: #e0665a;
+  --hero-muted: rgba(255,255,255,0.82);
+  --stop-align: center;
+
+  --sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --wordmark-font: 700 15px/1 var(--sans);
+  --wordmark-tracking: 0.22em;
+  --wordmark-case: uppercase;
+  --display-font: 300 clamp(40px, 6vw, 84px)/1.0 var(--sans);
+  --display-tracking: -0.025em;
+  --h2-font: 300 clamp(30px, 3.6vw, 46px)/1.08 var(--sans);
+  --h2-tracking: -0.02em;
+  --h3-font: 600 19px/1.25 var(--sans);
+  --statement-font: 300 clamp(24px, 2.8vw, 36px)/1.3 var(--sans);
+  --radius: 2px;
+}
+.wm-1 { font-weight: 700; } .wm-2 { font-weight: 300; }
+.display strong { font-weight: 600; }
+.pillar-text h3 { font-weight: 600; }

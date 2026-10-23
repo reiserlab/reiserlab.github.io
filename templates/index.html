@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block bodyclass %}placeholder{% endblock %}
+{% block body %}
+<main class="ph">
+  <header class="ph-head">
+    <p class="ph-eyebrow">{{ site.institution }}</p>
+    <h1 class="ph-title">Reiser Lab</h1>
+    <p class="ph-tagline">{{ site.tagline }}</p>
+  </header>
+
+  <section class="ph-section">
+    <h2 class="ph-h2">Shared resources</h2>
+    {% for group, items in resource_groups %}
+    <h3 class="ph-h3">{{ group }}</h3>
+    <ul class="ph-list">
+      {% for r in items %}
+      <li><a href="{{ r.url }}">{{ r.name }}</a><span class="ph-line"> {{ r.line }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+
+  <section class="ph-section">
+    <h2 class="ph-h2">Recent papers</h2>
+    <ul class="ph-list">
+      {% for p in selected %}
+      <li><a href="{{ p.links.doi }}">{{ p.title }}</a><span class="ph-line"> {{ p.venue }}, {{ p.year }}.</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer class="ph-foot">
+    <p>A new site is being built here. Until then: <a href="{{ site.links.janelia }}">lab page at Janelia</a> · <a href="{{ site.links.github }}">GitHub</a> · <a href="{{ site.links.youtube }}">YouTube</a></p>
+    <p>{{ site.address }} · <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <p class="ph-built">Updated {{ built | month_year }}</p>
+  </footer>
+</main>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Home-page mockups · Reiser Lab</title>
+<style>
+  body { margin: 0; padding: 48px 20px; font: 16px/1.5 -apple-system, "Helvetica Neue", Arial, sans-serif; color: #1a1a1a; background: #fafafa; }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  p.note { color: #555; }
+  ul { list-style: none; padding: 0; }
+  li { padding: 16px 0; border-top: 1px solid #ddd; }
+  li a { font-size: 20px; font-weight: 600; color: #1a1a1a; }
+  li p { margin: 4px 0 0; color: #444; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Home-page mockups</h1>
+  <p class="note">Same content, same structure, three token sets. All imagery is placeholder stills and frames from the eye-map animations (Zhao et al. 2025, Marisa Dreher); the final hero will be re-rendered from the Blender scene. Scroll in each mockup to drive the hero. Not indexed by search engines.</p>
+  <ul>
+    {% for key, v in variants.items() %}
+    <li><a href="{{ key }}/">{{ key | upper }} · {{ v.name }}</a><p>{{ v.subtitle }}</p></li>
+    {% endfor %}
+  </ul>
+</main>
+</body>
+</html>

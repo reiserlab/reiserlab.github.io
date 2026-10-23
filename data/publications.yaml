@@ -1,0 +1,234 @@
+# One entry per paper. Newest first is conventional but the build sorts by year anyway.
+#
+# Required: id, title, authors, year, venue, pillars, and doi (or url).
+# Optional: type (journal | preprint), date (YYYY-MM-DD, used to order within a year),
+#           selected (true to feature on the home page), summary (one sentence),
+#           figure (file name in media/figures/), figure_caption, figure_credit,
+#           links: {preprint, pdf, code, data, explorer, video, press}
+# Pillars: anatomy, behavior, neurophysiology, methods, modeling
+
+- id: hoeller2026pathways
+  title: The organization of visual pathways in the Drosophila brain
+  authors: Hoeller J, Zhao A, Nern A, Rogers EM, Romani S, Reiser MB
+  year: 2026
+  date: 2026-09-03
+  venue: Cell
+  doi: 10.1016/j.cell.2026.08.014
+  pillars: [anatomy, modeling]
+  selected: true
+  summary: ""
+  links:
+    preprint: https://doi.org/10.64898/2025.12.22.696097
+    code: https://github.com/reiserlab/visualpathways
+    explorer: https://reiserlab.github.io/visualpathways/gallery_vpn/
+
+- id: berg2026malecns
+  title: Sexual dimorphism in the complete Drosophila male central nervous system connectome
+  authors: Berg S, Beckett IR, et al., Reiser MB, Hess HF, Rubin GM, Jefferis GSXE
+  year: 2026
+  date: 2026-09-03
+  venue: Cell
+  doi: 10.1016/j.cell.2026.08.015
+  pillars: [anatomy]
+  selected: true
+  summary: ""
+  links:
+    preprint: https://doi.org/10.1101/2025.10.09.680999
+    explorer: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
+    data: https://male-cns.janelia.org/
+
+- id: longden2026mitochondria
+  title: Connectomic analysis of mitochondria in the central brain of Drosophila
+  authors: Longden KD, et al., Reiser MB, Plaza SM, Berg S
+  year: 2026
+  type: preprint
+  venue: bioRxiv
+  doi: 10.1101/2024.04.21.590464
+  pillars: [anatomy]
+
+- id: drummond2026blueprint
+  title: Population morphology implies a common developmental blueprint for Drosophila motion detectors
+  authors: Drummond N, Zhao A, Borst A
+  year: 2026
+  venue: PLoS Computational Biology
+  doi: 10.1371/journal.pcbi.1014657
+  pillars: [anatomy, modeling]
+
+- id: zhao2025eyemap
+  title: Eye structure shapes neuron function in Drosophila motion vision
+  authors: Zhao A, Gruntman E, Nern A, Iyer NA, Rogers EM, Koskela S, Siwanowicz I, Dreher M, Flynn MA, Laughland CW, Ludwig HDF, Thomson AG, Moran CP, Gezahegn B, Bock DD, Reiser MB
+  year: 2025
+  date: 2025-07-23
+  venue: Nature
+  doi: 10.1038/s41586-025-09276-5
+  pillars: [anatomy, neurophysiology, modeling]
+  selected: true
+  summary: ""
+  links:
+    preprint: https://doi.org/10.1101/2022.12.14.520178
+    code: https://github.com/reiserlab/eyemap_T4
+
+- id: nern2025inventory
+  title: Connectome-driven neural inventory of a complete visual system
+  authors: Nern A, Loesche F, Takemura S-y, et al., Reiser MB
+  year: 2025
+  date: 2025-03-26
+  venue: Nature
+  doi: 10.1038/s41586-025-08746-0
+  pillars: [anatomy]
+  selected: true
+  summary: ""
+  links:
+    preprint: https://doi.org/10.1101/2024.04.16.589741
+    explorer: https://reiserlab.github.io/male-drosophila-visual-system-connectome/
+    code: https://github.com/reiserlab/male-drosophila-visual-system-connectome-code
+    video: https://www.youtube.com/@ReiserLab
+
+- id: vaxenburg2025simulation
+  title: Whole-body physics simulation of fruit fly locomotion
+  authors: Vaxenburg R, Siwanowicz I, et al., Reiser MB, et al., Turaga SC
+  year: 2025
+  venue: Nature
+  doi: 10.1038/s41586-025-09029-4
+  pillars: [modeling, behavior]
+
+- id: erginkaya2025disinhibitory
+  title: A competitive disinhibitory network for robust optic flow processing in Drosophila
+  authors: Erginkaya M, Cruz T, Brotas M, Marques A, Steck K, Nern A, Torrão F, Varela N, Bock DD, Reiser M, Chiappe ME
+  year: 2025
+  venue: Nature Neuroscience
+  doi: 10.1038/s41593-025-01948-9
+  pillars: [anatomy, neurophysiology]
+
+- id: zhao2024lptn
+  title: A comprehensive neuroanatomical survey of the Drosophila lobula plate tangential neurons with predictions for their optic flow sensitivity
+  authors: Zhao A, Nern A, Koskela S, Dreher M, Erginkaya M, Laughland CW, Ludwig HDF, Thomson AG, Hoeller J, Parekh R, Romani S, Bock DD, Chiappe E, Reiser MB
+  year: 2024
+  venue: eLife
+  doi: 10.7554/eLife.93659
+  pillars: [anatomy, modeling]
+  links:
+    preprint: https://doi.org/10.1101/2023.10.16.562634
+
+- id: xu2024homeodomain
+  title: Homeodomain proteins hierarchically specify neuronal diversity and synaptic connectivity
+  authors: Xu C, Ramos TB, Rogers EM, Reiser MB, Doe CQ
+  year: 2024
+  venue: eLife
+  doi: 10.7554/eLife.90133
+  pillars: [anatomy]
+
+- id: longden2023spectral
+  title: Different spectral sensitivities of ON- and OFF-motion pathways enhance the detection of approaching color objects in Drosophila
+  authors: Longden KD, Rogers EM, Nern A, Dionne H, Reiser MB
+  year: 2023
+  venue: Nature Communications
+  doi: 10.1038/s41467-023-43566-8
+  pillars: [neurophysiology, behavior]
+
+- id: isaacson2023lpc1
+  title: Small-field visual projection neurons detect translational optic flow and support walking control
+  authors: Isaacson MD, Eliason JLM, Nern A, Rogers EM, Lott GK, Tabachnik T, Rowell WJ, Edwards AW, Korff WL, Rubin GM, Branson K, Reiser MB
+  year: 2023
+  type: preprint
+  venue: bioRxiv
+  doi: 10.1101/2023.06.21.546024
+  pillars: [behavior, anatomy, neurophysiology]
+
+- id: kladt2023gravity
+  title: Drosophila antennae are dispensable for gravity orientation
+  authors: Kladt N, Reiser MB
+  year: 2023
+  type: preprint
+  venue: bioRxiv
+  doi: 10.1101/2023.03.08.531317
+  pillars: [behavior]
+
+- id: isaacson2022g4
+  title: A modular LED display system for visual neuroscience (G4)
+  authors: Isaacson MD, et al., Reiser MB
+  year: 2022
+  type: preprint
+  venue: bioRxiv
+  doi: 10.1101/2022.08.02.502550
+  pillars: [methods]
+  links:
+    code: https://reiserlab.github.io/Modular-LED-Display/
+
+- id: klapoetke2022featuremap
+  title: A functionally ordered visual feature map in the Drosophila brain
+  authors: Klapoetke NC, Nern A, Rogers EM, Rubin GM, Reiser MB, Card GM
+  year: 2022
+  venue: Neuron
+  doi: 10.1016/j.neuron.2022.02.013
+  pillars: [anatomy, neurophysiology]
+
+- id: loesche2021treadmill
+  title: An inexpensive, high-precision, modular spherical treadmill setup optimized for Drosophila experiments
+  authors: Loesche F, Reiser MB
+  year: 2021
+  venue: Frontiers in Behavioral Neuroscience
+  doi: 10.3389/fnbeh.2021.689573
+  pillars: [methods, behavior]
+  links:
+    code: https://reiserlab.github.io/Fly-Lab-Gear/
+
+- id: kind2021photoreceptors
+  title: Synaptic targets of photoreceptors specialized to detect color and skylight polarization in Drosophila
+  authors: Kind E, Longden KD, Nern A, Zhao A, Sancer G, Flynn MA, Laughland CW, Gezahegn B, Ludwig HDF, Thomson AG, Obrusnik T, Alarcón PG, Dionne H, Bock DD, Rubin GM, Reiser MB, Wernet MF
+  year: 2021
+  venue: eLife
+  doi: 10.7554/eLife.71858
+  pillars: [anatomy]
+
+- id: morimoto2020lc6
+  title: Spatial readout of visual looming in the central brain of Drosophila
+  authors: Morimoto MM, Nern A, Zhao A, Rogers EM, Wong AM, Isaacson MD, Bock DD, Rubin GM, Reiser MB
+  year: 2020
+  venue: eLife
+  doi: 10.7554/eLife.57685
+  pillars: [anatomy, neurophysiology]
+  links:
+    code: https://github.com/reiserlab/LC6downstream
+
+- id: gruntman2019t5
+  title: The computation of directional selectivity in the Drosophila OFF motion pathway
+  authors: Gruntman E, Romani S, Reiser MB
+  year: 2019
+  venue: Nature Neuroscience
+  doi: 10.1038/s41593-019-0379-0
+  pillars: [neurophysiology, modeling]
+  links:
+    code: https://github.com/reiserlab/T5ConductanceModel
+
+- id: gruntman2018t4
+  title: Simple integration of fast excitation and offset, delayed inhibition computes directional selectivity in Drosophila
+  authors: Gruntman E, Romani S, Reiser MB
+  year: 2018
+  venue: Nature Neuroscience
+  doi: 10.1038/s41593-017-0046-4
+  pillars: [neurophysiology, modeling]
+
+- id: strother2018state
+  title: Behavioral state modulates the ON visual motion pathway of Drosophila
+  authors: Strother JA, Wu S-T, Rogers EM, Eliason JLM, Wong AM, Nern A, Reiser MB
+  year: 2018
+  venue: PNAS
+  doi: 10.1073/pnas.1703090115
+  pillars: [neurophysiology, behavior]
+
+- id: klapoetke2017looming
+  title: Ultra-selective looming detection from radial motion opponency
+  authors: Klapoetke NC, Nern A, Peek MY, Rogers EM, Breads P, Rubin GM, Reiser MB, Card GM
+  year: 2017
+  venue: Nature
+  doi: 10.1038/nature24626
+  pillars: [neurophysiology, anatomy]
+
+- id: strother2017emergence
+  title: The emergence of directional selectivity in the visual motion pathway of Drosophila
+  authors: Strother JA, Wu S-T, Wong AM, Nern A, Rogers EM, Le JQ, Rubin GM, Reiser MB
+  year: 2017
+  venue: Neuron
+  doi: 10.1016/j.neuron.2017.03.010
+  pillars: [neurophysiology, anatomy]
