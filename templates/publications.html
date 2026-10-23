@@ -6,7 +6,7 @@
   <header class="ph-head">
     <p class="ph-eyebrow"><a href="/">Reiser Lab</a> · {{ site.institution }}</p>
     <h1 class="ph-title">Publications</h1>
-    <p class="ph-tagline">{{ publications | length }} papers, preprints and reviews, 2003 to {{ publications[0].year }}. Preprints that were later published link to the journal version.</p>
+    <p class="ph-tagline">{{ publications | length }} papers and preprints, 2003 to {{ publications[0].year }}. One entry per paper; where a preprint exists it is linked from the paper.</p>
   </header>
   {% set ns = namespace(year=None) %}
   {% for p in publications %}
@@ -17,8 +17,8 @@
     {% endif %}
     <li>
       <a href="{{ p.links.doi or p.url }}">{{ p.title }}</a>
-      <span class="ph-line"> {{ p.authors }}. <em>{{ p.venue }}</em>{% if p.type == 'preprint' %} (preprint){% elif p.type == 'review' %} (review){% elif p.type == 'conference' %} (conference){% endif %}.</span>
-      <span class="ph-links">{% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}{% if p.preprint_of %}<a href="#{{ p.preprint_of }}">published version</a>{% endif %}</span>
+      <span class="ph-line"> {{ p.authors }}.{% if p.type == 'preprint' %} Preprint.{% elif p.type == 'review' %} Review.{% elif p.type == 'conference' %} Conference paper.{% endif %}</span>
+      <span class="ph-links">{% if p.doi %}<a href="https://doi.org/{{ p.doi }}">doi</a>{% endif %}{% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}{% if p.pmcid %}<a href="https://pmc.ncbi.nlm.nih.gov/articles/{{ p.pmcid }}/">free full text</a>{% endif %}</span>
     </li>
   {% endfor %}
   </ul></section>

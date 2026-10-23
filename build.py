@@ -88,6 +88,16 @@ def load_data() -> dict:
             if not src.exists():
                 raise BuildError(f"{where}: figure {src.relative_to(ROOT)} not found")
     pubs.sort(key=lambda p: (p["year"], str(p.get("date") or "")), reverse=True)
+    # Preprints with a published version become a "preprint" link on that version and drop out of the list.
+    by_id = {p["id"]: p for p in pubs}
+    for p in pubs:
+        target = by_id.get(p.get("preprint_of") or "")
+        if target is not None:
+            target["links"].setdefault("preprint", f"https://doi.org/{p['doi']}" if p.get("doi") else p.get("url"))
+            if not target.get("figure") and p.get("figure"):
+                target["figure"] = p["figure"]
+    pubs_all = pubs
+    pubs = [p for p in pubs if not p.get("preprint_of")]
 
     for person in people:
         where = f"people.yaml entry {person.get('name', '?')}"
@@ -110,6 +120,7 @@ def load_data() -> dict:
     return {
         "site": site,
         "publications": pubs,
+        "publications_all": pubs_all,
         "selected": [p for p in pubs if p["selected"]],
         "people": people,
         "current": [p for p in people if p["status"] == "current"],

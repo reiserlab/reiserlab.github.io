@@ -7,6 +7,12 @@
 #           links: {preprint, pdf, code, data, explorer, video, press}
 # Pillars: anatomy, behavior, neurophysiology, methods, modeling
 #
+# Display convention (HHMI style, following the institute's guidance to de-emphasize journal names): the site
+# never shows the venue. It shows title, authors, date and persistent identifiers (DOI, preprint DOI, PMCID).
+# `venue` is kept in the data for internal use only. Preprints that have a published version (preprint_of) are
+# not listed separately; they appear as a "preprint" link on the published entry. Only papers with Michael
+# Reiser as an author are listed.
+#
 # 2026-10-23: complete list compiled from PubMed, bioRxiv, Crossref and ORCID (see
 # docs/research/publications-all.yaml for sources and exclusions). Entries marked pillars_auto: true were
 # tagged by keyword and need a human look; delete the flag once checked. FlyWire consortium papers
@@ -47,17 +53,6 @@
     preprint: https://doi.org/10.1101/2025.10.09.680999
     explorer: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
     data: https://male-cns.janelia.org/
-
-- id: drummond2026blueprint
-  title: Population morphology implies a common developmental blueprint for Drosophila motion detectors
-  authors: Drummond N, Zhao A, Borst A
-  year: 2026
-  venue: PLoS Computational Biology
-  doi: 10.1371/journal.pcbi.1014657
-  pillars:
-  - anatomy
-  - modeling
-  note: Lab member paper; Reiser not an author
 
 - id: hoeller2025pathways
   title: The organization of visual pathways in the Drosophila brain

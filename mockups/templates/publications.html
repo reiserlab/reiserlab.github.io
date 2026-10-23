@@ -29,8 +29,8 @@
 <main class="pubs">
   <div class="section-head pubs-head">
     <p class="eyebrow">Publications</p>
-    <h1 class="h2">{{ publications | length }} papers, preprints and reviews</h1>
-    <p class="section-lede">Everything the lab has published since 2003, newest first. Preprints that were later published point to the journal version. Filter by what the paper is mostly about.</p>
+    <h1 class="h2">{{ publications | length }} papers</h1>
+    <p class="section-lede">Everything the lab has published since 2003, newest first, one entry per paper with the preprint linked where there is one. Filter by what the paper is mostly about.</p>
     <div class="filters" role="group" aria-label="Filter by pillar">
       <button class="chip is-on" data-filter="all">All</button>
       {% for p in site.pillars %}<button class="chip" data-filter="{{ p.key }}">{{ p.name }}</button>{% endfor %}
@@ -49,17 +49,16 @@
     <li class="pub" id="{{ p.id }}" data-pillars="{{ p.pillars | join(' ') }}" data-type="{{ p.type }}">
       <div class="pub-fig">
         {% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.png','') | replace('.jpg','') }}-400.webp" alt="">
-        {% else %}<div class="pub-fig-empty" aria-hidden="true"><span>{{ p.venue }}</span></div>{% endif %}
+        {% else %}<div class="pub-fig-empty" aria-hidden="true"><span>{{ p.year }}</span></div>{% endif %}
       </div>
       <div class="pub-body">
-        <p class="pub-meta mono">{% if p.type == 'preprint' %}Preprint · {% elif p.type == 'review' %}Review · {% elif p.type == 'conference' %}Conference · {% endif %}{{ p.venue }}{% if p.date %} · {{ p.date | long_date }}{% endif %}</p>
+        <p class="pub-meta mono">{% if p.type == 'preprint' %}Preprint{% elif p.type == 'review' %}Review{% elif p.type == 'conference' %}Conference paper{% else %}Paper{% endif %}{% if p.date %} · {{ p.date | long_date }}{% else %} · {{ p.year }}{% endif %}</p>
         <h3><a href="{{ p.links.doi or p.url }}">{{ p.title }}</a></h3>
         <p class="pub-authors">{{ p.authors }}</p>
         {% if p.summary %}<p class="pub-summary">{{ p.summary }}</p>{% endif %}
         <p class="pub-links">
-          {% if p.links.doi %}<a href="{{ p.links.doi }}">journal</a>{% endif %}
+          {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">doi</a>{% elif p.url %}<a href="{{ p.url }}">link</a>{% endif %}
           {% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}
-          {% if p.preprint_of %}<a href="#{{ p.preprint_of }}">published version</a>{% endif %}
           {% if p.pmcid %}<a href="https://pmc.ncbi.nlm.nih.gov/articles/{{ p.pmcid }}/">free full text</a>{% endif %}
         </p>
         <p class="tags">{% for t in p.pillars %}<span class="tag tag-{{ t }}">{{ t }}</span>{% endfor %}</p>

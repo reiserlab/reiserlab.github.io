@@ -109,12 +109,12 @@
     <article class="paper">
       <a class="paper-fig" href="{{ p.links.doi }}"><img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy"></a>
       <div class="paper-text">
-        <p class="paper-venue"><span class="mono">{{ p.venue }} · {{ p.year }}</span></p>
+        <p class="paper-venue"><span class="mono">{{ p.date | long_date if p.date else p.year }}</span></p>
         <h3><a href="{{ p.links.doi }}">{{ p.title }}</a></h3>
         <p class="paper-authors">{{ p.authors }}</p>
         <p class="paper-links">
+          <a href="{{ p.links.doi }}">doi</a>
           {% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}
-          <a href="{{ p.links.doi }}">journal</a>
         </p>
         <p class="tags">{% for t in p.pillars %}<span class="tag tag-{{ t }}">{{ t }}</span>{% endfor %}</p>
       </div>
