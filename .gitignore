@@ -7,3 +7,6 @@ __pycache__/
 
 # editors and OS
 .DS_Store
+
+# downloaded source media (not committed)
+media/sources/

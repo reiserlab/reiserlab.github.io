@@ -1,0 +1,891 @@
+# Complete publication list of Michael B. Reiser (ORCID 0000-0002-4108-4517, verified: record name "Michael Reiser",
+# 36 works listed there; all are covered below except a meeting abstract and an eLife version DOI, see exclusions).
+# Generated 2026-10-23 by script from these sources, in order:
+#   1. PubMed E-utilities (esearch "Reiser MB[Author]" and "Reiser M[Author] AND (Drosophila OR fly OR vision OR Janelia OR
+#      Caltech ...)"; efetch XML for title, authors, journal, dates, DOI, PMID, PMCID). 70 hits screened, 43 kept.
+#   2. bioRxiv API (api.biorxiv.org/details) for every preprint DOI, including the "published" field used to set preprint_of.
+#   3. Europe PMC (AUTH:"Reiser MB", indexes preprints), Crossref (query.author, prefix filters 10.1101 and 10.64898,
+#      has-preprint relations, conference papers), the ORCID public API, and the Janelia lab page
+#      https://www.janelia.org/lab/reiser-lab/publications (6 pages), and the arXiv API for the one arXiv preprint.
+#   Google Scholar was not queried (no API; it would only have added citation counts).
+#
+# Total: 63 entries (35 journal, 5 review/commentary,
+#   2 conference, 21 preprint). Sorted newest first by date.
+# Field notes: `date` is the online publication date (PubMed ArticleDate, else Crossref published-online, else print date);
+#   for preprints it is the date of the first bioRxiv version. `year` is the citation year (journal volume year), so a few
+#   papers published online in December carry a `date` one year earlier than `year`. `type: review` is used for reviews, dispatches and
+#   News & Views pieces. `pmid`/`pmcid` are omitted when none exists. `pillars` is left empty for the lab to tag.
+#   The arXiv preprint has no DOI; its arXiv id is given under links.
+#
+# Excluded hits (not this M. Reiser, or not a publication), with reason:
+#   Other people named M. Reiser found by the PubMed/Europe PMC/Crossref author searches (none has a fly/vision/Janelia
+#   affiliation; all were dropped):
+#     - Reiser MF / Reiser M, Maximilian F. Reiser, LMU Munich radiology (Eur Radiol, Radiologe, Rofo, Eur J Cardiothorac Surg,
+#       Invest Radiol, Schizophr Res, Psychiatry Res, Biol Psychiatry, Genes Brain Behav, Brain, Hum Brain Mapp, PLoS One,
+#       Neuropsychopharmacology, J Psychiatry Neurosci, Arch Gen Psychiatry, BMC Neurosci, Soc Cogn Affect Neurosci, Ann Rheum Dis,
+#       Diagn Interv Radiol, J Glob Oncol, etc.; PMIDs 7740121, 8693089, 9830662, 10371110, 10756987, 10997443, 11793288, 15448906,
+#       16476409, 17306512, 17765479, 18387137, 20799025, 20890763 and the Europe PMC-only psychiatry/radiology hits): radiology/psychiatry.
+#     - Reiser M, Universitaet Ulm / Goethe University Frankfurt immunology (J Immunol 2009, 2011; Eur J Immunol 2014;
+#       Methods Mol Biol 2015 "Minicircle"; Gene Ther 2021 "CARAMBA"; bioRxiv 10.1101/675009): immunology/CAR-T.
+#     - Reiser ML, Boston University / DRK-Blutspendedienst (Front Immunol 2017, 2020, 2021; Sci Rep 2017): PorB adjuvant immunology.
+#     - Reiser M, Univ. of South Florida (PNAS 2022 "Bioengineered peptibodies"), ACS Nano 2016 (nanoparticles), FASEB J 2003 and
+#       Adv Exp Med Biol 2003 (Magdeburg/tumor MRI), Hemasphere 2026, Mol Pharm 2023, J Phys Chem B 2023, Environ Sci Pollut Res 2020,
+#       Front Psychol 2016/2025 (Giessen sports science): unrelated fields.
+#     - Martin Reiser, Univ. of Maryland accelerator physics (Phys Rev Lett, Nucl Instrum Methods, PAC proceedings 1969-2010);
+#       Martin Reiser, IBM (J ACM 1980/81 queuing networks); Marion Reiser (political science chapters); Marius Reiser (theology);
+#       Michelle Reiser (bioRxiv 10.1101/862441, 10.1101/2025.05.31.657128, 10.64898/2026.06.14.731898, 10.1101/2025.11.21.689807);
+#       M. Reiser, pulse oximetry (bioRxiv 10.64898/2026.04.20.719559): unrelated.
+#   Items by Michael B. Reiser or his lab that are deliberately not listed as separate entries:
+#     - Dorkenwald S et al. 2024 Nature 10.1038/s41586-024-07558-y and Schlegel P et al. 2024 Nature 10.1038/s41586-024-07686-5:
+#       Reiser appears only as a member of the FlyWire Consortium (PubMed investigator list), not as a named author.
+#     - Seelig JD, Chiappe ME, Lott GK, Reiser MB, Jayaraman V. 2011 Biophys J 100(3) Suppl, 10.1016/j.bpj.2010.12.735, and
+#       Longden K, Reiser M. 2017 J Vision 17(10):395, 10.1167/17.10.395: meeting abstracts (Biophysical Society, VSS).
+#     - 10.1038/nmeth0211-184b (2011 corrigendum to Seelig et al. 2010), 10.2139/ssrn.3836132 (SSRN/Cell Press Sneak Peek copy of
+#       Gruntman et al. 2021 preprint), 10.7554/eLife.90133.3 and 10.7554/eLife.93659.1 (eLife version DOIs), author-response
+#       DOIs 10.7554/elife.*.sa2: duplicates of listed items.
+#     - Reiser MB. 2007 PhD thesis, Caltech, "Visually mediated control of flight in Drosophila: not lost in translation",
+#       10.7907/YYSN-7C82: thesis, not in the type vocabulary.
+#   Items on the Janelia Reiser Lab publications page without Reiser as author (lab members' papers): Drummond N, Zhao A,
+#     Borst A 2026 PLoS Comput Biol 10.1371/journal.pcbi.1014657 (and its preprint 10.1101/2025.11.15.688637); Liessem S et al.
+#     2025 bioRxiv 10.64898/2025.12.13.693955; Shih MFM et al. 2019 G3 and Eliason J et al. 2018 G3; Longden KD 2018 and 2016
+#     Curr Biol dispatches; Isaacson MD, Hedwig B 2017 Sci Rep; Ding Y et al. 2016 Nature; Dyakova O et al. 2015 Nat Commun.
+#   No book chapters and no pre-2003 electrical-engineering papers by Michael B. Reiser were found in Crossref or ORCID.
+
+- id: hoeller2026pathways
+  title: The organization of visual pathways in the Drosophila brain
+  authors: Hoeller J, Zhao A, Nern A, Rogers EM, Romani S, Reiser MB
+  year: 2026
+  date: 2026-09-03
+  venue: Cell
+  type: journal
+  doi: 10.1016/j.cell.2026.08.014
+  pmid: 42691997
+  pillars: []
+  selected: false
+  links: {}
+
+- id: berg2026malecns
+  title: Sexual dimorphism in the complete Drosophila male central nervous system connectome
+  authors: Berg S, Beckett IR, Costa M, Schlegel P, Januszewski M, Marin EC, Nern A, Preibisch S, Qiu W, Takemura SY, et al., Hess HF, Rubin GM, Jefferis GSXE
+  year: 2026
+  date: 2026-09-03
+  venue: Cell
+  type: journal
+  doi: 10.1016/j.cell.2026.08.015
+  pmid: 42691995
+  pillars: []
+  selected: false
+  links: {}
+
+- id: hoeller2025pathways
+  title: The organization of visual pathways in the Drosophila brain
+  authors: Hoeller J, Zhao A, Nern A, Rogers EM, Romani S, Reiser MB
+  year: 2025
+  date: 2025-12-25
+  venue: bioRxiv
+  type: preprint
+  doi: 10.64898/2025.12.22.696097
+  pillars: []
+  selected: false
+  preprint_of: hoeller2026pathways
+  links: {}
+
+- id: berg2025malecns
+  title: Sexual dimorphism in the complete connectome of the Drosophila male central nervous system
+  authors: Berg S, Beckett IR, Costa M, Schlegel P, Januszewski M, Marin EC, Nern A, Preibisch S, Qiu W, Takemura SY, et al., Hess HF, Rubin GM, Jefferis GS
+  year: 2025
+  date: 2025-10-09
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2025.10.09.680999
+  pmid: 41279223
+  pmcid: PMC12636603
+  pillars: []
+  selected: false
+  preprint_of: berg2026malecns
+  links: {}
+
+- id: zhao2025eyemap
+  title: Eye structure shapes neuron function in Drosophila motion vision
+  authors: Zhao A, Gruntman E, Nern A, Iyer N, Rogers EM, Koskela S, Siwanowicz I, Dreher M, Flynn MA, Laughland C, Ludwig H, Thomson A, Moran C, Gezahegn B, Bock DD, Reiser MB
+  year: 2025
+  date: 2025-07-23
+  venue: Nature
+  type: journal
+  doi: 10.1038/s41586-025-09276-5
+  pmid: 40702177
+  pmcid: PMC12488493
+  pillars: []
+  selected: false
+  links: {}
+
+- id: erginkaya2025disinhibitory
+  title: A competitive disinhibitory network for robust optic flow processing in Drosophila
+  authors: Erginkaya M, Cruz T, Brotas M, Marques A, Steck K, Nern A, Torrão F, Varela N, Bock DD, Reiser M, Chiappe ME
+  year: 2025
+  date: 2025-05-01
+  venue: Nature Neuroscience
+  type: journal
+  doi: 10.1038/s41593-025-01948-9
+  pmid: 40312577
+  pmcid: PMC12148931
+  pillars: []
+  selected: false
+  links: {}
+
+- id: vaxenburg2025simulation
+  title: Whole-body physics simulation of fruit fly locomotion
+  authors: Vaxenburg R, Siwanowicz I, Merel J, Robie AA, Morrow C, Novati G, Stefanidi Z, Both GJ, Card GM, Reiser MB, Botvinick MM, Branson KM, Tassa Y, Turaga SC
+  year: 2025
+  date: 2025-04-23
+  venue: Nature
+  type: journal
+  doi: 10.1038/s41586-025-09029-4
+  pmid: 40267984
+  pmcid: PMC12310536
+  pillars: []
+  selected: false
+  links: {}
+
+- id: nern2025inventory
+  title: Connectome-driven neural inventory of a complete visual system
+  authors: Nern A, Loesche F, Takemura SY, Burnett LE, Dreher M, Gruntman E, Hoeller J, Huang GB, Januszewski M, Klapoetke NC, et al., Berg S, Rubin GM, Reiser MB
+  year: 2025
+  date: 2025-03-26
+  venue: Nature
+  type: journal
+  doi: 10.1038/s41586-025-08746-0
+  pmid: 40140576
+  pmcid: PMC12119369
+  pillars: []
+  selected: false
+  links: {}
+
+- id: longden2026mitochondria
+  title: Connectomic Analysis of Mitochondria in the Central Brain of Drosophila
+  authors: Longden KD, Rivlin PK, Januszewski M, Neace E, Scheffer LK, Ordish C, Clements J, Phillips E, Smith N, Takemura S, Umayam L, Walsh C, Yakal EA, Musial TF, Devine MJ, Reiser MB, Plaza SM, Berg S
+  year: 2024
+  date: 2024-04-25
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2024.04.21.590464
+  pmid: 42395513
+  pmcid: PMC13320868
+  pillars: []
+  selected: false
+  links: {}
+
+- id: nern2024inventory
+  title: Connectome-driven neural inventory of a complete visual system
+  authors: Nern A, Loesche F, Takemura SY, Burnett LE, Dreher M, Gruntman E, Hoeller J, Huang GB, Januszewski M, Klapoetke NC, et al., Berg S, Rubin GM, Reiser MB
+  year: 2024
+  date: 2024-04-18
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2024.04.16.589741
+  pmid: 38659887
+  pmcid: PMC11042306
+  pillars: []
+  selected: false
+  preprint_of: nern2025inventory
+  links: {}
+
+- id: vaxenburg2024simulation
+  title: Whole-body simulation of realistic fruit fly locomotion with deep reinforcement learning
+  authors: Vaxenburg R, Siwanowicz I, Merel J, Robie AA, Morrow C, Novati G, Stefanidi Z, Both GJ, Card GM, Reiser MB, Botvinick MM, Branson KM, Tassa Y, Turaga SC
+  year: 2024
+  date: 2024-03-14
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2024.03.11.584515
+  pillars: []
+  selected: false
+  preprint_of: vaxenburg2025simulation
+  links: {}
+
+- id: zhao2024lptn
+  title: A comprehensive neuroanatomical survey of the Drosophila Lobula Plate Tangential Neurons with predictions for their optic flow sensitivity
+  authors: Zhao A, Nern A, Koskela S, Dreher M, Erginkaya M, Laughland CW, Ludwigh H, Thomson A, Hoeller J, Parekh R, Romani S, Bock DD, Chiappe E, Reiser MB
+  year: 2024
+  date: 2024-01-09
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.93659
+  pillars: []
+  selected: false
+  links: {}
+
+- id: xu2024homeodomain
+  title: Homeodomain proteins hierarchically specify neuronal diversity and synaptic connectivity
+  authors: Xu C, Ramos TB, Rogers EM, Reiser MB, Doe CQ
+  year: 2024
+  date: 2024-01-05
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.90133
+  pmid: 38180023
+  pmcid: PMC10942767
+  pillars: []
+  selected: false
+  links: {}
+
+- id: longden2023spectral
+  title: Different spectral sensitivities of ON- and OFF-motion pathways enhance the detection of approaching color objects in Drosophila
+  authors: Longden KD, Rogers EM, Nern A, Dionne H, Reiser MB
+  year: 2023
+  date: 2023-11-24
+  venue: Nature Communications
+  type: journal
+  doi: 10.1038/s41467-023-43566-8
+  pmid: 38001097
+  pmcid: PMC10673857
+  pillars: []
+  selected: false
+  links: {}
+
+- id: zhao2023lptn
+  title: A comprehensive neuroanatomical survey of the Drosophila Lobula Plate Tangential Neurons with predictions for their optic flow sensitivity
+  authors: Zhao A, Nern A, Koskela S, Dreher M, Erginkaya M, Laughland CW, Ludwigh H, Thomson A, Hoeller J, Parekh R, Romani S, Bock DD, Chiappe E, Reiser MB
+  year: 2023
+  date: 2023-10-17
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2023.10.16.562634
+  pmid: 37904921
+  pmcid: PMC10614863
+  pillars: []
+  selected: false
+  preprint_of: zhao2024lptn
+  links: {}
+
+- id: erginkaya2023disinhibitory
+  title: A competitive disinhibitory network for robust optic flow processing in Drosophila
+  authors: Erginkaya M, Cruz TL, Brotas M, Steck K, Nern A, Torrao F, Varela N, Bock D, Reiser MB, Chiappe ME
+  year: 2023
+  date: 2023-08-07
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2023.08.06.552150
+  pillars: []
+  selected: false
+  preprint_of: erginkaya2025disinhibitory
+  links: {}
+
+- id: isaacson2023lpc1
+  title: Small-field visual projection neurons detect translational optic flow and support walking control
+  authors: Isaacson MD, Eliason JL, Nern A, Rogers EM, Lott GK, Tabachnik T, Rowell WJ, Edwards AW, Korff WL, Rubin GM, Branson K, Reiser MB
+  year: 2023
+  date: 2023-06-22
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2023.06.21.546024
+  pillars: []
+  selected: false
+  links: {}
+
+- id: kladt2023gravity
+  title: Drosophila antennae are dispensable for gravity orientation
+  authors: Kladt N, Reiser MB
+  year: 2023
+  date: 2023-03-10
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2023.03.08.531317
+  pillars: []
+  selected: false
+  links: {}
+
+- id: zhao2022eyemap
+  title: Eye structure shapes neuron function in Drosophila motion vision
+  authors: Zhao A, Gruntman E, Nern A, Iyer NA, Rogers EM, Koskela S, Siwanowicz I, Dreher M, Flynn MA, Laughland CW, Ludwig HD, Thomson AG, Moran CP, Gezahegn B, Bock DD, Reiser MB
+  year: 2022
+  date: 2022-12-15
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2022.12.14.520178
+  pillars: []
+  selected: false
+  preprint_of: zhao2025eyemap
+  links: {}
+
+- id: isaacson2022g4
+  title: A high-speed, modular display system for diverse neuroscience applications
+  authors: Isaacson M, Ferguson L, Loesche F, Ganguly I, Chen J, Chiu A, Liu J, Dickson W, Reiser M
+  year: 2022
+  date: 2022-08-03
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2022.08.02.502550
+  pillars: []
+  selected: false
+  links: {}
+
+- id: shinomiya2022circuits
+  title: Neuronal circuits integrating visual motion information in Drosophila melanogaster
+  authors: Shinomiya K, Nern A, Meinertzhagen IA, Plaza SM, Reiser MB
+  year: 2022
+  date: 2022-07-14
+  venue: Current Biology
+  type: review
+  doi: 10.1016/j.cub.2022.06.061
+  pmid: 35839763
+  pillars: []
+  selected: false
+  links: {}
+
+- id: klapoetke2022featuremap
+  title: A functionally ordered visual feature map in the Drosophila brain
+  authors: Klapoetke NC, Nern A, Rogers EM, Rubin GM, Reiser MB, Card GM
+  year: 2022
+  date: 2022-03-14
+  venue: Neuron
+  type: journal
+  doi: 10.1016/j.neuron.2022.02.013
+  pmid: 35290791
+  pillars: []
+  selected: false
+  links: {}
+
+- id: shinomiya2021circuits
+  title: Neuronal circuits integrating visual motion information in Drosophila
+  authors: Shinomiya K, Nern A, Meinertzhagen I, Plaza SM, Reiser MB
+  year: 2021
+  date: 2021-12-21
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.12.20.473513
+  pillars: []
+  selected: false
+  preprint_of: shinomiya2022circuits
+  links: {}
+
+- id: kind2021photoreceptors
+  title: Synaptic targets of photoreceptors specialized to detect color and skylight polarization in Drosophila
+  authors: Kind E, Longden KD, Nern A, Zhao A, Sancer G, Flynn MA, Laughland CW, Gezahegn B, Ludwig HD, Thomson AG, Obrusnik T, Alarcón PG, Dionne H, Bock DD, Rubin GM, Reiser MB, Wernet MF
+  year: 2021
+  date: 2021-12-16
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.71858
+  pmid: 34913436
+  pmcid: PMC8789284
+  pillars: []
+  selected: false
+  links: {}
+
+- id: longden2021synergy
+  title: Synergy of color and motion vision for detecting approaching objects in Drosophila
+  authors: Longden KD, Rogers EM, Nern A, Dionne H, Reiser MB
+  year: 2021
+  date: 2021-11-04
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.11.03.467132
+  pillars: []
+  selected: false
+  preprint_of: longden2023spectral
+  links: {}
+
+- id: gruntman2021contrast
+  title: Non-preferred contrast responses in the Drosophila motion pathways reveal a receptive field structure that explains a common visual illusion
+  authors: Gruntman E, Reimers P, Romani S, Reiser MB
+  year: 2021
+  date: 2021-10-20
+  venue: Current Biology
+  type: journal
+  doi: 10.1016/j.cub.2021.09.072
+  pmid: 34672960
+  pillars: []
+  selected: false
+  links: {}
+
+- id: xu2021homeodomain
+  title: Homeodomain proteins hierarchically specify neuronal diversity and synaptic connectivity
+  authors: Xu C, Ramos TB, Rogers EM, Reiser MB, Doe CQ
+  year: 2021
+  date: 2021-10-01
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.10.01.462699
+  pillars: []
+  selected: false
+  preprint_of: xu2024homeodomain
+  links: {}
+
+- id: loesche2021treadmill
+  title: An Inexpensive, High-Precision, Modular Spherical Treadmill Setup Optimized for Drosophila Experiments
+  authors: Loesche F, Reiser MB
+  year: 2021
+  date: 2021-07-16
+  venue: Frontiers in Behavioral Neuroscience
+  type: journal
+  doi: 10.3389/fnbeh.2021.689573
+  pmid: 34335199
+  pmcid: PMC8322621
+  pillars: []
+  selected: false
+  links: {}
+
+- id: kind2021photoreceptorspre
+  title: Synaptic targets of photoreceptors specialized to detect color and skylight polarization in Drosophila
+  authors: Kind E, Longden KD, Nern A, Zhao A, Sancer G, Flynn M, Laughland C, Gezahegn B, Ludwig H, Thomson A, Obrusnik T, Alarcon PG, Dionne H, Bock DD, Rubin GM, Reiser MB, Wernet MF
+  year: 2021
+  date: 2021-05-17
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.05.17.444480
+  pillars: []
+  selected: false
+  preprint_of: kind2021photoreceptors
+  links: {}
+
+- id: loesche2021treadmillpre
+  title: An inexpensive, high-precision, modular spherical treadmill setup optimized for Drosophila experiments
+  authors: Loesche F, Reiser M
+  year: 2021
+  date: 2021-04-30
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.04.29.442008
+  pillars: []
+  selected: false
+  preprint_of: loesche2021treadmill
+  links: {}
+
+- id: gruntman2021contrastpre
+  title: Non-preferred contrast responses in the Drosophila motion pathways reveal a receptive field structure that explains a common visual illusion
+  authors: Gruntman E, Reimers P, Romani S, Reiser MB
+  year: 2021
+  date: 2021-04-30
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2021.04.29.442028
+  pillars: []
+  selected: false
+  preprint_of: gruntman2021contrast
+  links: {}
+
+- id: morimoto2020lc6
+  title: Spatial readout of visual looming in the central brain of Drosophila
+  authors: Morimoto MM, Nern A, Zhao A, Rogers EM, Wong AM, Isaacson MD, Bock DD, Rubin GM, Reiser MB
+  year: 2020
+  date: 2020-11-18
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.57685
+  pmid: 33205753
+  pmcid: PMC7744102
+  pillars: []
+  selected: false
+  links: {}
+
+- id: morimoto2020looming
+  title: Connectivity establishes spatial readout of visual looming in a glomerulus lacking retinotopy
+  authors: Morimoto MM, Nern A, Zhao A, Rogers EM, Wong AM, Isaacson MD, Bock DD, Rubin GM, Reiser MB
+  year: 2020
+  date: 2020-04-20
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/2020.04.19.036947
+  pillars: []
+  selected: false
+  preprint_of: morimoto2020lc6
+  links: {}
+
+- id: davis2020resource
+  title: A genetic, genomic, and computational resource for exploring neural circuit function
+  authors: Davis FP, Nern A, Picard S, Reiser MB, Rubin GM, Eddy SR, Henry GL
+  year: 2020
+  date: 2020-01-15
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.50901
+  pmid: 31939737
+  pmcid: PMC7034979
+  pillars: []
+  selected: false
+  links: {}
+
+- id: gruntman2019t5
+  title: The computation of directional selectivity in the Drosophila OFF motion pathway
+  authors: Gruntman E, Romani S, Reiser MB
+  year: 2019
+  date: 2019-12-11
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.50706
+  pmid: 31825313
+  pmcid: PMC6917495
+  pillars: []
+  selected: false
+  links: {}
+
+- id: gruntman2019t5pre
+  title: The computation of directional selectivity in the Drosophila OFF motion pathway
+  authors: Gruntman E, Romani S, Reiser MB
+  year: 2019
+  date: 2019-08-02
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/721902
+  pillars: []
+  selected: false
+  preprint_of: gruntman2019t5
+  links: {}
+
+- id: davis2018resource
+  title: A genetic, genomic, and computational resource for exploring neural circuit function
+  authors: Davis FP, Nern A, Picard S, Reiser MB, Rubin GM, Eddy SR, Henry GL
+  year: 2018
+  date: 2018-08-05
+  venue: bioRxiv
+  type: preprint
+  doi: 10.1101/385476
+  pillars: []
+  selected: false
+  preprint_of: davis2020resource
+  links: {}
+
+- id: tschopp2018hexagonal
+  title: A connectome based hexagonal lattice convolutional network model of the Drosophila visual system
+  authors: Tschopp FD, Reiser MB, Turaga SC
+  year: 2018
+  date: 2018-06-12
+  venue: arXiv
+  type: preprint
+  pillars: []
+  selected: false
+  links: {arxiv: https://arxiv.org/abs/1806.04793}
+
+- id: gruntman2018t4
+  title: Simple integration of fast excitation and offset, delayed inhibition computes directional selectivity in Drosophila
+  authors: Gruntman E, Romani S, Reiser MB
+  year: 2018
+  date: 2018-01-08
+  venue: Nature Neuroscience
+  type: journal
+  doi: 10.1038/s41593-017-0046-4
+  pmid: 29311742
+  pmcid: PMC5967973
+  pillars: []
+  selected: false
+  links: {}
+
+- id: strother2018state
+  title: Behavioral state modulates the ON visual motion pathway of Drosophila
+  authors: Strother JA, Wu ST, Rogers EM, Eliason JLM, Wong AM, Nern A, Reiser MB
+  year: 2018
+  date: 2017-12-18
+  venue: PNAS
+  type: journal
+  doi: 10.1073/pnas.1703090115
+  pmid: 29255026
+  pmcid: PMC5776785
+  pillars: []
+  selected: false
+  links: {}
+
+- id: klapoetke2017looming
+  title: Ultra-selective looming detection from radial motion opponency
+  authors: Klapoetke NC, Nern A, Peek MY, Rogers EM, Breads P, Rubin GM, Reiser MB, Card GM
+  year: 2017
+  date: 2017-11-09
+  venue: Nature
+  type: journal
+  doi: 10.1038/nature24626
+  pmid: 29120418
+  pmcid: PMC7457385
+  pillars: []
+  selected: false
+  links: {}
+
+- id: robie2017mapping
+  title: Mapping the Neural Substrates of Behavior
+  authors: Robie AA, Hirokawa J, Edwards AW, Umayam LA, Lee A, Phillips ML, Card GM, Korff W, Rubin GM, Simpson JH, Reiser MB, Branson K
+  year: 2017
+  date: 2017-07-13
+  venue: Cell
+  type: journal
+  doi: 10.1016/j.cell.2017.06.032
+  pmid: 28709004
+  pillars: []
+  selected: false
+  links: {}
+
+- id: strother2017emergence
+  title: The Emergence of Directional Selectivity in the Visual Motion Pathway of Drosophila
+  authors: Strother JA, Wu ST, Wong AM, Nern A, Rogers EM, Le JQ, Rubin GM, Reiser MB
+  year: 2017
+  date: 2017-04-05
+  venue: Neuron
+  type: journal
+  doi: 10.1016/j.neuron.2017.03.010
+  pmid: 28384470
+  pillars: []
+  selected: false
+  links: {}
+
+- id: longden2017sensorimotor
+  title: "Sensorimotor Neuroscience: Motor Precision Meets Vision"
+  authors: Longden KD, Huston SJ, Reiser MB
+  year: 2017
+  date: 2017-04-03
+  venue: Current Biology
+  type: review
+  doi: 10.1016/j.cub.2017.02.047
+  pmid: 28376331
+  pillars: []
+  selected: false
+  links: {}
+
+- id: wu2016lc
+  title: Visual projection neurons in the Drosophila lobula link feature detection to distinct behavioral programs
+  authors: Wu M, Nern A, Williamson WR, Morimoto MM, Reiser MB, Card GM, Rubin GM
+  year: 2016
+  date: 2016-12-28
+  venue: eLife
+  type: journal
+  doi: 10.7554/eLife.21022
+  pmid: 28029094
+  pmcid: PMC5293491
+  pillars: []
+  selected: false
+  links: {}
+
+- id: florence2015temperature
+  title: "Neuroscience: hot on the trail of temperature processing"
+  authors: Florence TJ, Reiser MB
+  year: 2015
+  date: 2015-03-04
+  venue: Nature
+  type: review
+  doi: 10.1038/nature14209
+  pmid: 25739498
+  pillars: []
+  selected: false
+  links: {}
+
+- id: tuthill2014feedback
+  title: Wide-field feedback neurons dynamically tune early visual processing
+  authors: Tuthill JC, Nern A, Rubin GM, Reiser MB
+  year: 2014
+  date: 2014-05-21
+  venue: Neuron
+  type: journal
+  doi: 10.1016/j.neuron.2014.04.023
+  pmid: 24853944
+  pillars: []
+  selected: false
+  links: {}
+
+- id: strother2014onoff
+  title: Direct observation of ON and OFF pathways in the Drosophila visual system
+  authors: Strother JA, Nern A, Reiser MB
+  year: 2014
+  date: 2014-04-03
+  venue: Current Biology
+  type: journal
+  doi: 10.1016/j.cub.2014.03.017
+  pmid: 24704075
+  pillars: []
+  selected: false
+  links: {}
+
+- id: tuthill2013lamina
+  title: Contributions of the 12 neuron classes in the fly lamina to motion vision
+  authors: Tuthill JC, Nern A, Holtz SL, Rubin GM, Reiser MB
+  year: 2013
+  date: 2013-07-10
+  venue: Neuron
+  type: journal
+  doi: 10.1016/j.neuron.2013.05.024
+  pmid: 23849200
+  pmcid: PMC3806040
+  pillars: []
+  selected: false
+  links: {}
+
+- id: roth2012yaw
+  title: "A task-level model for optomotor yaw regulation in Drosophila melanogaster: a frequency-domain system identification approach"
+  authors: Roth E, Reiser MB, Dickinson MH, Cowan NJ
+  year: 2012
+  date: 2012-12-10
+  venue: IEEE Conference on Decision and Control 2012
+  type: conference
+  doi: 10.1109/cdc.2012.6426231
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2013speed
+  title: Visual motion speed determines a behavioral switch from forward flight to expansion avoidance in Drosophila
+  authors: Reiser MB, Dickinson MH
+  year: 2013
+  date: 2012-11-29
+  venue: Journal of Experimental Biology
+  type: journal
+  doi: 10.1242/jeb.074732
+  pmid: 23197097
+  pillars: []
+  selected: false
+  links: {}
+
+- id: dombeck2012virtual
+  title: Real neuroscience in virtual worlds
+  authors: Dombeck DA, Reiser MB
+  year: 2012
+  date: 2011-12-02
+  venue: Current Opinion in Neurobiology
+  type: review
+  doi: 10.1016/j.conb.2011.10.015
+  pmid: 22138559
+  pillars: []
+  selected: false
+  links: {}
+
+- id: ofstad2011place
+  title: Visual place learning in Drosophila melanogaster
+  authors: Ofstad TA, Zuker CS, Reiser MB
+  year: 2011
+  date: 2011-06-08
+  venue: Nature
+  type: journal
+  doi: 10.1038/nature10131
+  pmid: 21654803
+  pmcid: PMC3169673
+  pillars: []
+  selected: false
+  links: {}
+
+- id: tuthill2011illusory
+  title: Neural correlates of illusory motion perception in Drosophila
+  authors: Tuthill JC, Chiappe ME, Reiser MB
+  year: 2011
+  date: 2011-05-17
+  venue: PNAS
+  type: journal
+  doi: 10.1073/pnas.1100062108
+  pmid: 21586635
+  pmcid: PMC3111268
+  pillars: []
+  selected: false
+  links: {}
+
+- id: chiappe2010walking
+  title: Walking modulates speed sensitivity in Drosophila motion vision
+  authors: Chiappe ME, Seelig JD, Reiser MB, Jayaraman V
+  year: 2010
+  date: 2010-07-22
+  venue: Current Biology
+  type: journal
+  doi: 10.1016/j.cub.2010.06.072
+  pmid: 20655222
+  pmcid: PMC4435946
+  pillars: []
+  selected: false
+  links: {}
+
+- id: seelig2010imaging
+  title: Two-photon calcium imaging from head-fixed Drosophila during optomotor walking behavior
+  authors: Seelig JD, Chiappe ME, Lott GK, Dutta A, Osborne JE, Reiser MB, Jayaraman V
+  year: 2010
+  date: 2010-06-06
+  venue: Nature Methods
+  type: journal
+  doi: 10.1038/nmeth.1468
+  pmid: 20526346
+  pmcid: PMC2945246
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2010straight
+  title: Drosophila fly straight by fixating objects in the face of expanding optic flow
+  authors: Reiser MB, Dickinson MH
+  year: 2010
+  date: 2010-05-04
+  venue: Journal of Experimental Biology
+  type: journal
+  doi: 10.1242/jeb.035147
+  pmid: 20435828
+  pmcid: PMC2861965
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2009ethomics
+  title: The ethomics era?
+  authors: Reiser M
+  year: 2009
+  date: 2009-05-30
+  venue: Nature Methods
+  type: review
+  doi: 10.1038/nmeth0609-413
+  pmid: 19478800
+  pillars: []
+  selected: false
+  links: {}
+
+- id: budick2007forward
+  title: The role of visual and mechanosensory cues in structuring forward flight in Drosophila melanogaster
+  authors: Budick SA, Reiser MB, Dickinson MH
+  year: 2007
+  date: 2007-11-21
+  venue: Journal of Experimental Biology
+  type: journal
+  doi: 10.1242/jeb.006502
+  pmid: 18025010
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2008display
+  title: A modular display system for insect behavioral neuroscience
+  authors: Reiser MB, Dickinson MH
+  year: 2008
+  date: 2007-08-03
+  venue: Journal of Neuroscience Methods
+  type: journal
+  doi: 10.1016/j.jneumeth.2007.07.019
+  pmid: 17854905
+  pillars: []
+  selected: false
+  links: {}
+
+- id: duistermars2007optomotor
+  title: Dynamic properties of large-field and small-field optomotor flight responses in Drosophila
+  authors: Duistermars BJ, Reiser MB, Zhu Y, Frye MA
+  year: 2007
+  date: 2007-06-06
+  venue: Journal of Comparative Physiology A
+  type: journal
+  doi: 10.1007/s00359-007-0233-y
+  pmid: 17551735
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2004compensatory
+  title: Vision as a compensatory mechanism for disturbance rejection in upwind flight
+  authors: Reiser MB, Humbert JS, Dunlop MJ, Del Vecchio D, Murray RM, Dickinson MH
+  year: 2004
+  date: 2004-06-30
+  venue: American Control Conference 2004
+  type: conference
+  doi: 10.23919/acc.2004.1383623
+  pillars: []
+  selected: false
+  links: {}
+
+- id: reiser2003testbed
+  title: A test bed for insect-inspired robotic control
+  authors: Reiser MB, Dickinson MH
+  year: 2003
+  date: 2003-10-15
+  venue: Philosophical Transactions of the Royal Society A
+  type: journal
+  doi: 10.1098/rsta.2003.1259
+  pmid: 14599319
+  pillars: []
+  selected: false
+  links: {}

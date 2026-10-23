@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Publications · Mockup {{ variant | upper }} · Reiser Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ v.fonts }}">
+<link rel="stylesheet" href="../../shared/base.css">
+<link rel="stylesheet" href="../../shared/{{ v.css }}">
+<link rel="stylesheet" href="../../shared/pubs.css">
+</head>
+<body class="variant-{{ variant }} page-pubs">
+
+<div class="mock-bar">
+  <span><strong>Mockup {{ variant | upper }}</strong> · {{ v.name }} · Publications</span>
+  <span class="mock-bar-links"><a href="../">home</a> <a href="../../a/publications/">A</a> <a href="../../b/publications/">B</a> <a href="../../c/publications/">C</a></span>
+</div>
+
+<header class="nav nav-solid">
+  <a class="wordmark" href="../"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
+  <nav class="nav-links">
+    {% for label, href in site.nav %}<a href="../#{{ label | lower }}"{% if label == 'Publications' %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
+  </nav>
+</header>
+
+<main class="pubs">
+  <div class="section-head pubs-head">
+    <p class="eyebrow">Publications</p>
+    <h1 class="h2">{{ publications | length }} papers, preprints and reviews</h1>
+    <p class="section-lede">Everything the lab has published since 2003, newest first. Preprints that were later published point to the journal version. Filter by what the paper is mostly about.</p>
+    <div class="filters" role="group" aria-label="Filter by pillar">
+      <button class="chip is-on" data-filter="all">All</button>
+      {% for p in site.pillars %}<button class="chip" data-filter="{{ p.key }}">{{ p.name }}</button>{% endfor %}
+      <button class="chip" data-filter="modeling">Modeling</button>
+      <button class="chip chip-type" data-filter="preprint">Preprints</button>
+    </div>
+  </div>
+
+  {% set ns = namespace(year=None) %}
+  {% for p in publications %}
+    {% if p.year != ns.year %}
+      {% if ns.year is not none %}</ol></section>{% endif %}
+      {% set ns.year = p.year %}
+      <section class="pub-year"><h2 class="year">{{ p.year }}</h2><ol class="pub-list">
+    {% endif %}
+    <li class="pub" id="{{ p.id }}" data-pillars="{{ p.pillars | join(' ') }}" data-type="{{ p.type }}">
+      <div class="pub-fig">
+        {% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.png','') | replace('.jpg','') }}-400.webp" alt="">
+        {% else %}<div class="pub-fig-empty" aria-hidden="true"><span>{{ p.venue }}</span></div>{% endif %}
+      </div>
+      <div class="pub-body">
+        <p class="pub-meta mono">{% if p.type == 'preprint' %}Preprint · {% elif p.type == 'review' %}Review · {% elif p.type == 'conference' %}Conference · {% endif %}{{ p.venue }}{% if p.date %} · {{ p.date | long_date }}{% endif %}</p>
+        <h3><a href="{{ p.links.doi or p.url }}">{{ p.title }}</a></h3>
+        <p class="pub-authors">{{ p.authors }}</p>
+        {% if p.summary %}<p class="pub-summary">{{ p.summary }}</p>{% endif %}
+        <p class="pub-links">
+          {% if p.links.doi %}<a href="{{ p.links.doi }}">journal</a>{% endif %}
+          {% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}
+          {% if p.preprint_of %}<a href="#{{ p.preprint_of }}">published version</a>{% endif %}
+          {% if p.pmcid %}<a href="https://pmc.ncbi.nlm.nih.gov/articles/{{ p.pmcid }}/">free full text</a>{% endif %}
+        </p>
+        <p class="tags">{% for t in p.pillars %}<span class="tag tag-{{ t }}">{{ t }}</span>{% endfor %}</p>
+      </div>
+    </li>
+  {% endfor %}
+  </ol></section>
+</main>
+
+<footer class="foot">
+  <p>© {{ built.year }} Reiser Lab · Updated {{ built | month_year }}.</p>
+</footer>
+
+<script>
+(function () {
+  const chips = document.querySelectorAll('.chip');
+  const pubs = document.querySelectorAll('.pub');
+  const years = document.querySelectorAll('.pub-year');
+  chips.forEach(c => c.addEventListener('click', () => {
+    chips.forEach(x => x.classList.toggle('is-on', x === c));
+    const f = c.dataset.filter;
+    pubs.forEach(p => {
+      const show = f === 'all' || p.dataset.pillars.split(' ').includes(f) || p.dataset.type === f;
+      p.hidden = !show;
+    });
+    years.forEach(y => { y.hidden = !y.querySelector('.pub:not([hidden])'); });
+  }));
+})();
+</script>
+</body>
+</html>

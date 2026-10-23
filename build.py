@@ -66,6 +66,7 @@ def load_data() -> dict:
     people = load_yaml("people.yaml")
     news = load_yaml("news.yaml")
     resources = load_yaml("resources.yaml")
+    join = load_yaml("join.yaml") if (DATA / "join.yaml").exists() else {}
 
     ids = set()
     for p in pubs:
@@ -116,6 +117,7 @@ def load_data() -> dict:
         "news": news,
         "resources": resources,
         "resource_groups": group_resources(resources, site.get("resource_groups", [])),
+        "join": join,
         "built": dt.date.today(),
     }
 
@@ -167,6 +169,7 @@ def copy_tree(src: Path, dst: Path, ignore=None) -> None:
 
 PAGES = [
     ("index.html", "index.html"),
+    ("publications.html", "publications/index.html"),
 ]
 
 
@@ -186,7 +189,9 @@ def render_pages(ctx: dict) -> None:
     env = make_env([TEMPLATES])
     for template_name, out_name in PAGES:
         html = env.get_template(template_name).render(**ctx)
-        (OUT / out_name).write_text(html)
+        target = OUT / out_name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(html)
 
 
 def render_mockups(ctx: dict) -> None:
@@ -198,10 +203,14 @@ def render_mockups(ctx: dict) -> None:
     copy_tree(MOCKUPS / "shared", out / "shared")
     copy_tree(MOCKUPS / "img", out / "img")
     copy_tree(MOCKUPS / "hero-frames", out / "hero-frames")
+    copy_tree(MOCKUPS / "media", out / "media")
     for key, v in variants.items():
         (out / key).mkdir(exist_ok=True)
         html = env.get_template("home.html").render(variant=key, v=v, **ctx)
         (out / key / "index.html").write_text(html)
+        (out / key / "publications").mkdir(exist_ok=True)
+        pubs = env.get_template("publications.html").render(variant=key, v=v, **ctx)
+        (out / key / "publications" / "index.html").write_text(pubs)
     index = env.get_template("mockups-index.html").render(variants=variants, **ctx)
     (out / "index.html").write_text(index)
 

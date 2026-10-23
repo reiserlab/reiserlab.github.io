@@ -1,0 +1,74 @@
+# Join page content. Draft 2026-10-23 from docs/research/join-page-research.md; every URL below was
+# fetched and verified on that date. Re-check deadlines each cycle (JHU: December 3; Cech Fellows: opens
+# November, closes mid-December).
+
+intro: >
+  We study how the fly visual system turns what the animal sees into what it does, working across anatomy,
+  behavior, neurophysiology, and the methods and instruments needed to connect them, with modeling throughout.
+  Current directions include connectome-guided circuit analysis and the automation and robotics of behavioral
+  and physiological experiments.
+
+sections:
+  - title: Postdocs
+    text: >
+      We are always glad to hear from potential postdocs; Janelia recruits year-round and postdocs here do not
+      write grants. Send a CV, a short statement (one page is plenty) of what you have done and what you would
+      like to do here, and the names of two or three references. Open positions, when we have them, are also
+      posted on the Janelia job listing.
+    links:
+      - [Janelia postdocs, https://www.janelia.org/you-janelia/students-postdocs/postdoctoral-associates]
+      - [Janelia job listing, "https://hhmi.wd1.myworkdayjobs.com/External?locations=d48b8f09725a105a7c43ec0c1b9f4993"]
+
+  - title: Graduate students
+    text: >
+      PhD students join through the Janelia and Johns Hopkins programs: the Joint Graduate Program in
+      Neuroscience or the Cross Disciplinary Graduate Program in Biomedical Sciences (XDBio). You apply to Johns
+      Hopkins (deadline December 3), name the Janelia labs you are interested in, spend the first year in
+      Baltimore, and rotate at Janelia the following summer before thesis work here. Johns Hopkins students
+      interested in a rotation should write to us directly.
+    links:
+      - [Joint Graduate Program in Neuroscience, https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program]
+      - [How to apply, https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program/application-details]
+      - [XDBio, https://www.janelia.org/cross-disciplinary-graduate-program-in-biomedical-sciences-xdbio]
+
+  - title: Undergraduates
+    text: >
+      Summer undergraduate research at Janelia runs through the HHMI Cech Fellows Program: nine weeks, a stipend,
+      and on-campus housing. Applications open in November for the following summer. Apply through HHMI; the
+      program asks that you not contact labs about your application.
+    links:
+      - [Cech Fellows Program, https://www.hhmi.org/programs/cech-fellows]
+      - [Undergraduate life at Janelia, https://www.janelia.org/you-janelia/students-postdocs/undergraduate-scholars-program/undergraduate-life-at-janelia]
+
+  - title: Scientific Computing Associates
+    text: >
+      Early-career programmers can work with the lab through Janelia's Scientific Computing Associate (SCA)
+      program, a two-year appointment embedded in a lab and in the Scientific Computing team, building real
+      research software with an open-source portfolio.
+    links:
+      - [Scientific Computing Associates, https://www.janelia.org/support-team/scientific-computing/scientific-computing-associates]
+      - [Theory Fellows, https://www.janelia.org/content/janelia-theory-fellow-program]
+
+  - title: Visiting scientists and collaborators
+    text: >
+      Janelia's Visiting Scientist Program supports stays from a week a month to a full sabbatical and covers
+      travel and housing. Contact us before submitting a proposal; proposals are accepted at any time.
+    links:
+      - [Visiting Scientist Program, https://www.janelia.org/you-janelia/visiting-scientists]
+      - [FAQ, https://www.janelia.org/you-janelia/visiting-scientists/frequently-asked-questions]
+
+  - title: Engineers and technicians
+    text: >
+      The lab builds its own instruments, from display arenas to automated behavior rigs. Engineering and
+      technician roles are posted on the Janelia job listing; if nothing is listed, email us anyway.
+    links:
+      - [Janelia job listing, "https://hhmi.wd1.myworkdayjobs.com/External?locations=d48b8f09725a105a7c43ec0c1b9f4993"]
+      - [Life at Janelia, https://www.janelia.org/about-us/campus-amenities]
+
+look_for:
+  - Curiosity about how real brains produce real behavior, not just a method.
+  - Comfort with quantitative work and a willingness to learn to code if you do not already.
+  - A builder's attitude: fixing, measuring, and improving the apparatus is part of the science.
+  - Openness: we share tools, data, and code, and we expect the same.
+
+updated: 2026-10-23

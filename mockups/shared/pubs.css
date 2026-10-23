@@ -1,0 +1,33 @@
+/* Publications page for the mockups: a Distill-style list with a year rail. */
+.page-pubs { background: var(--ground); }
+.nav-solid { position: static; background: var(--ground); color: var(--ink); border-bottom: 1px solid var(--rule); backdrop-filter: none; }
+.pubs { padding: 56px max(var(--gutter), calc((100vw - var(--max)) / 2)) 80px; }
+.pubs-head { max-width: 760px; margin-bottom: 44px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.chip { font: 600 12.5px/1 var(--sans); letter-spacing: 0.04em; padding: 9px 13px; border: 1px solid var(--rule); background: transparent; color: var(--ink); border-radius: 999px; cursor: pointer; }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip.is-on { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+.chip-type { margin-left: 10px; }
+.pub-year { display: grid; grid-template-columns: 120px 1fr; gap: 0 32px; padding-top: 28px; border-top: 1px solid var(--rule); margin-top: 8px; }
+.year { font: var(--h3-font); font-size: 15px; letter-spacing: 0.12em; color: var(--accent); padding-top: 4px; }
+.pub-list { list-style: none; margin: 0; padding: 0; }
+.pub { display: grid; grid-template-columns: 132px 1fr; gap: 20px; padding: 0 0 26px; margin-bottom: 26px; border-bottom: 1px solid var(--rule); }
+.pub:last-child { border-bottom: 0; }
+.pub-fig img, .pub-fig-empty { width: 132px; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); display: block; }
+.pub-fig-empty { display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--ink) 6%, transparent); color: var(--muted); font: 500 11px/1.2 var(--mono); text-align: center; padding: 8px; letter-spacing: 0.04em; }
+.pub-meta { color: var(--accent); margin-bottom: 6px; }
+.pub h3 { font: var(--h3-font); font-size: 18px; }
+.pub h3 a { text-decoration: none; }
+.pub h3 a:hover { color: var(--accent); }
+.pub-authors { font-size: 14px; line-height: 1.45; color: var(--muted); margin-top: 6px; }
+.pub-summary { font-size: 15px; margin-top: 8px; }
+.pub-links { margin-top: 8px; font-size: 13px; }
+.pub-links a { margin-right: 12px; text-decoration: none; border-bottom: 1px solid var(--rule); }
+.pub-links a:hover { border-color: var(--accent); color: var(--accent); }
+.pub .tags { margin-top: 8px; }
+@media (max-width: 760px) {
+  .pub-year { grid-template-columns: 1fr; }
+  .year { margin-bottom: 14px; }
+  .pub { grid-template-columns: 1fr; gap: 12px; }
+  .pub-fig img, .pub-fig-empty { width: 100%; max-width: 320px; }
+}

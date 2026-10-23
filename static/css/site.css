@@ -36,3 +36,7 @@ a:hover { color: var(--accent); }
 .ph-foot { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 15px; }
 .ph-foot p { margin: 6px 0; }
 .ph-built { font-size: 13px; }
+
+.ph-more { margin-top: 14px; font-weight: 600; }
+.ph-pubs li { padding: 10px 0; }
+.ph-links a { font-size: 13px; margin-right: 10px; color: var(--muted); }

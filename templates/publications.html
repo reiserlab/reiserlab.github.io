@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Publications · {{ site.title }}{% endblock %}
+{% block bodyclass %}placeholder{% endblock %}
+{% block body %}
+<main class="ph">
+  <header class="ph-head">
+    <p class="ph-eyebrow"><a href="/">Reiser Lab</a> · {{ site.institution }}</p>
+    <h1 class="ph-title">Publications</h1>
+    <p class="ph-tagline">{{ publications | length }} papers, preprints and reviews, 2003 to {{ publications[0].year }}. Preprints that were later published link to the journal version.</p>
+  </header>
+  {% set ns = namespace(year=None) %}
+  {% for p in publications %}
+    {% if p.year != ns.year %}
+      {% if ns.year is not none %}</ul></section>{% endif %}
+      {% set ns.year = p.year %}
+      <section class="ph-section"><h2 class="ph-h2">{{ p.year }}</h2><ul class="ph-list ph-pubs">
+    {% endif %}
+    <li>
+      <a href="{{ p.links.doi or p.url }}">{{ p.title }}</a>
+      <span class="ph-line"> {{ p.authors }}. <em>{{ p.venue }}</em>{% if p.type == 'preprint' %} (preprint){% elif p.type == 'review' %} (review){% elif p.type == 'conference' %} (conference){% endif %}.</span>
+      <span class="ph-links">{% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}{% if p.preprint_of %}<a href="#{{ p.preprint_of }}">published version</a>{% endif %}</span>
+    </li>
+  {% endfor %}
+  </ul></section>
+  <footer class="ph-foot">
+    <p><a href="/">Home</a> · <a href="{{ site.links.github }}">GitHub</a> · <a href="{{ site.links.janelia }}">Janelia</a></p>
+    <p class="ph-built">Updated {{ built | month_year }}</p>
+  </footer>
+</main>
+{% endblock %}

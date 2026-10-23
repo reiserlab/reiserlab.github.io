@@ -3,7 +3,7 @@ title: Reiser Lab
 domain: reiserlab.org
 # Set to true only after the Cloudflare DNS records point at GitHub Pages (see docs/plan.md section 2).
 domain_live: false
-tagline: We study how flies see, from the structure of the eye to the circuits that drive behavior.
+tagline: We study fly vision to understand how brains work and where behavior comes from.
 institution: Janelia Research Campus, Howard Hughes Medical Institute
 address: 19700 Helix Drive, Ashburn, Virginia 20147, USA
 email: reiserm@janelia.hhmi.org
@@ -22,7 +22,8 @@ pillars:
   - key: methods
     name: Methods
     line: Instruments, displays and software we build and share.
-modeling_line: Modeling runs through all of it, from single dendrites to whole-brain pathways.
+modeling_line: Flies see and do remarkable things, and the fly visual system is where a complete wiring diagram, genetic access to identified neurons and precise behavior can be studied together. Modeling runs through all of it.
+focus_line: Our current focus is adding functional depth to the anatomy we have mapped, and building experimental automation, robotics and AI-accelerated instruments to measure and perturb identified cell types at scale.
 
 nav:
   - [Research, /research/]

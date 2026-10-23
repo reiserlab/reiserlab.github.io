@@ -4,7 +4,7 @@
   --max: 1180px;
   --gutter: 20px;
   --radius: 2px;
-  --hero-height: 520vh;
+  --hero-height: 200vh;   /* was 520vh then 300vh; one viewport of scrub, as on the best product pages */
 }
 
 * { box-sizing: border-box; }
@@ -62,6 +62,8 @@ h1, h2, h3, p { margin: 0; }
 .statement { padding: 96px max(var(--gutter), calc((100vw - var(--max)) / 2)) 40px; }
 .statement-text { font: var(--statement-font); letter-spacing: -0.01em; max-width: 30em; }
 .statement-modeling { color: var(--muted); }
+.statement-focus { margin-top: 28px; max-width: 42em; font-size: 19px; line-height: 1.5; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .loop { display: none; } }
 
 /* generic section padding */
 .pillars, .resources, .papers, .news, .join { padding: 72px max(var(--gutter), calc((100vw - var(--max)) / 2)); }
@@ -69,8 +71,8 @@ h1, h2, h3, p { margin: 0; }
 /* pillars */
 .pillar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .pillar { position: relative; display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--radius); text-decoration: none; color: #fff; background: #000; }
-.pillar img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.6s ease, opacity 0.4s; }
-.pillar:hover img { transform: scale(1.04); opacity: 1; }
+.pillar img, .pillar video { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: transform 0.6s ease, opacity 0.4s; }
+.pillar:hover img, .pillar:hover video { transform: scale(1.04); opacity: 1; }
 .pillar-text { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px; background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0)); }
 .pillar-num { font-family: var(--mono); font-size: 12px; opacity: 0.7; }
 .pillar h3 { font: var(--h3-font); margin: 4px 0 6px; }
@@ -83,7 +85,7 @@ h1, h2, h3, p { margin: 0; }
 .resources .section-lede { color: var(--band-muted); }
 .resource-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .resource { text-decoration: none; display: block; }
-.resource img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; border-radius: var(--radius); }
+.resource img, .resource video { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; border-radius: var(--radius); display: block; }
 .resource h3 { font: var(--h3-font); margin: 14px 0 6px; }
 .resource p { font-size: 14.5px; line-height: 1.45; color: var(--band-muted); }
 .resource .mono { display: inline-block; margin-top: 8px; color: var(--band-accent); }
@@ -121,10 +123,16 @@ h1, h2, h3, p { margin: 0; }
 .join { background: var(--band); color: var(--band-ink); }
 .join .eyebrow { color: var(--band-accent); }
 .join .section-lede { color: var(--band-muted); }
-.join-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: end; }
+.join-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 32px; margin-top: 8px; }
+.join-item h3 { font: var(--h3-font); margin-bottom: 8px; }
+.join-item p { font-size: 15.5px; line-height: 1.5; color: var(--band-muted); }
+.join-links { margin-top: 8px; }
+.join-links a { display: inline-block; margin: 0 14px 4px 0; font-size: 14px; font-weight: 600; color: var(--band-ink); text-decoration: none; border-bottom: 1px solid var(--band-accent); }
+.join-lookfor ul { margin: 0 0 16px; padding-left: 18px; font-size: 15.5px; line-height: 1.5; color: var(--band-muted); }
+.join-lookfor li { margin-bottom: 6px; }
 .join .button { border-color: var(--band-ink); color: var(--band-ink); }
 .join .button:hover { background: var(--band-ink); color: var(--band); }
-.join-meta { color: var(--band-muted); font-size: 15px; line-height: 1.6; }
-.join-meta a { color: var(--band-ink); }
-@media (max-width: 760px) { .join-inner { grid-template-columns: 1fr; } }
+.join-meta { margin-top: 14px; font-size: 14px; }
+@media (max-width: 900px) { .join-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .join-grid { grid-template-columns: 1fr; } }
 .foot { padding: 28px max(var(--gutter), calc((100vw - var(--max)) / 2)) 64px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); }
