@@ -32,6 +32,9 @@ Older papers from the 2015 Janelia page that had thumbnails (reference only, re-
 
 Papers where the proposer could not see full captions: Hoeller 2026, Berg 2026, Strother 2017, Klapoetke 2022 (publisher pages blocked scripted access; picks use figure titles, main text, and the preprint legends). Later figures of the mitochondria and LPC1 preprints were not read.
 
+### First pass done (2026-10-23)
+Crops of the proposed panels for 14 papers are in `media/figures/` and show on the publication pages and home cards; credits are in `media/credits.yaml`. Source figures and movies (557 MB) are in `media/sources/<paper id>/` with a `SOURCES.md` each. Panels used: Hoeller 6C, Berg 1G (descending neurons; 1B whole-CNS render is an alternative), Zhao 2025 3b, Nern 2a, Vaxenburg 1e, Erginkaya 1c, Zhao 2024 3A, Longden 8a, Isaacson 2023 2A, Kladt 1C, Isaacson 2022 1B, Loesche 1A, Kind 4Dv–vi, Morimoto 5F. Weakest at thumbnail size: Longden 8a (small source), Erginkaya 1c (low resolution), Kind 4D (dim). Not yet done: Gruntman 2018/2019, Strother 2017/2018, Klapoetke 2017/2022 (non-CC; need the lab's own figure files), and the older papers.
+
 ## 2. Videos
 
 ### From the papers (best looping candidates first)

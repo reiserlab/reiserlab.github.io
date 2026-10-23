@@ -15,7 +15,8 @@
       {% set ns.year = p.year %}
       <section class="ph-section"><h2 class="ph-h2">{{ p.year }}</h2><ul class="ph-list ph-pubs">
     {% endif %}
-    <li>
+    <li class="ph-pub{% if p.figure %} has-fig{% endif %}">
+      {% if p.figure %}<img class="ph-fig" src="/media/figures/{{ p.figure | replace('.jpg','') | replace('.png','') }}-400.webp" alt="" loading="lazy">{% endif %}
       <a href="{{ p.links.doi or p.url }}">{{ p.title }}</a>
       <span class="ph-line"> {{ p.authors }}.{% if p.type == 'preprint' %} Preprint.{% elif p.type == 'review' %} Review.{% elif p.type == 'conference' %} Conference paper.{% endif %}</span>
       <span class="ph-links">{% if p.doi %}<a href="https://doi.org/{{ p.doi }}">doi</a>{% endif %}{% for k, url in p.links.items() if k != 'doi' %}<a href="{{ url }}">{{ k }}</a>{% endfor %}{% if p.pmcid %}<a href="https://pmc.ncbi.nlm.nih.gov/articles/{{ p.pmcid }}/">free full text</a>{% endif %}</span>

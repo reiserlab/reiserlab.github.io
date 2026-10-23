@@ -107,7 +107,7 @@
     {% set pimgs = ['t4_brain-neuropil', 'eyemap_neurons-medulla', 'eyemap_lens-directions', 't4_t4-cells'] %}
     {% for p in selected[:4] %}
     <article class="paper">
-      <a class="paper-fig" href="{{ p.links.doi }}"><img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy"></a>
+      <a class="paper-fig" href="{{ p.links.doi }}">{% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.jpg','') | replace('.png','') }}-800.webp" alt="{{ p.figure_caption }}" loading="lazy">{% else %}<img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy">{% endif %}</a>
       <div class="paper-text">
         <p class="paper-venue"><span class="mono">{{ p.date | long_date if p.date else p.year }}</span></p>
         <h3><a href="{{ p.links.doi }}">{{ p.title }}</a></h3>
