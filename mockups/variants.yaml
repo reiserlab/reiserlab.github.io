@@ -18,3 +18,24 @@ c:
   subtitle: White, large tight display type, generous whitespace, images as wide bands. Violet accent from the lamina with the eye red as a second.
   fonts: "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap"
   css: c.css
+
+d:
+  name: Dark instrument, then paper
+  subtitle: Warm near-black hero with a small mono label and the question bottom-left; releases to off-white paper with a narrow left rail of mono labels (Flatiron skeleton) and a Distill-style paper list. Instrument Sans, Newsreader, IBM Plex Mono.
+  fonts: "https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+  css: d.css
+  layout: rail
+
+e:
+  name: Warm scientific journal
+  subtitle: Dark hero, then cream paper and a display serif. A split panel after the hero (tall specimen plate beside one flat rust field), Quanta-style eyebrow labels, a ruled paper list with mono dates. Fraunces, Source Serif 4, JetBrains Mono.
+  fonts: "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap"
+  css: e.css
+  layout: journal
+
+f:
+  name: Numbered plates
+  subtitle: Oatmeal page. Pillars as full-width flat color bands with the name set huge; papers as numbered plates with the figure inside and mono tags; news as a label-date-title list. Archivo, JetBrains Mono.
+  fonts: "https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Archivo+Black&family=JetBrains+Mono:wght@400;500&display=swap"
+  css: f.css
+  layout: plates

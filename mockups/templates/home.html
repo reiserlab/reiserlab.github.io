@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="../shared/base.css">
 <link rel="stylesheet" href="../shared/{{ v.css }}">
 </head>
-<body class="variant-{{ variant }}">
+<body class="variant-{{ variant }} layout-{{ v.layout | default("cards") }}">
 
 <div class="mock-bar">
   <span><strong>Mockup {{ variant | upper }}</strong> · {{ v.name }}</span>
-  <span class="mock-bar-links"><a href="../a/">A</a> <a href="../b/">B</a> <a href="../c/">C</a> <a href="../">about these mockups</a></span>
+  <span class="mock-bar-links"><a href="../a/">A</a> <a href="../b/">B</a> <a href="../c/">C</a> <a href="../d/">D</a> <a href="../e/">E</a> <a href="../f/">F</a> <a href="../">about these mockups</a></span>
 </div>
 
 <header class="nav">
@@ -51,18 +51,48 @@
   </div>
 </section>
 
-<section class="statement">
-  <p class="statement-text">{{ site.tagline }} <span class="statement-modeling">{{ site.modeling_line }}</span></p>
-  <p class="statement-focus">{{ site.focus_line }}</p>
+{% if v.layout == 'journal' %}
+<section class="split">
+  <div class="split-plate"><img src="../img/eyemap_lens-directions.jpg" alt="Lens centers and viewing directions mapped on the eye"></div>
+  <div class="split-field">
+    <p class="eyebrow eyebrow-light">The lab in one paragraph</p>
+    <p class="split-text">{{ site.tagline }} {{ site.modeling_line }}</p>
+    <p class="split-focus">{{ site.focus_line }}</p>
+  </div>
 </section>
+{% else %}
+<section class="statement">
+  <div class="rail"><span class="rail-label">About</span></div>
+  <div class="statement-body">
+    <p class="statement-text">{{ site.tagline }} <span class="statement-modeling">{{ site.modeling_line }}</span></p>
+    <p class="statement-focus">{{ site.focus_line }}</p>
+  </div>
+</section>
+{% endif %}
 
+{% set vids = {'anatomy': 'tile-anatomy', 'behavior': 'tile-behavior', 'neurophysiology': 'tile-neurophys', 'methods': 'tile-methods'} %}
+{% if v.layout == 'plates' %}
+<section class="bands" id="research">
+  {% for p in site.pillars %}
+  <a class="band band-{{ p.key }}" href="#research">
+    <div class="band-text">
+      <span class="band-num mono">0{{ loop.index }} / 04</span>
+      <h2 class="band-title">{{ p.name }}</h2>
+      <p class="band-line">{{ p.line }}</p>
+    </div>
+    <video class="loop band-media" muted loop playsinline autoplay preload="metadata" poster="../media/{{ vids[p.key] }}.jpg"><source src="../media/{{ vids[p.key] }}.mp4" type="video/mp4"></video>
+  </a>
+  {% endfor %}
+</section>
+{% else %}
 <section class="pillars" id="research">
+  <div class="rail"><span class="rail-label">What we do</span></div>
+  <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">What we do</p>
     <h2 class="h2">Four ways in</h2>
   </div>
   <div class="pillar-grid">
-    {% set vids = {'anatomy': 'tile-anatomy', 'behavior': 'tile-behavior', 'neurophysiology': 'tile-neurophys', 'methods': 'tile-methods'} %}
     {% for p in site.pillars %}
     <a class="pillar pillar-{{ p.key }}" href="#research">
       <video class="loop" muted loop playsinline autoplay preload="metadata" poster="../media/{{ vids[p.key] }}.jpg"><source src="../media/{{ vids[p.key] }}.mp4" type="video/mp4"></video>
@@ -74,9 +104,13 @@
     </a>
     {% endfor %}
   </div>
+  </div>
 </section>
+{% endif %}
 
 <section class="resources" id="resources">
+  <div class="rail"><span class="rail-label">Resources</span></div>
+  <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">Resources</p>
     <h2 class="h2">Tools and data we share</h2>
@@ -96,9 +130,12 @@
     {% endfor %}
   </div>
   <p class="more"><a href="#resources">All resources</a></p>
+  </div>
 </section>
 
 <section class="papers" id="publications">
+  <div class="rail"><span class="rail-label">Papers</span></div>
+  <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">Recent papers</p>
     <h2 class="h2">Selected work</h2>
@@ -109,7 +146,7 @@
     <article class="paper">
       <a class="paper-fig" href="{{ p.links.doi }}">{% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.jpg','') | replace('.png','') }}-800.webp" alt="{{ p.figure_caption }}" loading="lazy">{% else %}<img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy">{% endif %}</a>
       <div class="paper-text">
-        <p class="paper-venue"><span class="mono">{{ p.date | long_date if p.date else p.year }}</span></p>
+        <p class="paper-venue"><span class="mono">{% if v.layout == 'plates' %}#{{ '%02d' % (publications | length - loop.index0) }} · {% endif %}{{ p.date | long_date if p.date else p.year }}</span></p>
         <h3><a href="{{ p.links.doi }}">{{ p.title }}</a></h3>
         <p class="paper-authors">{{ p.authors }}</p>
         <p class="paper-links">
@@ -122,9 +159,12 @@
     {% endfor %}
   </div>
   <p class="more"><a href="publications/">All {{ publications | length }} publications</a></p>
+  </div>
 </section>
 
 <section class="news" id="news">
+  <div class="rail"><span class="rail-label">News</span></div>
+  <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">News</p>
     <h2 class="h2">Recently</h2>
@@ -137,9 +177,12 @@
     </li>
     {% endfor %}
   </ul>
+  </div>
 </section>
 
 <section class="join" id="join">
+  <div class="rail"><span class="rail-label">Join</span></div>
+  <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">Join</p>
     <h2 class="h2">Work with us</h2>
@@ -159,6 +202,7 @@
       <p><a class="button" href="mailto:{{ site.email }}">Write to Michael</a></p>
       <p class="join-meta">{{ site.institution }}<br>{{ site.address }}</p>
     </div>
+  </div>
   </div>
 </section>
 

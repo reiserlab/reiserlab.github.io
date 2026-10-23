@@ -1,0 +1,87 @@
+/* Variant F — Numbered plates.
+   Oatmeal page. Pillars as full-width flat color bands with the name set huge; papers as numbered
+   plates with the figure inside and mono tags; news as a label-date-title list. */
+:root {
+  --ground: #efece6;
+  --ink: #141414;
+  --muted: #5f5f5f;
+  --rule: rgba(20, 20, 20, 0.14);
+  --accent: #141414;
+  --band: #141414;
+  --band-ink: #efece6;
+  --band-muted: #b9b6af;
+  --band-accent: #e0b35a;
+  --nav-ink: #efece6;
+  --nav-bg: transparent;
+  --hero-scrim: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
+  --hero-accent: #e0b35a;
+  --hero-muted: rgba(239,236,230,0.85);
+  --stop-align: end;
+
+  /* restrained plate family */
+  --plate-1: #243b5a;   /* ink blue */
+  --plate-2: #8c3b2a;   /* oxide red */
+  --plate-3: #b58b2e;   /* ochre */
+  --plate-4: #2f5a46;   /* bottle green */
+
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --black: "Archivo Black", "Archivo", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --wordmark-font: 900 18px/1 var(--sans);
+  --wordmark-tracking: -0.03em;
+  --wordmark-case: uppercase;
+  --display-font: 900 clamp(44px, 6.8vw, 100px)/0.95 var(--sans);
+  --display-tracking: -0.04em;
+  --h2-font: 900 clamp(30px, 3.6vw, 52px)/1.0 var(--sans);
+  --h2-tracking: -0.035em;
+  --h3-font: 700 18px/1.25 var(--sans);
+  --statement-font: 500 clamp(22px, 2.4vw, 34px)/1.3 var(--sans);
+  --radius: 0px;
+}
+.eyebrow { font-family: var(--mono); font-weight: 500; letter-spacing: 0.12em; color: var(--muted); }
+.stop .eyebrow { color: var(--hero-accent); }
+.nav-links a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.statement-text { letter-spacing: -0.02em; }
+.statement-modeling { color: var(--muted); font-weight: 400; }
+
+/* bands: full-width flat color, name huge, loop on the right */
+.bands { display: block; }
+.band { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 32px; min-height: 440px; padding: 56px max(var(--gutter), calc((100vw - var(--max)) / 2)); color: #f3efe7; text-decoration: none; }
+.band-anatomy { background: var(--plate-1); }
+.band-behavior { background: var(--plate-2); }
+.band-neurophysiology { background: var(--plate-3); color: #141414; }
+.band-methods { background: var(--plate-4); }
+.band-num { display: block; margin-bottom: 14px; font-size: 12px; letter-spacing: 0.12em; opacity: 0.8; }
+.band-title { font: 900 clamp(48px, 8vw, 128px)/0.9 var(--sans); letter-spacing: -0.045em; text-transform: uppercase; }
+.band-line { margin-top: 18px; font-size: clamp(17px, 1.5vw, 21px); max-width: 26em; opacity: 0.9; }
+.band-media { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+@media (max-width: 760px) { .band { grid-template-columns: 1fr; min-height: 0; } }
+
+/* resources as plates on the dark band */
+.resource h3 { font: 700 19px/1.25 var(--sans); }
+.resources .mono { color: var(--band-accent); }
+
+/* papers: numbered plates with the figure inside */
+.paper-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.paper { display: block; background: #e3dfd6; padding: 16px; }
+.paper:nth-child(4n+1) { background: #d9dde4; }
+.paper:nth-child(4n+2) { background: #e7d8d3; }
+.paper:nth-child(4n+3) { background: #ebe3cf; }
+.paper:nth-child(4n+4) { background: #d8e1dc; }
+.paper .paper-fig img { aspect-ratio: 16 / 10; }
+.paper-venue { margin: 14px 0 6px; color: var(--ink); }
+.paper h3 { font: 700 20px/1.25 var(--sans); letter-spacing: -0.02em; }
+.paper-links a { border-color: rgba(20,20,20,0.3); }
+.tag { border-color: rgba(20,20,20,0.25); color: var(--ink); }
+@media (max-width: 900px) { .paper-grid { grid-template-columns: 1fr; } }
+
+/* news: label left, date right */
+.news-list li { grid-template-columns: 1fr 160px; }
+.news-date { order: 2; text-align: right; }
+.news-body { order: 1; }
+.news .tag { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+@media (max-width: 560px) { .news-date { order: 0; text-align: left; } }
+
+/* join: dark band with the gold accent */
+.join .button { border-color: var(--band-ink); color: var(--band-ink); }
+.join .button:hover { background: var(--band-ink); color: var(--band); }

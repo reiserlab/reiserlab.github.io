@@ -136,3 +136,10 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 900px) { .join-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .join-grid { grid-template-columns: 1fr; } }
 .foot { padding: 28px max(var(--gutter), calc((100vw - var(--max)) / 2)) 64px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); }
+
+/* layout hooks: inert unless a variant styles them */
+.rail { display: none; }
+.section-body { display: contents; }
+.statement-body { display: contents; }
+.split { display: none; }
+.bands { display: block; }
