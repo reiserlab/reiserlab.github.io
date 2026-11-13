@@ -181,6 +181,8 @@
   doi: 10.1101/2024.04.21.590464
   pmid: 42395513
   pmcid: PMC13320868
+  figure: longden2026mitochondria.jpg
+  figure_caption: "Fig. 1D, MBON13 neuron (yellow) with its segmented mitochondria (dark)"
   pillars:
   - anatomy
   selected: false
@@ -249,6 +251,8 @@
   doi: 10.7554/eLife.90133
   pmid: 38180023
   pmcid: PMC10942767
+  figure: xu2024homeodomain.jpg
+  figure_caption: "Fig. 1A-B', lamina neurogenesis: Tll, Elav, Dac and Chaoptin staining at 15-16 h APF"
   pillars:
   - anatomy
   selected: false
@@ -382,6 +386,8 @@
   type: review
   doi: 10.1016/j.cub.2022.06.061
   pmid: 35839763
+  figure: shinomiya2022circuits.jpg
+  figure_caption: "Fig. 3C, EM reconstruction of the VS lobula plate tangential cells, posterior view"
   pillars:
   - anatomy
   selected: false
@@ -397,6 +403,8 @@
   type: journal
   doi: 10.1016/j.neuron.2022.02.013
   pmid: 35290791
+  figure: klapoetke2022featuremap.jpg
+  figure_caption: "Fig. 4A, optic glomeruli in the PVLP, color-coded by LC cell type"
   pillars:
   - anatomy
   - neurophysiology
@@ -461,6 +469,8 @@
   type: journal
   doi: 10.1016/j.cub.2021.09.072
   pmid: 34672960
+  figure: gruntman2021contrast.jpg
+  figure_caption: "Fig. 2A, T4 and T5 responses to preferred- and non-preferred-contrast bar flashes across the receptive field"
   pillars:
   - neurophysiology
   selected: false
@@ -593,6 +603,8 @@
   doi: 10.7554/eLife.50901
   pmid: 31939737
   pmcid: PMC7034979
+  figure: davis2020resource.jpg
+  figure_caption: "Fig. 1D, expression patterns of 24 cell-type-specific driver lines (GFP green, neuropil magenta)"
   pillars:
   - modeling
   selected: false
@@ -609,6 +621,8 @@
   doi: 10.7554/eLife.50706
   pmid: 31825313
   pmcid: PMC6917495
+  figure: gruntman2019t5.jpg
+  figure_caption: "Fig. 1D, whole-cell responses of a T5 neuron to a dark bar moving in eight directions"
   pillars:
   - neurophysiology
   - modeling
@@ -655,6 +669,8 @@
   venue: arXiv
   type: preprint
   url: https://arxiv.org/abs/1806.04793
+  figure: tschopp2018hexagonal.jpg
+  figure_caption: "Fig. 5a, connectome-initialized network after training, nodes colored by direction selectivity index (T4 cells selective)"
   pillars:
   - anatomy
   - modeling
@@ -674,6 +690,8 @@
   doi: 10.1038/s41593-017-0046-4
   pmid: 29311742
   pmcid: PMC5967973
+  figure: gruntman2018t4.jpg
+  figure_caption: "Fig. 5a, T4 reconstruction with modeled excitatory and inhibitory synapses"
   pillars:
   - neurophysiology
   - modeling
@@ -690,6 +708,8 @@
   doi: 10.1073/pnas.1703090115
   pmid: 29255026
   pmcid: PMC5776785
+  figure: strother2018state.jpg
+  figure_caption: "Fig. 3A, octopamine neuron driver line: expression pattern and multicolor stochastic labeling"
   pillars:
   - neurophysiology
   - behavior
@@ -706,6 +726,8 @@
   doi: 10.1038/nature24626
   pmid: 29120418
   pmcid: PMC7457385
+  figure: klapoetke2017looming.jpg
+  figure_caption: "Fig. 1a, single LPLC2 neurons (green and magenta) in the lobula and lobula plate"
   pillars:
   - neurophysiology
   - anatomy
@@ -722,6 +744,8 @@
   type: journal
   doi: 10.1016/j.cell.2017.06.032
   pmid: 28709004
+  figure: robie2017mapping.jpg
+  figure_caption: "Fig. 7A, brain regions whose expression correlates with increased walking (supervoxels colored by p value)"
   pillars:
   - behavior
   selected: false
@@ -737,6 +761,8 @@
   type: journal
   doi: 10.1016/j.neuron.2017.03.010
   pmid: 28384470
+  figure: strother2017emergence.jpg
+  figure_caption: "Fig. 2A, split-GAL4 driver lines for the T4 input neurons Mi1, Tm3, Mi4 and Mi9"
   pillars:
   - neurophysiology
   - anatomy
@@ -752,6 +778,8 @@
   type: review
   doi: 10.1016/j.cub.2017.02.047
   pmid: 28376331
+  figure: longden2017sensorimotor.jpg
+  figure_caption: "Fig. 1A, fly brain with an octopaminergic projection neuron, HS and VS cells, and ascending and descending interneurons"
   pillars:
   - behavior
   selected: false
@@ -768,6 +796,8 @@
   doi: 10.7554/eLife.21022
   pmid: 28029094
   pmcid: PMC5293491
+  figure: wu2016lc.jpg
+  figure_caption: "Fig. 3A-B, LC neuron populations and their optic glomeruli, color-coded by cell type"
   pillars:
   - anatomy
   - behavior
@@ -784,6 +814,8 @@
   type: review
   doi: 10.1038/nature14209
   pmid: 25739498
+  figure: florence2015temperature.jpg
+  figure_caption: "Fig. 1, the flow of temperature information in the fly brain (thermoreceptor and projection neuron pathways)"
   pillars:
   - behavior
   selected: false
@@ -799,6 +831,8 @@
   type: journal
   doi: 10.1016/j.neuron.2014.04.023
   pmid: 24853944
+  figure: tuthill2014feedback.jpg
+  figure_caption: "Fig. 1D, multicolor labeling of the Lawf2 population in medulla layers M1 and M9"
   pillars:
   - anatomy
   selected: false

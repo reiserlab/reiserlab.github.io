@@ -35,6 +35,9 @@ Papers where the proposer could not see full captions: Hoeller 2026, Berg 2026, 
 ### First pass done (2026-10-23)
 Crops of the proposed panels for 14 papers are in `media/figures/` and show on the publication pages and home cards; credits are in `media/credits.yaml`. Source figures and movies (557 MB) are in `media/sources/<paper id>/` with a `SOURCES.md` each. Panels used: Hoeller 6C, Berg 1G (descending neurons; 1B whole-CNS render is an alternative), Zhao 2025 3b, Nern 2a, Vaxenburg 1e, Erginkaya 1c, Zhao 2024 3A, Longden 8a, Isaacson 2023 2A, Kladt 1C, Isaacson 2022 1B, Loesche 1A, Kind 4Dv–vi, Morimoto 5F. Weakest at thumbnail size: Longden 8a (small source), Erginkaya 1c (low resolution), Kind 4D (dim). Not yet done: Gruntman 2018/2019, Strother 2017/2018, Klapoetke 2017/2022 (non-CC; need the lab's own figure files), and the older papers.
 
+### Every paper has a figure (2026-11-13)
+All 47 listed papers now carry a thumbnail in `media/figures/`, with source, license and a quality note per file in `media/credits.yaml`. The 33 added today came mostly from the lab's own figure files and published PDFs in `WORK/PAPERS/`. Weak or source-limited ones worth replacing with originals: Klapoetke 2017 (566 px), Klapoetke 2022 (low native resolution), Longden mitochondria preprint (soft; ask Kit for the render), Gruntman 2021 (traces small), the 2009 commentary (journal artist's drawing; the lab's own sketch is in `WORK/PAPERS/2009/tracking_N&V/`), and the 2015 News & Views (redrawn by the journal; the authors' draft is in `media/sources/florence2015temperature/`). Thirty of the 47 are publisher-copyright figures reused by the author on the lab site; the rest are CC BY, CC0 or author manuscripts.
+
 ## 2. Videos
 
 ### From the papers (best looping candidates first)

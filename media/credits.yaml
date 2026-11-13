@@ -184,3 +184,107 @@
   creator: Reiser MB et al.
   license: "publisher copyright, author reuse on lab site"
   quality: good
+
+# Added by tools/merge_figures.py
+- file: media/figures/longden2026mitochondria.jpg
+  source: "Connectomic Analysis of Mitochondria in the Central Brain of Drosophila (2024), Fig. 1D, doi:10.1101/2024.04.21.590464"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/PAPERS_in progress/Kit_Mito Analysis/2024.04.21.590464v6.full.pdf (page 3; bioRxiv v6, doi:10.1101/2024.04.21.590464)"
+  creator: Longden KD et al.
+  license: "CC BY 4.0"
+  quality: ok
+- file: media/figures/xu2024homeodomain.jpg
+  source: "Homeodomain proteins hierarchically specify neuronal diversity and synaptic connectivity (2024), Fig. 1A-B', doi:10.7554/eLife.90133"
+  origin: "https://iiif.elifesciences.org/lax:90133%2Felife-90133-fig1-v1.tif/full/full/0/default.jpg"
+  creator: Xu C et al.
+  license: "CC BY 4.0"
+  quality: good
+- file: media/figures/shinomiya2022circuits.jpg
+  source: "Neuronal circuits integrating visual motion information in Drosophila melanogaster (2022), Fig. 3C, doi:10.1016/j.cub.2022.06.061"
+  origin: "https://ars.els-cdn.com/content/image/1-s2.0-S0960982222010235-gr3_lrg.jpg"
+  creator: Shinomiya K et al.
+  license: "CC BY 4.0"
+  quality: good
+- file: media/figures/klapoetke2022featuremap.jpg
+  source: "A functionally ordered visual feature map in the Drosophila brain (2022), Fig. 4A, doi:10.1016/j.neuron.2022.02.013"
+  origin: "https://ars.els-cdn.com/content/image/1-s2.0-S0896627322001787-gr4_lrg.jpg"
+  creator: Klapoetke NC et al.
+  license: "CC BY 4.0"
+  quality: ok
+- file: media/figures/gruntman2021contrast.jpg
+  source: "Non-preferred contrast responses in the Drosophila motion pathways reveal a receptive field structure that explains a common visual illusion (2021), Fig. 2A, doi:10.1016/j.cub.2021.09.072"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2021/Gruntman_Reimers_et al 2021.pdf (page 5)"
+  creator: Gruntman E et al.
+  license: "CC BY 4.0"
+  quality: ok
+- file: media/figures/davis2020resource.jpg
+  source: "A genetic, genomic, and computational resource for exploring neural circuit function (2020), Fig. 1D, doi:10.7554/eLife.50901"
+  origin: "https://iiif.elifesciences.org/lax/50901%2Felife-50901-fig1-v2.tif/full/full/0/default.jpg"
+  creator: Davis FP et al.
+  license: "CC0 1.0"
+  quality: good
+- file: media/figures/gruntman2019t5.jpg
+  source: "The computation of directional selectivity in the Drosophila OFF motion pathway (2019), Fig. 1D, doi:10.7554/eLife.50706"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2019/elife-50706-v2.pdf (page 3)"
+  creator: Gruntman E et al.
+  license: "CC BY 4.0"
+  quality: good
+- file: media/figures/tschopp2018hexagonal.jpg
+  source: "A connectome based hexagonal lattice convolutional network model of the Drosophila visual system (2018), Fig. 5a"
+  origin: "https://arxiv.org/pdf/1806.04793 (page 7)"
+  creator: Tschopp FD et al.
+  license: "arXiv.org perpetual non-exclusive license, author reuse on lab site"
+  quality: ok
+- file: media/figures/gruntman2018t4.jpg
+  source: "Simple integration of fast excitation and offset, delayed inhibition computes directional selectivity in Drosophila (2018), Fig. 5a, doi:10.1038/s41593-017-0046-4"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2018/Gruntman_2018.pdf (page 6)"
+  creator: Gruntman E et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/strother2018state.jpg
+  source: "Behavioral state modulates the ON visual motion pathway of Drosophila (2018), Fig. 3A, doi:10.1073/pnas.1703090115"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2018/BSM_Paper/revision 1017/Fig3_V18.pdf"
+  creator: Strother JA et al.
+  license: "CC BY-NC-ND 4.0 (PNAS); crop made from the authors' own figure file"
+  quality: good
+- file: media/figures/klapoetke2017looming.jpg
+  source: "Ultra-selective looming detection from radial motion opponency (2017), Fig. 1a, doi:10.1038/nature24626"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2017/LPLC2 Manuscript/Figures/F1/LPLC2_Figure_1_100317_SB_modified.pdf"
+  creator: Klapoetke NC et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/robie2017mapping.jpg
+  source: "Mapping the Neural Substrates of Behavior (2017), Fig. 7A, doi:10.1016/j.cell.2017.06.032"
+  origin: "https://ars.els-cdn.com/content/image/1-s2.0-S009286741730716X-gr7_lrg.jpg"
+  creator: Robie AA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/strother2017emergence.jpg
+  source: "The Emergence of Directional Selectivity in the Visual Motion Pathway of Drosophila (2017), Fig. 2A, doi:10.1016/j.neuron.2017.03.010"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2017/T4_inputs_NEURON/prepress docs 030617/Fig2_v19.pdf"
+  creator: Strother JA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/longden2017sensorimotor.jpg
+  source: "Sensorimotor Neuroscience: Motor Precision Meets Vision (2017), Fig. 1A, doi:10.1016/j.cub.2017.02.047"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2017/CB_Dispatch_Feb2017/Figure_1.png"
+  creator: Longden KD et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/wu2016lc.jpg
+  source: "Visual projection neurons in the Drosophila lobula link feature detection to distinct behavioral programs (2016), Fig. 3A-B, doi:10.7554/eLife.21022"
+  origin: "https://iiif.elifesciences.org/lax/21022%2Felife-21022-fig3-v2.tif/full/full/0/default.jpg"
+  creator: Wu M et al.
+  license: "CC BY 4.0"
+  quality: good
+- file: media/figures/florence2015temperature.jpg
+  source: "Neuroscience: hot on the trail of temperature processing (2015), Fig. 1, doi:10.1038/nature14209"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2015/N&V Feb 2015/Reiser NV AOP.pdf (page 1)"
+  creator: Florence TJ et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/tuthill2014feedback.jpg
+  source: "Wide-field feedback neurons dynamically tune early visual processing (2014), Fig. 1D, doi:10.1016/j.neuron.2014.04.023"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2014/lawf_paper/Neuron_final_03_3014/pdf_figs/fig1_03_21_2014.pdf"
+  creator: Tuthill JC et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
