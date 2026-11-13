@@ -153,7 +153,7 @@ h1, h2, h3, p { margin: 0; }
 .theme { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 36px 0; border-top: 1px solid var(--rule); }
 .theme:nth-of-type(even) .theme-media { order: 2; }
 .theme-media { margin: 0; }
-.theme-media video { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: var(--radius); background: #000; }
+.theme-media video { width: 100%; height: auto; display: block; border-radius: var(--radius); background: #000; outline: 1px solid var(--rule); }   /* each loop keeps its own shape */
 .theme-media figcaption { margin-top: 8px; font: 500 11.5px/1.4 var(--mono); letter-spacing: 0.03em; color: var(--muted); }
 .theme-q { font: var(--h2-font); letter-spacing: var(--h2-tracking); margin-bottom: 14px; }
 .theme-body { font-size: 18px; line-height: 1.55; max-width: 34em; }

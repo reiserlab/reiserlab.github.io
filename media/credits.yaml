@@ -296,7 +296,19 @@
   attribution: "An LED arena tilting around a fly under the two-photon microscope. From Isaacson et al. 2022."
 
 - file: mockups/media/theme-scale.mp4
-  source: "Robotic Lab Assistant demo, May 2019 (Presentations/movies/Robotic Lab Assistant/Request_01.mpg): a robot arm takes a tethered fly from a rack and places it in an LED arena"
+  source: "Robotic Lab Assistant demo, May 2019 (Presentations/movies/Robotic Lab Assistant/Tiled.mpg): a robot arm places tethered flies on an air-supported ball in an LED arena; mosaic of many flies"
   creator: Frank Loesche, Reiser Lab
   license: lab footage, unpublished
   attribution: "Robotic fly handling. Reiser Lab."
+
+- file: mockups/media/theme-motion.mp4
+  source: "T4b input film v4 (final), made for the IAS fly meeting, Princeton, October 2026 (Presentations/2026/IAS_FlyMeeting_Oct2026/talk_v2_build/I_blender/I6_film_v4/I6_T4b_116716_film_v4_1080p24.mp4); male-cns v1.0 data"
+  creator: Michael Reiser
+  license: lab film, unpublished
+  attribution: "Synaptic inputs to a single T4b neuron. Reiser Lab; data from the male CNS connectome."
+
+- file: mockups/media/theme-wiring.mp4
+  source: "Nern et al. 2025, Nature, doi:10.1038/s41586-025-08746-0, Supplementary Video 3 (Dm4 population tiling the medulla)"
+  creator: Nern A et al.
+  license: CC BY 4.0
+  attribution: "Dm4 neurons tiling the medulla. From Nern et al. 2025."

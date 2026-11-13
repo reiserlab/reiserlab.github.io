@@ -54,7 +54,7 @@ themes:
       non-selective inputs into direction-selective signals. We are now mapping which receptors sit at which
       synapses, to learn what sets the timing this computation depends on.
     media: theme-motion
-    media_caption: Inputs to a single T4 neuron, colored by cell type
+    media_caption: Synaptic inputs to a single T4 neuron, colored by input cell type
     papers: [gruntman2018t4, gruntman2019t5, zhao2025eyemap]
   - key: wiring
     question: How is a visual system organized?
@@ -64,7 +64,7 @@ themes:
       We found that the structure of the eye shapes the responses of neurons deep in the brain. We use these
       maps to choose which neurons to study.
     media: theme-wiring
-    media_caption: Columnar neurons filling the medulla, one cell type at a time. From Nern et al. 2025
+    media_caption: Dm4 neurons tiling the medulla. From Nern et al. 2025
     papers: [nern2025inventory, hoeller2026pathways, berg2026malecns]
   - key: behavior
     question: How does vision guide behavior?
@@ -85,7 +85,7 @@ themes:
       experiments in which data from one experiment shape the next. Our approach is human-centered and
       AI-accelerated.
     media: theme-scale
-    media_caption: A robot picks a tethered fly from a rack and places it in an LED arena
+    media_caption: A robot places tethered flies on a ball in front of an LED display, one after another
     papers: [isaacson2022g4, loesche2021treadmill]
     hiring: true
 
