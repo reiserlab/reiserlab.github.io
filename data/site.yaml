@@ -32,7 +32,8 @@ focus_line: Our work combines connectomics, quantitative behavior, neurophysiolo
 hero:
   question: How does a brain turn seeing into doing?
   lede: We study vision in flies to understand where behavior comes from.
-  frames: 192          # number of frames in the scroll sequence
+  set: eyemap          # frame set in media/hero/: <set>-desktop and <set>-mobile
+  frames: 180          # number of frames in each set
   credit: Animation by Marisa Dreher, from Zhao et al. 2025
   stops:
     - eyebrow: Why flies

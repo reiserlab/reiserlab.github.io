@@ -12,11 +12,23 @@
 (function () {
   const el = document.querySelector('[data-scrub]');
   if (!el) return;
+
+  // The nav is light-on-dark over the hero and switches to the page colors below it.
+  const nav = document.querySelector('.nav');
+  function navState() {
+    const past = el.getBoundingClientRect().bottom <= (nav ? nav.offsetHeight : 0);
+    document.body.classList.toggle('past-hero', past);
+  }
+  window.addEventListener('scroll', navState, { passive: true });
+  window.addEventListener('resize', navState);
+  navState();
   const canvas = el.querySelector('canvas');
   const poster = el.querySelector('.hero-poster');
   const stops = Array.from(el.querySelectorAll('.stop'));
   const N = parseInt(el.dataset.frames, 10);
-  const pattern = el.dataset.pattern;
+  // Phones and other portrait screens get the portrait-framed set when the page provides one.
+  const portrait = window.matchMedia('(max-aspect-ratio: 4/5)').matches;
+  const pattern = (portrait && el.dataset.patternMobile) || el.dataset.pattern;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const flat = /[?&]flat=1/.test(location.search); // review aid: render the hero as one screen
 

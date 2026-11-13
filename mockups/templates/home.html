@@ -9,7 +9,7 @@
 <meta name="description" content="{{ site.description }}">
 <meta property="og:title" content="{{ site.title }}">
 <meta property="og:description" content="{{ site.description }}">
-<meta property="og:image" content="https://{{ site.domain }}{{ P.hero }}f_0001.webp">
+<meta property="og:image" content="https://{{ site.domain }}{{ P.hero }}poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ v.fonts }}">
@@ -29,10 +29,13 @@
 
 {% include "_nav.html" %}
 
-<section class="hero" id="top" data-scrub data-frames="{{ site.hero.frames | default(192) }}" data-pattern="{{ P.hero }}f_%04d.webp">
+<section class="hero" id="top" data-scrub data-frames="{{ site.hero.frames | default(192) }}" data-pattern="{{ P.hero }}f_%04d.webp" data-pattern-mobile="{{ P.hero_mobile }}f_%04d.webp">
   <div class="hero-sticky">
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
-    <img class="hero-poster" src="{{ P.hero }}f_0001.webp" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
+    <picture>
+      <source media="(max-aspect-ratio: 4/5)" srcset="{{ P.hero_mobile }}poster.jpg">
+      <img class="hero-poster" src="{{ P.hero }}poster.jpg" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
+    </picture>
     <div class="hero-scrim"></div>
     <div class="hero-stops">
       <div class="stop" data-from="0.00" data-to="0.18">

@@ -203,7 +203,8 @@ def site_paths() -> dict:
     hrefs = {"Research": "/#research", "Publications": "/publications/", "Resources": "/resources/",
              "People": "/people/", "News": "/#news", "Join": "/#join"}
     return {
-        "assets": "/assets/", "hero": "/media/hero/v0/", "img": "/media/img/", "loops": "/media/loops/",
+        "assets": "/assets/", "hero": "/media/hero/desktop/", "hero_mobile": "/media/hero/mobile/",
+        "img": "/media/img/", "loops": "/media/loops/",
         "home": "/", "pubs": "/publications/", "resources": "/resources/", "people": "/people/", "join": "/#join",
         "nav": [{"label": n, "href": hrefs[n]} for n in NAV],
     }
@@ -215,11 +216,24 @@ def mockup_paths(depth: int) -> dict:
     hrefs = {"Research": f"{up}#research", "Publications": f"{up}publications/", "Resources": f"{up}#resources",
              "People": f"{up}#people-anchor", "News": f"{up}#news", "Join": f"{up}#join"}
     return {
-        "assets": f"{up}../shared/", "hero": f"{up}../hero-frames/", "img": f"{up}../img/", "loops": f"{up}../media/",
+        "assets": f"{up}../shared/", "hero": f"{up}../hero-frames/", "hero_mobile": f"{up}../hero-frames-mobile/",
+        "img": f"{up}../img/", "loops": f"{up}../media/",
         "home": up or "./", "pubs": f"{up}publications/", "resources": f"{up}#resources", "people": f"{up}#people-anchor",
         "join": f"{up}#join",
         "nav": [{"label": n, "href": hrefs[n]} for n in NAV],
     }
+
+
+def copy_hero(ctx: dict, desktop: Path, mobile: Path) -> None:
+    """Copy the scroll-hero frame sets named by hero.set in site.yaml (see media/hero/README.md)."""
+    hero = ctx["site"].get("hero", {})
+    name = hero.get("set", "eyemap")
+    for kind, dst in (("desktop", desktop), ("mobile", mobile)):
+        src = MEDIA / "hero" / f"{name}-{kind}"
+        n = len(list(src.glob("f_*.webp"))) if src.exists() else 0
+        if n != hero.get("frames"):
+            raise BuildError(f"media/hero/{name}-{kind}: found {n} frames, site.yaml hero.frames says {hero.get('frames')}")
+        copy_tree(src, dst)
 
 
 def write(path: Path, html: str) -> None:
@@ -241,7 +255,7 @@ def render_site(ctx: dict) -> int:
     copy_tree(MOCKUPS / "shared", OUT / "assets")
     copy_tree(MOCKUPS / "img", OUT / "media" / "img")
     copy_tree(MOCKUPS / "media", OUT / "media" / "loops")
-    copy_tree(MOCKUPS / "hero-frames", OUT / "media" / "hero" / "v0")
+    copy_hero(ctx, OUT / "media" / "hero" / "desktop", OUT / "media" / "hero" / "mobile")
     pages = [("home.html", "index.html"), ("publications.html", "publications/index.html"),
              ("people.html", "people/index.html"), ("resources.html", "resources/index.html")]
     for template_name, out_name in pages:
@@ -259,7 +273,7 @@ def render_mockups(ctx: dict) -> None:
     out.mkdir(parents=True, exist_ok=True)
     copy_tree(MOCKUPS / "shared", out / "shared")
     copy_tree(MOCKUPS / "img", out / "img")
-    copy_tree(MOCKUPS / "hero-frames", out / "hero-frames")
+    copy_hero(ctx, out / "hero-frames", out / "hero-frames-mobile")
     copy_tree(MOCKUPS / "media", out / "media")
     for key, v in variants.items():
         write(out / key / "index.html",

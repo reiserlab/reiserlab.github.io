@@ -231,7 +231,7 @@ The failure mode of the old page was not design but staleness (news ended in 201
 | 1 | Confirm wording: hero question, the four themes, the lab statement, the opening card | Michael | question and themes chosen 2026-11-13; line edits welcome |
 | 2 | Promote mockup E to the site root: home at `/`, publications at `/publications/`, plus People and Resources pages; drop the mockup bar; keep `/mockups/` unlinked and `noindex` | Claude | done 2026-11-13 (live at reiserlab.github.io) |
 | 3 | A figure for every paper (47 of 47), with credits | Claude | done 2026-11-13 |
-| 4 | Hero frames: label-free sequence from Marisa's files (separate session, output in `media/hero/`); launch can proceed on the current frames if this is not ready | Claude | in progress |
+| 4 | Hero frames: label-free sequence re-rendered from Marisa's Blender scene, desktop and portrait sets in `media/hero/` (see its README); wired in | Claude | done 2026-11-13 |
 | 5 | Workday link for the postdoc position into `data/join.yaml` when the posting is live | Michael → Claude | waits on posting |
 | 6 | Cloudflare DNS: four A records for `reiserlab.org` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME `www` → `reiserlab.github.io`, all DNS-only | Michael | open |
 | 7 | After `dig reiserlab.org` returns the GitHub addresses: set `domain_live: true`, push, wait for the certificate, enforce HTTPS, verify the domain for the org | Claude | waits on 6 |

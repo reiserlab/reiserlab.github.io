@@ -43,7 +43,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* hero */
-.hero { position: relative; height: var(--hero-height); background: #000; color: #fff; }
+.hero { position: relative; height: var(--hero-height); background: #171513; color: #fff; }   /* matches the frames' background */
 .hero-sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; }
 .hero-canvas, .hero-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-poster { transition: opacity 0.4s; }
@@ -182,4 +182,8 @@ h1, h2, h3, p { margin: 0; }
 .opening-note { font-size: 14px; color: var(--band-muted); }
 .button-solid { background: var(--band-ink); color: var(--band) !important; border-color: var(--band-ink) !important; }
 .button-solid:hover { opacity: 0.85; }
-.display-2 { font-size: 0.72em; }
+.display-2 { font-size: clamp(30px, 4.4vw, 62px); }
+@media (min-aspect-ratio: 4/5) { .stop { max-width: min(600px, 54vw); } }
+
+/* once the hero has scrolled away the fixed nav sits on the page color */
+.past-hero .nav { background: var(--ground); color: var(--ink); border-bottom: 1px solid var(--rule); backdrop-filter: none; -webkit-backdrop-filter: none; }

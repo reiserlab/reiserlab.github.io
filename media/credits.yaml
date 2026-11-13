@@ -3,11 +3,11 @@
 # source: paper DOI and figure/movie, or "lab, unpublished"
 # creator, license, attribution (text to show on the credits page)
 
-- file: mockups/hero-frames/
-  source: Zhao et al. 2025, Nature, doi:10.1038/s41586-025-09276-5, eye-map animation (first 64 s)
+- file: media/hero/eyemap-desktop/ and media/hero/eyemap-mobile/
+  source: Zhao et al. 2025, Nature, doi:10.1038/s41586-025-09276-5, eye-map animation; re-rendered 2026-11-13 from Marisa Dreher's Blender scene without labels (see media/hero/README.md)
   creator: Marisa Dreher
-  license: CC BY 4.0
-  attribution: Eye-map animation by Marisa Dreher, from Zhao et al. 2025. Mockup frames only; final frames will be re-rendered from the Blender scene.
+  license: lab-owned model and scene; paper is CC BY 4.0
+  attribution: Animation by Marisa Dreher, from Zhao et al. 2025.
 
 - file: mockups/img/
   source: Zhao et al. 2025, Nature, eye-map and T4 animations
