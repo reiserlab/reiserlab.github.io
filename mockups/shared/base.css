@@ -35,7 +35,12 @@ h1, h2, h3, p { margin: 0; }
 .wordmark { text-decoration: none; font: var(--wordmark-font); letter-spacing: var(--wordmark-tracking); text-transform: var(--wordmark-case); }
 .nav-links a { text-decoration: none; margin-left: 26px; font-size: 15px; font-weight: 500; opacity: 0.9; }
 .nav-links a:hover { opacity: 1; color: var(--accent); }
-@media (max-width: 760px) { .nav-links { display: none; } }
+@media (max-width: 760px) {
+  .nav { flex-wrap: wrap; padding-top: 12px; padding-bottom: 10px; }
+  .nav-links { display: flex; width: 100%; gap: 16px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { margin-left: 0; white-space: nowrap; font-size: 11px; }
+}
 
 /* hero */
 .hero { position: relative; height: var(--hero-height); background: #000; color: #fff; }

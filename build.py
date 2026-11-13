@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Static site generator for reiserlab.org.
 
-Reads YAML in data/, media in media/, templates in templates/, static assets in
-static/, and writes the finished site to site/. Run `uv run build.py` (or
+Reads YAML in data/, media in media/, and the templates, styles and loops in
+mockups/ (the design named by `design` in data/site.yaml becomes the public site;
+every variant is also rendered under /mockups/), and writes the finished site to site/. Run `uv run build.py` (or
 `python build.py` with jinja2, pyyaml and pillow installed). `--serve` builds
 and then serves site/ on http://localhost:8000. `--no-mockups` skips the
 design mockups under /mockups/.
@@ -24,8 +25,6 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 MEDIA = ROOT / "media"
-STATIC = ROOT / "static"
-TEMPLATES = ROOT / "templates"
 MOCKUPS = ROOT / "mockups"
 OUT = ROOT / "site"
 
@@ -184,12 +183,6 @@ def copy_tree(src: Path, dst: Path, ignore=None) -> None:
 # ----------------------------------------------------------------------------
 # rendering
 
-PAGES = [
-    ("index.html", "index.html"),
-    ("publications.html", "publications/index.html"),
-]
-
-
 def make_env(search: list[Path]) -> Environment:
     env = Environment(
         loader=FileSystemLoader([str(p) for p in search]),
@@ -202,19 +195,66 @@ def make_env(search: list[Path]) -> Environment:
     return env
 
 
-def render_pages(ctx: dict) -> None:
-    env = make_env([TEMPLATES])
-    for template_name, out_name in PAGES:
-        html = env.get_template(template_name).render(**ctx)
-        target = OUT / out_name
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(html)
+NAV = ["Research", "Publications", "Resources", "People", "News", "Join"]
+
+
+def site_paths() -> dict:
+    """URL prefixes for the public site (absolute paths from the domain root)."""
+    hrefs = {"Research": "/#research", "Publications": "/publications/", "Resources": "/resources/",
+             "People": "/people/", "News": "/#news", "Join": "/#join"}
+    return {
+        "assets": "/assets/", "hero": "/media/hero/v0/", "img": "/media/img/", "loops": "/media/loops/",
+        "home": "/", "pubs": "/publications/", "resources": "/resources/", "people": "/people/", "join": "/#join",
+        "nav": [{"label": n, "href": hrefs[n]} for n in NAV],
+    }
+
+
+def mockup_paths(depth: int) -> dict:
+    """URL prefixes for a mockup page; depth 0 is /mockups/<key>/, depth 1 one folder below it."""
+    up = "../" * depth
+    hrefs = {"Research": f"{up}#research", "Publications": f"{up}publications/", "Resources": f"{up}#resources",
+             "People": f"{up}#people-anchor", "News": f"{up}#news", "Join": f"{up}#join"}
+    return {
+        "assets": f"{up}../shared/", "hero": f"{up}../hero-frames/", "img": f"{up}../img/", "loops": f"{up}../media/",
+        "home": up or "./", "pubs": f"{up}publications/", "resources": f"{up}#resources", "people": f"{up}#people-anchor",
+        "join": f"{up}#join",
+        "nav": [{"label": n, "href": hrefs[n]} for n in NAV],
+    }
+
+
+def write(path: Path, html: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(html)
+
+
+def load_variants() -> dict:
+    return yaml.safe_load((MOCKUPS / "variants.yaml").read_text())
+
+
+def render_site(ctx: dict) -> int:
+    """The public site: the design named by `design` in site.yaml, rendered at the domain root."""
+    variants = load_variants()
+    key = ctx["site"].get("design", "e")
+    if key not in variants:
+        raise BuildError(f"site.yaml design: {key} is not in mockups/variants.yaml")
+    env = make_env([MOCKUPS / "templates"])
+    copy_tree(MOCKUPS / "shared", OUT / "assets")
+    copy_tree(MOCKUPS / "img", OUT / "media" / "img")
+    copy_tree(MOCKUPS / "media", OUT / "media" / "loops")
+    copy_tree(MOCKUPS / "hero-frames", OUT / "media" / "hero" / "v0")
+    pages = [("home.html", "index.html"), ("publications.html", "publications/index.html"),
+             ("people.html", "people/index.html"), ("resources.html", "resources/index.html")]
+    for template_name, out_name in pages:
+        html = env.get_template(template_name).render(variant=key, v=variants[key], P=site_paths(), mock=False, **ctx)
+        write(OUT / out_name, html)
+    write(OUT / "404.html", env.get_template("404.html").render(variant=key, v=variants[key], P=site_paths(), mock=False, **ctx))
+    return len(pages)
 
 
 def render_mockups(ctx: dict) -> None:
-    """Design mockups: one home-page template rendered against several CSS variants."""
-    variants = yaml.safe_load((MOCKUPS / "variants.yaml").read_text())
-    env = make_env([MOCKUPS / "templates", TEMPLATES])
+    """Design mockups: the same templates rendered against every variant, under /mockups/."""
+    variants = load_variants()
+    env = make_env([MOCKUPS / "templates"])
     out = OUT / "mockups"
     out.mkdir(parents=True, exist_ok=True)
     copy_tree(MOCKUPS / "shared", out / "shared")
@@ -222,14 +262,11 @@ def render_mockups(ctx: dict) -> None:
     copy_tree(MOCKUPS / "hero-frames", out / "hero-frames")
     copy_tree(MOCKUPS / "media", out / "media")
     for key, v in variants.items():
-        (out / key).mkdir(exist_ok=True)
-        html = env.get_template("home.html").render(variant=key, v=v, **ctx)
-        (out / key / "index.html").write_text(html)
-        (out / key / "publications").mkdir(exist_ok=True)
-        pubs = env.get_template("publications.html").render(variant=key, v=v, **ctx)
-        (out / key / "publications" / "index.html").write_text(pubs)
-    index = env.get_template("mockups-index.html").render(variants=variants, **ctx)
-    (out / "index.html").write_text(index)
+        write(out / key / "index.html",
+              env.get_template("home.html").render(variant=key, v=v, P=mockup_paths(0), mock=True, **ctx))
+        write(out / key / "publications" / "index.html",
+              env.get_template("publications.html").render(variant=key, v=v, P=mockup_paths(1), mock=True, **ctx))
+    write(out / "index.html", env.get_template("mockups-index.html").render(variants=variants, **ctx))
 
 
 # ----------------------------------------------------------------------------
@@ -240,11 +277,9 @@ def build(include_mockups: bool = True) -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
-    copy_tree(STATIC, OUT / "static")
     copy_tree(MEDIA / "people", OUT / "media" / "people")
-    copy_tree(MEDIA / "loops", OUT / "media" / "loops")
     process_figures()
-    render_pages(ctx)
+    n_pages = render_site(ctx)
     if include_mockups and MOCKUPS.exists():
         render_mockups(ctx)
     # Only emit CNAME once DNS for the custom domain exists. Publishing a CNAME
@@ -255,7 +290,6 @@ def build(include_mockups: bool = True) -> None:
         (OUT / "CNAME").write_text(domain + "\n")
     (OUT / ".nojekyll").write_text("")
     (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /mockups/\n")
-    n_pages = len(PAGES)
     print(f"built {n_pages} page(s), {len(ctx['publications'])} publications, "
           f"{len(ctx['current'])} current people, {len(ctx['news'])} news items -> {OUT.relative_to(ROOT)}/")
 

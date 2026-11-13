@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page not found · {{ site.title }}</title>
+<link rel="stylesheet" href="{{ v.fonts }}">
+<link rel="stylesheet" href="{{ P.assets }}base.css">
+<link rel="stylesheet" href="{{ P.assets }}{{ v.css }}">
+<link rel="stylesheet" href="{{ P.assets }}pubs.css">
+<link rel="stylesheet" href="{{ P.assets }}pages.css">
+</head>
+<body class="variant-{{ variant }} page-inner">
+{% set solid = true %}
+{% include "_nav.html" %}
+<main class="inner">
+  <div class="section-head inner-head">
+    <p class="eyebrow">404</p>
+    <h1 class="h2">That page is not here</h1>
+    <p class="section-lede">The lab's shared resources have their own addresses; try the <a href="{{ P.resources }}">resources page</a>, the <a href="{{ P.pubs }}">publications</a>, or the <a href="{{ P.home }}">home page</a>.</p>
+  </div>
+</main>
+{% include "_foot.html" %}
+</body>
+</html>

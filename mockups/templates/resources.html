@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if mock or not site.domain_live %}<meta name="robots" content="noindex">{% endif %}
+
+<title>Resources · {{ site.title }}</title>
+<meta name="description" content="Tools, maps and data shared by the Reiser Lab: Cell Type Explorers, visual pathway galleries, modular LED displays, Fly Lab Gear and code.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{{ v.fonts }}">
+<link rel="stylesheet" href="{{ P.assets }}base.css">
+<link rel="stylesheet" href="{{ P.assets }}{{ v.css }}">
+<link rel="stylesheet" href="{{ P.assets }}pubs.css">
+<link rel="stylesheet" href="{{ P.assets }}pages.css">
+</head>
+<body class="variant-{{ variant }} page-inner">
+{% set solid = true %}{% set active = "Resources" %}
+{% include "_nav.html" %}
+
+<main class="inner">
+  <div class="section-head inner-head">
+    <p class="eyebrow">Resources</p>
+    <h1 class="h2">Tools and data we share</h1>
+    <p class="section-lede">We build our own tools and share them: explorers for every cell type in the fly visual system and brain, galleries of visual pathways, LED displays and rigs for fly experiments, and the code behind our papers.</p>
+  </div>
+  {% for group, items in resource_groups %}
+  <section class="res-group">
+    <h2 class="group-title">{{ group }}</h2>
+    <ul class="res-list">
+      {% for r in items %}
+      <li class="res">
+        <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
+        <p class="res-line">{{ r.line }}</p>
+        <p class="res-meta mono">{% if r.version %}<span>{{ r.version }}</span>{% endif %}{% if r.license %}<span>{{ r.license }}</span>{% endif %}<a href="{{ r.url }}">open</a>{% if r.repo %}<a href="{{ r.repo }}">source</a>{% endif %}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</main>
+
+{% include "_foot.html" %}
+</body>
+</html>

@@ -2,6 +2,7 @@
 # Optional: pillars, line (one sentence on what they work on), photo (file in media/people/),
 #           links: {scholar, github, orcid, website, bluesky}, where_now (alumni), years (alumni, e.g. "2019–2024")
 # Roles are shown as written; keep them short.
+# group: heading on the People page (Lab, Visiting scientists, Administration); default Lab.
 
 - name: Michael Reiser
   role: Senior Group Leader
@@ -33,11 +34,12 @@
   links:
     github: https://github.com/floesche
 
-- name: Aljoscha Nern
-  role: Research Scientist
-  status: current
-  pillars: [anatomy]
-  line: ""
+# To confirm before listing (not on the Janelia Reiser Lab members page):
+# - name: Aljoscha Nern
+#   role: Research Scientist
+#   status: current
+#   pillars: [anatomy]
+#   line: ""
 
 - name: Pavithraa Seenivasan
   role: Postdoctoral Scientist
@@ -78,21 +80,25 @@
 - name: Dominic Evans
   role: Visiting Postdoctoral Associate
   status: current
+  group: Visiting scientists
   line: ""
 
 - name: Ali Karimi
   role: Visiting Postdoctoral Associate
   status: current
+  group: Visiting scientists
   line: ""
 
 - name: Elisa de Launoit
   role: Visiting Postdoctoral Associate
   status: current
+  group: Visiting scientists
   line: ""
 
 - name: Dianne Pereira
   role: Lab Administration Specialist
   status: current
+  group: Administration
   line: ""
 
 # Alumni: add entries like the one below (commented out until confirmed).

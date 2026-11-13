@@ -86,3 +86,101 @@
   creator: Morimoto MM et al.
   license: CC BY 4.0
   attribution: "Fig. 5F, LC6 axons bundling into the glomerulus. Morimoto MM et al. 2020."
+
+# Added by tools/merge_figures.py
+- file: media/figures/strother2014onoff.jpg
+  source: "Direct observation of ON and OFF pathways in the Drosophila visual system (2014), Fig. 1A-B, doi:10.1016/j.cub.2014.03.017"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2014/Medulla Paper/figures_current/fig_1.pdf"
+  creator: Strother JA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/tuthill2013lamina.jpg
+  source: "Contributions of the 12 neuron classes in the fly lamina to motion vision (2013), Fig. 2A and 2C, doi:10.1016/j.neuron.2013.05.024"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2013_Tuthill_contributions_12_neuron_classes.pdf (page 131, embedded figure image without text labels)"
+  creator: Tuthill JC et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/reiser2013speed.jpg
+  source: "Visual motion speed determines a behavioral switch from forward flight to expansion avoidance in Drosophila (2013), Fig. 5A, doi:10.1242/jeb.074732"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2013/expansion_speed_head_motion/figures/fig_5.pdf"
+  creator: Reiser MB et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/roth2012yaw.jpg
+  source: "A task-level model for optomotor yaw regulation in Drosophila melanogaster: a frequency-domain system identification approach (2012), Fig. 1, doi:10.1109/cdc.2012.6426231"
+  origin: "/Users/reiserm/Zotero/storage/XM6EK5SZ/2012 Eatai Roth.pdf (page 3722)"
+  creator: Roth E et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/dombeck2012virtual.jpg
+  source: "Real neuroscience in virtual worlds (2012), Fig. 1b, doi:10.1016/j.conb.2011.10.015"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/Papers3/Library.papers3/Articles/2012/Dombeck/Curr. Opin. Neurobiol. 2012 Dombeck.pdf (page 4)"
+  creator: Dombeck DA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/ofstad2011place.jpg
+  source: "Visual place learning in Drosophila melanogaster (2011), Fig. 1a-b, doi:10.1038/nature10131"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2011_Ofstad_visual_place_learning_drosophila.pdf (page 1)"
+  creator: Ofstad TA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/tuthill2011illusory.jpg
+  source: "Neural correlates of illusory motion perception in Drosophila (2011), Fig. 1B, doi:10.1073/pnas.1100062108"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2011/Reverse Phi paper/PNAS_re_submission/PNAS_figs/fig1_pnas.pdf"
+  creator: Tuthill JC et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/chiappe2010walking.jpg
+  source: "Walking modulates speed sensitivity in Drosophila motion vision (2010), Fig. 1A-B, doi:10.1016/j.cub.2010.06.072"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2010_Chiappe_walking_modulates_speed_sensitivity.pdf (page 10)"
+  creator: Chiappe ME et al.
+  license: "author manuscript (PMC)"
+  quality: good
+- file: media/figures/seelig2010imaging.jpg
+  source: "Two-photon calcium imaging from head-fixed Drosophila during optomotor walking behavior (2010), Fig. 1b, doi:10.1038/nmeth.1468"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2010/Jayaraman_methods/April_19_resubmit/All_figs.pdf (page 1)"
+  creator: Seelig JD et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/reiser2010straight.jpg
+  source: "Drosophila fly straight by fixating objects in the face of expanding optic flow (2010), Fig. 1A, doi:10.1242/jeb.035147"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2010/expansion_fixation/jeb035147.pdf (page 3)"
+  creator: Reiser MB et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/reiser2009ethomics.jpg
+  source: "The ethomics era? (2009), Fig. 1 (first stage), doi:10.1038/nmeth0609-413"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2009_Reiser_ethomics_era.pdf (page 413)"
+  creator: Reiser M et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: weak
+- file: media/figures/reiser2008display.jpg
+  source: "A modular display system for insect behavioral neuroscience (2008), Fig. 2, doi:10.1016/j.jneumeth.2007.07.019"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/WORK/PAPERS/2007/panel_methods/fig2.pdf"
+  creator: Reiser MB et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/budick2007forward.jpg
+  source: "The role of visual and mechanosensory cues in structuring forward flight in Drosophila melanogaster (2007), Fig. 1, doi:10.1242/jeb.006502"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2007_Budick_visual_mechanosensory_cues_flight.pdf (page 4094)"
+  creator: Budick SA et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/duistermars2007optomotor.jpg
+  source: "Dynamic properties of large-field and small-field optomotor flight responses in Drosophila (2007), Fig. 3, doi:10.1007/s00359-007-0233-y"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/Library_Papers2/Articles/2007/Duistermars/J. Comp. Physiol. A Neuroethol. Sens. Neural. Behav. Physiol. 2007 Duistermars.pdf (page 790)"
+  creator: Duistermars BJ et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good
+- file: media/figures/reiser2004compensatory.jpg
+  source: "Vision as a compensatory mechanism for disturbance rejection in upwind flight (2004), Fig. 3B, doi:10.23919/acc.2004.1383623"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2004_Reiser_vision_compensatory_disturbance_rejection.pdf (page 2)"
+  creator: Reiser MB et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: ok
+- file: media/figures/reiser2003testbed.jpg
+  source: "A test bed for insect-inspired robotic control (2003), Fig. 3, doi:10.1098/rsta.2003.1259"
+  origin: "/Users/reiserm/Library/CloudStorage/Dropbox-HHMI/Michael Reiser/ClaudeCoworkProject/WritingStyle/published papers/2003_Reiser_test_bed_insect_inspired_robotic.pdf (page 5)"
+  creator: Reiser MB et al.
+  license: "publisher copyright, author reuse on lab site"
+  quality: good

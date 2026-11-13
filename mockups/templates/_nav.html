@@ -1,0 +1,6 @@
+<header class="nav{% if solid %} nav-solid{% endif %}">
+  <a class="wordmark" href="{{ P.home }}"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
+  <nav class="nav-links" aria-label="Main">
+    {% for item in P.nav %}<a href="{{ item.href }}"{% if item.label == active %} aria-current="page"{% endif %}{% if item.label == "Join" and join.openings %} class="nav-hiring"{% endif %}>{{ item.label }}{% if item.label == "Join" and join.openings %}<span class="nav-badge">Hiring</span>{% endif %}</a>{% endfor %}
+  </nav>
+</header>

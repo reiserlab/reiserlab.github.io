@@ -814,6 +814,8 @@
   type: journal
   doi: 10.1016/j.cub.2014.03.017
   pmid: 24704075
+  figure: strother2014onoff.jpg
+  figure_caption: "Fig. 1A-B, two-photon imaging of a fly viewing projected stimuli, and the layers of the visual system"
   pillars:
   - behavior
   selected: false
@@ -830,6 +832,8 @@
   doi: 10.1016/j.neuron.2013.05.024
   pmid: 23849200
   pmcid: PMC3806040
+  figure: tuthill2013lamina.jpg
+  figure_caption: "Fig. 2A and 2C, single L1 and L3 lamina neurons and the expression patterns of their Split-GAL4 driver lines"
   pillars:
   - anatomy
   selected: false
@@ -845,6 +849,8 @@
   type: journal
   doi: 10.1242/jeb.074732
   pmid: 23197097
+  figure: reiser2013speed.jpg
+  figure_caption: "Fig. 5A, orientation histograms: flies fixate the focus of expansion at slow speeds and the focus of contraction at fast speeds"
   pillars:
   - behavior
   selected: false
@@ -860,6 +866,8 @@
   venue: IEEE Conference on Decision and Control 2012
   type: conference
   doi: 10.1109/cdc.2012.6426231
+  figure: roth2012yaw.jpg
+  figure_caption: "Fig. 1, the closed-loop flight arena apparatus"
   pillars:
   - behavior
   - modeling
@@ -876,6 +884,8 @@
   type: review
   doi: 10.1016/j.conb.2011.10.015
   pmid: 22138559
+  figure: dombeck2012virtual.jpg
+  figure_caption: "Fig. 1b, a tethered-flight closed-loop virtual reality experiment"
   pillars:
   - behavior
   selected: false
@@ -892,6 +902,8 @@
   doi: 10.1038/nature10131
   pmid: 21654803
   pmcid: PMC3169673
+  figure: ofstad2011place.jpg
+  figure_caption: "Fig. 1a-b, the thermal-visual place learning arena and a thermal image of its floor with one cool tile"
   pillars:
   - behavior
   selected: false
@@ -908,6 +920,8 @@
   doi: 10.1073/pnas.1100062108
   pmid: 21586635
   pmcid: PMC3111268
+  figure: tuthill2011illusory.jpg
+  figure_caption: "Fig. 1B, the LED flight arena and the wingbeat measure of steering"
   pillars:
   - behavior
   selected: false
@@ -924,6 +938,8 @@
   doi: 10.1016/j.cub.2010.06.072
   pmid: 20655222
   pmcid: PMC4435946
+  figure: chiappe2010walking.jpg
+  figure_caption: "Fig. 1A-B, a fly walking on a ball under the two-photon microscope, and the HS neuron dendrites that were imaged"
   pillars:
   - behavior
   selected: false
@@ -940,6 +956,8 @@
   doi: 10.1038/nmeth.1468
   pmid: 20526346
   pmcid: PMC2945246
+  figure: seelig2010imaging.jpg
+  figure_caption: "Fig. 1b, the setup for two-photon imaging from a head-fixed fly walking on a ball"
   pillars:
   - behavior
   - neurophysiology
@@ -958,6 +976,8 @@
   doi: 10.1242/jeb.035147
   pmid: 20435828
   pmcid: PMC2861965
+  figure: reiser2010straight.jpg
+  figure_caption: "Fig. 1A, closed-loop orientation of single flies in an expanding flow field (first two example trials)"
   pillars:
   - behavior
   selected: false
@@ -973,6 +993,8 @@
   type: review
   doi: 10.1038/nmeth0609-413
   pmid: 19478800
+  figure: reiser2009ethomics.jpg
+  figure_caption: "Fig. 1 (first stage), video collection in the pipeline for automatic phenotyping of fly behavior"
   pillars:
   - methods
   selected: false
@@ -988,6 +1010,8 @@
   type: journal
   doi: 10.1016/j.jneumeth.2007.07.019
   pmid: 17854905
+  figure: reiser2008display.jpg
+  figure_caption: "Fig. 2, an LED panel and the cylindrical and flat displays built from panels"
   pillars:
   - behavior
   - methods
@@ -1004,6 +1028,8 @@
   type: journal
   doi: 10.1242/jeb.006502
   pmid: 18025010
+  figure: budick2007forward.jpg
+  figure_caption: "Fig. 1, the LED arena in the wind tunnel with a magnetically tethered fly"
   pillars:
   - behavior
   selected: false
@@ -1019,6 +1045,8 @@
   type: journal
   doi: 10.1007/s00359-007-0233-y
   pmid: 17551735
+  figure: duistermars2007optomotor.jpg
+  figure_caption: "Fig. 3, mean steering responses to oscillating large-field and small-field patterns"
   pillars:
   - behavior
   - neurophysiology
@@ -1034,6 +1062,8 @@
   venue: American Control Conference 2004
   type: conference
   doi: 10.23919/acc.2004.1383623
+  figure: reiser2004compensatory.jpg
+  figure_caption: "Fig. 3B, the directions of the aerodynamic forces on the insect body"
   pillars:
   - behavior
   selected: false
@@ -1049,6 +1079,8 @@
   type: journal
   doi: 10.1098/rsta.2003.1259
   pmid: 14599319
+  figure: reiser2003testbed.jpg
+  figure_caption: "Fig. 3, the FlyBall robotic platform, its camera, and an array of elementary motion detectors"
   pillars:
   - behavior
   selected: false

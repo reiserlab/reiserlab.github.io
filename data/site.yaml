@@ -1,5 +1,8 @@
 # Site-wide settings. Edit freely; the build reads this on every run.
 title: Reiser Lab
+description: The Reiser Lab at HHMI Janelia studies vision in flies to learn how brains turn seeing into doing, and shares the tools, maps and data it builds.
+# Which design in mockups/variants.yaml the public site uses.
+design: e
 domain: reiserlab.org
 # Set to true only after the Cloudflare DNS records point at GitHub Pages (see docs/plan.md section 2).
 domain_live: false
@@ -27,8 +30,10 @@ focus_line: We combine connectomics, quantitative behavior, neurophysiology and 
 
 # Home-page hero: the question, and the two captions that appear as the animation plays.
 hero:
-  question: Where does behavior come from?
-  lede: We study vision in flies to find out, from single neurons processing light to brain-wide circuits that turn what a fly sees into what it does.
+  question: How does a brain turn seeing into doing?
+  lede: We study vision in flies to learn where behavior comes from, from single neurons processing light to brain-wide circuits that guide what the animal does.
+  frames: 192          # number of frames in the scroll sequence
+  credit: Animation by Marisa Dreher, from Zhao et al. 2025
   stops:
     - eyebrow: Why flies
       title: A complete visual system, completely mapped

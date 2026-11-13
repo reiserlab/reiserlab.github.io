@@ -3,32 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Mockup {{ variant | upper }} · {{ v.name }} · Reiser Lab</title>
+{% if mock or not site.domain_live %}<meta name="robots" content="noindex">{% endif %}
+
+<title>{% if mock %}Mockup {{ variant | upper }} · {{ v.name }} · {% endif %}{{ site.title }}{% if not mock %} · HHMI Janelia{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:image" content="https://{{ site.domain }}{{ P.hero }}f_0001.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ v.fonts }}">
-<link rel="stylesheet" href="../shared/base.css">
-<link rel="stylesheet" href="../shared/{{ v.css }}">
+<link rel="stylesheet" href="{{ P.assets }}base.css">
+<link rel="stylesheet" href="{{ P.assets }}{{ v.css }}">
+<link rel="stylesheet" href="{{ P.assets }}pages.css">
 </head>
 <body class="variant-{{ variant }} layout-{{ v.layout | default("cards") }}">
 
+{% if mock %}
 <div class="mock-bar">
   <span><strong>Mockup {{ variant | upper }}</strong> · {{ v.name }}</span>
   <span class="mock-bar-links"><a href="../a/">A</a> <a href="../b/">B</a> <a href="../c/">C</a> <a href="../d/">D</a> <a href="../e/">E</a> <a href="../f/">F</a> <a href="../">about these mockups</a></span>
 </div>
+{% endif %}
 
-<header class="nav">
-  <a class="wordmark" href="#top"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
-  <nav class="nav-links">
-    {% for label, href in site.nav %}<a href="{% if label == "Publications" %}publications/{% else %}#{{ label | lower }}{% endif %}"{% if label == "Join" and join.openings %} class="nav-hiring"{% endif %}>{{ label }}{% if label == "Join" and join.openings %}<span class="nav-badge">Hiring</span>{% endif %}</a>{% endfor %}
-  </nav>
-</header>
+{% include "_nav.html" %}
 
-<section class="hero" id="top" data-scrub data-frames="192" data-pattern="../hero-frames/f_%04d.webp">
+<section class="hero" id="top" data-scrub data-frames="{{ site.hero.frames | default(192) }}" data-pattern="{{ P.hero }}f_%04d.webp">
   <div class="hero-sticky">
     <canvas class="hero-canvas" aria-hidden="true"></canvas>
-    <img class="hero-poster" src="../hero-frames/f_0001.webp" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
+    <img class="hero-poster" src="{{ P.hero }}f_0001.webp" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
     <div class="hero-scrim"></div>
     <div class="hero-stops">
       <div class="stop" data-from="0.00" data-to="0.18">
@@ -51,7 +54,7 @@
 
 {% if v.layout == 'journal' %}
 <section class="split">
-  <div class="split-plate"><img src="../img/eyemap_lens-directions.jpg" alt="Lens centers and viewing directions mapped on the eye"></div>
+  <div class="split-plate"><img src="{{ P.img }}eyemap_lens-directions-plate.jpg" alt="Lens centers and viewing directions mapped on the eye"></div>
   <div class="split-field">
     <p class="eyebrow eyebrow-light">The lab</p>
     <p class="split-text">{{ site.tagline }} {{ site.modeling_line }}</p>
@@ -85,7 +88,7 @@
       <h2 class="band-title band-title-q">{{ t.question }}</h2>
       <p class="band-line">{{ t.text }}</p>
     </div>
-    <video class="loop band-media" muted loop playsinline autoplay preload="metadata" poster="../media/{{ t.media }}.jpg"><source src="../media/{{ t.media }}.mp4" type="video/mp4"></video>
+    <video class="loop band-media" muted loop playsinline autoplay preload="metadata" poster="{{ P.loops }}{{ t.media }}.jpg"><source src="{{ P.loops }}{{ t.media }}.mp4" type="video/mp4"></video>
   </a>
   {% endfor %}
 </section>
@@ -100,7 +103,7 @@
   {% for t in site.themes %}
   <article class="theme">
     <figure class="theme-media">
-      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="../media/{{ t.media }}.jpg"><source src="../media/{{ t.media }}.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="{{ P.loops }}{{ t.media }}.jpg"><source src="{{ P.loops }}{{ t.media }}.mp4" type="video/mp4"></video>
       <figcaption>{{ t.media_caption }}</figcaption>
     </figure>
     <div class="theme-text">
@@ -131,7 +134,7 @@
     {% set rvids = ['res-explorer', 'res-pathways', 'res-displays', 'res-flylabgear'] %}
     {% for r in resources if r.get("featured") %}
     <a class="resource" href="{{ r.url }}">
-      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="../media/{{ rvids[loop.index0] }}.jpg"><source src="../media/{{ rvids[loop.index0] }}.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="{{ P.loops }}{{ rvids[loop.index0] }}.jpg"><source src="{{ P.loops }}{{ rvids[loop.index0] }}.mp4" type="video/mp4"></video>
       <div class="resource-text">
         <h3>{{ r.name }}</h3>
         <p>{{ r.line }}</p>
@@ -140,7 +143,7 @@
     </a>
     {% endfor %}
   </div>
-  <p class="more"><a href="#resources">All resources</a></p>
+  <p class="more"><a href="{{ P.resources }}">All resources</a></p>
   </div>
 </section>
 
@@ -155,7 +158,7 @@
     {% set pimgs = ['t4_brain-neuropil', 'eyemap_neurons-medulla', 'eyemap_lens-directions', 't4_t4-cells'] %}
     {% for p in selected[:4] %}
     <article class="paper">
-      <a class="paper-fig" href="{{ p.links.doi }}">{% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.jpg','') | replace('.png','') }}-800.webp" alt="{{ p.figure_caption }}" loading="lazy">{% else %}<img src="../img/{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy">{% endif %}</a>
+      <a class="paper-fig" href="{{ p.links.doi }}">{% if p.figure %}<img src="/media/figures/{{ p.figure | replace('.jpg','') | replace('.png','') }}-800.webp" alt="{{ p.figure_caption }}" loading="lazy">{% else %}<img src="{{ P.img }}{{ pimgs[loop.index0] }}.jpg" alt="" loading="lazy">{% endif %}</a>
       <div class="paper-text">
         <p class="paper-venue"><span class="mono">{% if v.layout == 'plates' %}#{{ '%02d' % (publications | length - loop.index0) }} · {% endif %}{{ p.date | long_date if p.date else p.year }}</span></p>
         <h3><a href="{{ p.links.doi }}">{{ p.title }}</a></h3>
@@ -169,7 +172,7 @@
     </article>
     {% endfor %}
   </div>
-  <p class="more"><a href="publications/">All {{ publications | length }} publications</a></p>
+  <p class="more"><a href="{{ P.pubs }}">All {{ publications | length }} publications</a></p>
   </div>
 </section>
 
@@ -226,10 +229,8 @@
   </div>
 </section>
 
-<footer class="foot" id="people">
-  <p>© {{ built.year }} Reiser Lab · Images from the lab's own data; see credits. Updated {{ built | month_year }}.</p>
-</footer>
+{% include "_foot.html" %}
 
-<script src="../shared/hero.js"></script>
+<script src="{{ P.assets }}hero.js"></script>
 </body>
 </html>

@@ -3,28 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Publications · Mockup {{ variant | upper }} · Reiser Lab</title>
+{% if mock or not site.domain_live %}<meta name="robots" content="noindex">{% endif %}
+
+<title>Publications · {% if mock %}Mockup {{ variant | upper }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="Publications of the Reiser Lab at HHMI Janelia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ v.fonts }}">
-<link rel="stylesheet" href="../../shared/base.css">
-<link rel="stylesheet" href="../../shared/{{ v.css }}">
-<link rel="stylesheet" href="../../shared/pubs.css">
+<link rel="stylesheet" href="{{ P.assets }}base.css">
+<link rel="stylesheet" href="{{ P.assets }}{{ v.css }}">
+<link rel="stylesheet" href="{{ P.assets }}pubs.css">
+<link rel="stylesheet" href="{{ P.assets }}pages.css">
 </head>
 <body class="variant-{{ variant }} page-pubs">
 
+{% if mock %}
 <div class="mock-bar">
   <span><strong>Mockup {{ variant | upper }}</strong> · {{ v.name }} · Publications</span>
   <span class="mock-bar-links"><a href="../">home</a> <a href="../../a/publications/">A</a> <a href="../../b/publications/">B</a> <a href="../../c/publications/">C</a></span>
 </div>
+{% endif %}
 
-<header class="nav nav-solid">
-  <a class="wordmark" href="../"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
-  <nav class="nav-links">
-    {% for label, href in site.nav %}<a href="../#{{ label | lower }}"{% if label == 'Publications' %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}
-  </nav>
-</header>
+{% set solid = true %}{% set active = "Publications" %}
+{% include "_nav.html" %}
 
 <main class="pubs">
   <div class="section-head pubs-head">
@@ -68,9 +69,7 @@
   </ol></section>
 </main>
 
-<footer class="foot">
-  <p>© {{ built.year }} Reiser Lab · Updated {{ built | month_year }}.</p>
-</footer>
+{% include "_foot.html" %}
 
 <script>
 (function () {
