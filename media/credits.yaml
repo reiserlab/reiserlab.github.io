@@ -3,7 +3,7 @@
 # source: paper DOI and figure/movie, or "lab, unpublished"
 # creator, license, attribution (text to show on the credits page)
 
-- file: media/hero/eyemap-*/ and media/hero/eyet4-*/ (eyet4 adds label-free frames of the T4 animation, 1730-1954)
+- file: media/hero/eyemap-desktop/ and media/hero/eyemap-mobile/
   source: Zhao et al. 2025, Nature, doi:10.1038/s41586-025-09276-5, eye-map animation; re-rendered 2026-11-13 from Marisa Dreher's Blender scene without labels (see media/hero/README.md)
   creator: Marisa Dreher
   license: lab-owned model and scene; paper is CC BY 4.0
