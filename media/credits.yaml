@@ -288,3 +288,9 @@
   creator: Tuthill JC et al.
   license: "publisher copyright, author reuse on lab site"
   quality: good
+
+- file: mockups/media/theme-scale.mp4
+  source: "Isaacson et al. 2022 (bioRxiv, doi:10.1101/2022.08.02.502550), Movie S2, pitching arena; cut from the lab's original file"
+  creator: Isaacson M et al.
+  license: CC BY 4.0
+  attribution: "An LED arena tilting around a fly under the two-photon microscope. From Isaacson et al. 2022."

@@ -35,3 +35,53 @@
 .foot a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
 .foot-built { margin-top: 10px; font-size: 12.5px; }
 @media (max-width: 760px) { .foot-cols { grid-template-columns: 1fr; gap: 18px; } }
+
+/* ---- phones: tighter vertical rhythm, stacked rows, text at full width ---- */
+@media (max-width: 640px) {
+  .statement, .pillars, .resources, .papers, .news, .join { padding-top: 38px; padding-bottom: 38px; }
+  .inner, .pubs { padding-top: 32px; padding-bottom: 48px; }
+  .section-head { margin-bottom: 18px; }
+  .section-lede { font-size: 17px; margin-top: 10px; }
+  .more { margin-top: 16px; }
+
+  /* nav: all six links on one or two rows, nothing hidden */
+  .nav-links { flex-wrap: wrap; gap: 6px 11px; overflow: visible; margin-top: 8px; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.03em; }
+  .nav-badge { margin-left: 5px; padding: 2px 4px 1px; font-size: 8.5px; }
+
+  /* research themes: question, loop, text, papers */
+  .themes .section-head { margin-bottom: 0; }
+  .theme { display: flex; flex-direction: column; align-items: stretch; gap: 12px; padding: 24px 0; }
+  .theme-text { display: contents; }
+  .theme-q { order: 1; margin-bottom: 0; }
+  .theme-media, .theme:nth-of-type(even) .theme-media { order: 2; }
+  .theme-media figcaption { margin-top: 6px; }
+  .theme-body { order: 3; font-size: 17px; }
+  .theme-papers { order: 4; margin-top: 0; }
+  .theme-hiring { order: 5; margin-top: 0; }
+
+  /* resources: one card per row */
+  .resource-grid { grid-template-columns: 1fr; gap: 24px; }
+  .resource h3 { margin-top: 10px; }
+
+  /* papers and news: stacked, full width */
+  .paper { padding: 18px 0; gap: 12px; }
+  .news-list li { grid-template-columns: 1fr; gap: 3px; padding: 13px 0; }
+  .news-date { padding-top: 0; }
+
+  /* lab statement, hiring, join */
+  .split-field { padding: 36px 20px; }
+  .split-text { font-size: 21px; }
+  .hiring-strip { padding-top: 14px; padding-bottom: 14px; }
+  .opening { padding: 20px 18px; margin-bottom: 28px; }
+  .join-grid { gap: 22px; }
+
+  /* inner pages */
+  .inner-head, .pubs-head { margin-bottom: 22px; }
+  .group-title { padding: 20px 0 10px; }
+  .people-list { gap: 16px; margin-bottom: 18px; }
+  .pub-year { padding-top: 18px; }
+  .pub { padding-bottom: 18px; margin-bottom: 18px; }
+  .res { padding: 14px 0; }
+  .foot { padding-top: 28px; padding-bottom: 48px; }
+}
