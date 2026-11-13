@@ -63,7 +63,7 @@ themes:
       The structure of the eye itself shapes what neurons deep in the brain respond to. These maps tell us
       which neurons to study next.
     media: theme-wiring
-    media_caption: The 11,700 cell types of the male fly central nervous system. Video by Philip Hubbard, FlyEM
+    media_caption: Columnar neurons filling the medulla, one cell type at a time. From Nern et al. 2025
     papers: [nern2025inventory, hoeller2026pathways, berg2026malecns]
   - key: behavior
     question: How does vision guide behavior?

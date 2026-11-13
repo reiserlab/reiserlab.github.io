@@ -3,20 +3,20 @@
 # Groups are ordered by resource_groups in site.yaml.
 
 - group: Connectome explorers and galleries
-  name: Optic Lobe Cell Type Explorer
-  url: https://reiserlab.github.io/male-drosophila-visual-system-connectome/
-  repo: https://github.com/reiserlab/male-drosophila-visual-system-connectome
-  line: Every cell type of the male fly visual system, with morphology, connectivity and spatial coverage. Companion to Nern et al. 2025.
-  version: optic-lobe v1.1
+  name: Male CNS Cell Type Explorer
+  url: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
+  repo: https://github.com/reiserlab/celltype-explorer-drosophila-male-cns
+  line: Every cell type in the complete male central nervous system, 11,751 types and 164,838 neurons, with morphology, connectivity and spatial coverage. It includes and supersedes the optic lobe explorer.
+  version: male-cns v1.0
   pillars: [anatomy]
   featured: true
 
 - group: Connectome explorers and galleries
-  name: Male CNS Cell Type Explorer
-  url: https://reiserlab.github.io/celltype-explorer-drosophila-male-cns/
-  repo: https://github.com/reiserlab/celltype-explorer-drosophila-male-cns
-  line: 11,751 cell types and 164,838 neurons of the complete male central nervous system.
-  version: male-cns v1.0
+  name: Optic Lobe Cell Type Explorer
+  url: https://reiserlab.github.io/male-drosophila-visual-system-connectome/
+  repo: https://github.com/reiserlab/male-drosophila-visual-system-connectome
+  line: The original explorer for the optic lobe, companion to Nern et al. 2025. Now superseded by the Male CNS explorer, which covers the same cell types in the full connectome.
+  version: optic-lobe v1.1
   pillars: [anatomy]
 
 - group: Connectome explorers and galleries

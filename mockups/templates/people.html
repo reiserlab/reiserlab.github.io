@@ -26,7 +26,7 @@
     <h1 class="h2">The lab</h1>
     <p class="section-lede">We are a small, cross-disciplinary group of biologists, engineers and computational scientists at HHMI's Janelia Research Campus.</p>
   </div>
-  {% for group in ["Lab", "Visiting scientists", "Administration"] %}
+  {% for group in ["Lab", "Visiting scientists", "Collaborators", "Administration"] %}
   {% set members = current | selectattr("group", "equalto", group) | list if group != "Lab" else current | rejectattr("group") | list %}
   {% if members %}
   <section class="people-group">

@@ -2,7 +2,7 @@
 # Optional: pillars, line (one sentence on what they work on), photo (file in media/people/),
 #           links: {scholar, github, orcid, website, bluesky}, where_now (alumni), years (alumni, e.g. "2019–2024")
 # Roles are shown as written; keep them short.
-# group: heading on the People page (Lab, Visiting scientists, Administration); default Lab.
+# group: heading on the People page (Lab, Visiting scientists, Collaborators, Administration); default Lab.
 
 - name: Michael Reiser
   role: Senior Group Leader
@@ -26,20 +26,11 @@
   pillars: [anatomy, methods]
   line: ""
 
-- name: Frank Loesche
-  role: Senior Engineer
+- name: Aljoscha Nern
+  role: Senior Scientist
   status: current
-  pillars: [methods]
+  pillars: [anatomy]
   line: ""
-  links:
-    github: https://github.com/floesche
-
-# To confirm before listing (not on the Janelia Reiser Lab members page):
-# - name: Aljoscha Nern
-#   role: Research Scientist
-#   status: current
-#   pillars: [anatomy]
-#   line: ""
 
 - name: Pavithraa Seenivasan
   role: Postdoctoral Scientist
@@ -100,6 +91,29 @@
   status: current
   group: Administration
   line: ""
+
+- name: Frank Loesche
+  role: Collaborator
+  status: current
+  group: Collaborators
+  line: ""
+  links:
+    github: https://github.com/floesche
+
+- name: Judith Hoeller
+  role: Collaborator
+  status: current
+  group: Collaborators
+  line: ""
+
+# Alumni. years and where_now are optional; add them when known.
+- name: Chelo Perez Sanchez
+  role: Postdoctoral Scientist
+  status: alumni
+
+- name: Laura Burnett
+  role: Postdoctoral Scientist
+  status: alumni
 
 # Alumni: add entries like the one below (commented out until confirmed).
 # - name: Eyal Gruntman
