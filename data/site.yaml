@@ -6,7 +6,7 @@ design: e
 domain: reiserlab.org
 # Set to true only after the Cloudflare DNS records point at GitHub Pages (see docs/plan.md section 2).
 domain_live: false
-tagline: We study how vision works, from single neurons processing light to brain-wide circuits that transform what a fly sees into what it does.
+tagline: We study how vision works, from single neurons processing light signals to brain-wide circuits that transform visual information into behavior.
 institution: Janelia Research Campus, Howard Hughes Medical Institute
 address: 19700 Helix Drive, Ashburn, Virginia 20147, USA
 email: reiserm@janelia.hhmi.org
@@ -25,22 +25,22 @@ pillars:
   - key: methods
     name: Methods
     line: Instruments, displays and software we build and share.
-modeling_line: The fly visual system offers a rare combination of richness and tractability. It supports many behaviors, yet its wiring is now completely mapped, so we can ask how real behaviors arise from specific computations in identified neurons.
-focus_line: We combine connectomics, quantitative behavior, neurophysiology and modeling, and we build the instruments each of these needs. We share the tools and data we make.
+modeling_line: The fly visual system contains multiple interacting subsystems that support diverse behaviors, and its structure is now fully mapped. We use it to test long-standing theories of how brains work.
+focus_line: Our work combines connectomics, quantitative behavior, neurophysiology and computational modeling. We build our own instruments and share them, along with our data and code.
 
 # Home-page hero: the question, and the two captions that appear as the animation plays.
 hero:
   question: How does a brain turn seeing into doing?
-  lede: We study vision in flies to learn where behavior comes from, from single neurons processing light to brain-wide circuits that guide what the animal does.
+  lede: We study vision in flies to understand where behavior comes from.
   frames: 192          # number of frames in the scroll sequence
   credit: Animation by Marisa Dreher, from Zhao et al. 2025
   stops:
     - eyebrow: Why flies
-      title: A complete visual system, completely mapped
-      text: The fly visual system supports many behaviors, and every neuron and connection in it is now known. That combination lets us test long-standing ideas about how brains work.
+      title: A visual system with a complete wiring diagram
+      text: Flies use vision for many behaviors, and every neuron and connection in the fly visual system has now been mapped.
     - eyebrow: Now
-      title: From wiring diagrams to working circuits
-      text: We are adding function to the map, and automating our experiments to do it at scale.
+      title: What does each neuron do?
+      text: We are measuring the activity of the mapped neurons during behavior, and automating our experiments so that we can study thousands of cell types.
 
 # Research themes on the home page. Each is a question, answered in two or three sentences.
 # media: base name of a loop in mockups/media/ (mp4 + jpg poster). papers: ids from publications.yaml.
@@ -60,28 +60,29 @@ themes:
     text: >
       With the FlyEM team and many colleagues, we cataloged every cell type in the fly optic lobe from a
       complete wiring diagram, and traced how visual information travels from the eye into the central brain.
-      The structure of the eye itself shapes what neurons deep in the brain respond to. These maps tell us
-      which neurons to study next.
+      We found that the structure of the eye shapes the responses of neurons deep in the brain. We use these
+      maps to choose which neurons to study.
     media: theme-wiring
     media_caption: Columnar neurons filling the medulla, one cell type at a time. From Nern et al. 2025
     papers: [nern2025inventory, hoeller2026pathways, berg2026malecns]
   - key: behavior
     question: How does vision guide behavior?
     text: >
-      Vision is active, so no account of seeing is complete without behavior. We link identified neurons to
-      what flies do, from pathways that detect the fly's own movement and steer walking to neurons that
-      detect approaching objects. We are extending this approach to visual learning and to social behavior
-      in complex environments.
+      Vision is inherently active, so no understanding of vision can be complete without behavior. We have
+      identified neurons that detect the fly's own movement and steer walking, and neurons that detect
+      approaching objects. We are extending this work to visual learning and to social behavior in complex
+      environments.
     media: theme-behavior
     media_caption: A tethered fly steering in an LED arena
     papers: [isaacson2023lpc1, klapoetke2017looming, ofstad2011place]
   - key: scale
     question: Which neurons should we study next?
     text: >
-      We can now explain individual circuits in mechanistic detail, but the fly brain has thousands of cell
-      types. To study them at scale we are rebuilding our experimental approach: custom instruments for
-      higher-throughput rigs, robots that handle flies, automated two-photon imaging, and adaptive experiments
-      in which data from one experiment shape the next. The approach is human-centered and AI-accelerated.
+      The fly brain has thousands of cell types, and the detailed methods we use to study one circuit at a
+      time do not scale to all of them. We are rebuilding our experimental approach with custom instruments
+      for higher-throughput rigs, robots that handle flies, automated two-photon imaging, and adaptive
+      experiments in which data from one experiment shape the next. Our approach is human-centered and
+      AI-accelerated.
     media: theme-scale
     media_caption: A tethered fly in a G6 LED arena
     papers: [isaacson2022g4, loesche2021treadmill]

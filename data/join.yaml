@@ -19,19 +19,19 @@ openings:
     who: >
       We welcome candidates from any technical background who are passionate about experimental design and
       execution; neuroscience, bioengineering or another quantitative field is ideal. Hands-on experience
-      with AI-assisted coding is required. Experience with Drosophila is not.
+      with AI-assisted coding is required. Experience with Drosophila is not required.
 
 intro: >
-  We are a small, cross-disciplinary group: biologists, engineers and computational scientists working side by
-  side. We build our own tools and share them. Our current focus is scaling up experiments by automating fly
-  handling, behavior and two-photon imaging.
+  We are a small, cross-disciplinary group of biologists, engineers and computational scientists. We build
+  our own tools and share them. Our current focus is scaling up experiments by automating fly handling,
+  behavioral phenotyping and two-photon imaging.
 
 sections:
   - title: Postdocs
     text: >
       We are always glad to hear from potential postdocs; Janelia recruits year-round and postdocs here do not
-      write grants. Send a CV, a short statement (one page is plenty) of what you have done and what you would
-      like to do here, and the names of two or three references. Open positions, when we have them, are also
+      write grants. Send a CV, a one-page statement of what you have done and what you would like to do here,
+      and the names of two or three references. Open positions, when we have them, are also
       posted on the Janelia job listing.
     links:
       - [Janelia postdocs, https://www.janelia.org/you-janelia/students-postdocs/postdoctoral-associates]
@@ -61,7 +61,7 @@ sections:
   - title: Scientific Computing Associates
     text: >
       Early-career programmers can work with the lab through Janelia's Scientific Computing Associate (SCA)
-      program, a two-year appointment embedded in a lab and in the Scientific Computing team, building real
+      program, a two-year appointment embedded in a lab and in the Scientific Computing team, to build
       research software with an open-source portfolio.
     links:
       - [Scientific Computing Associates, https://www.janelia.org/support-team/scientific-computing/scientific-computing-associates]
@@ -77,16 +77,18 @@ sections:
 
   - title: Engineers and technicians
     text: >
-      The lab builds its own instruments, from display arenas to automated behavior rigs. Engineering and
-      technician roles are posted on the Janelia job listing; if nothing is listed, email us anyway.
+      The lab builds its own instruments, including LED display arenas and automated behavior rigs.
+      Engineering and technician roles are posted on the Janelia job listing. If nothing is listed, you are
+      welcome to email us.
     links:
       - [Janelia job listing, "https://hhmi.wd1.myworkdayjobs.com/External?locations=d48b8f09725a105a7c43ec0c1b9f4993"]
       - [Life at Janelia, https://www.janelia.org/about-us/campus-amenities]
 
+# From the November 2026 job ad ("What we're looking for").
 look_for:
-  - Curiosity about how real brains produce real behavior, not just a method.
-  - Comfort with quantitative work and a willingness to learn to code if you do not already.
-  - A builder's attitude: fixing, measuring, and improving the apparatus is part of the science.
-  - Openness: we share tools, data, and code, and we expect the same.
+  - A passion for experimental design and execution.
+  - Equal enthusiasm for developing methods and for collecting large, rigorous datasets.
+  - Strong quantitative skills, including programming and working with large datasets.
+  - Enjoyment of collaborative work with engineers, software developers and experimental biologists.
 
 updated: 2026-10-23

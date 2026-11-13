@@ -1,123 +1,220 @@
 # One entry per person. Required: name, role, status (current | alumni).
-# Optional: pillars, line (one sentence on what they work on), photo (file in media/people/),
-#           links: {scholar, github, orcid, website, bluesky}, where_now (alumni), years (alumni, e.g. "2019–2024")
-# Roles are shown as written; keep them short.
-# group: heading on the People page (Lab, Visiting scientists, Collaborators, Administration); default Lab.
+# Optional: group (heading on the People page: Lab, Visiting scientists, Collaborators, Administration;
+#           default Lab), note (shown under the role, e.g. a co-mentoring lab), line (one sentence on what
+#           they work on), photo (file in media/people/), links: {scholar, github, orcid, website},
+#           years (e.g. "2019–2024"), where_now (alumni).
+# Source for roles, years and "where now": Reiser_short_CV_1126 (November 2026), mentoring section.
 
 - name: Michael Reiser
   role: Senior Group Leader
   status: current
-  pillars: [anatomy, behavior, neurophysiology, methods, modeling]
-  line: ""
   links:
     janelia: https://www.janelia.org/people/michael-reiser
+
+- name: Aljoscha Nern
+  role: Senior Scientist
+  note: with the Rubin Lab
+  status: current
 
 - name: Arthur Zhao
   role: Research Scientist
   status: current
-  pillars: [anatomy, modeling]
-  line: ""
   links:
     orcid: https://orcid.org/0000-0003-2869-4393
 
 - name: Edward Rogers
   role: Research Specialist
   status: current
-  pillars: [anatomy, methods]
-  line: ""
-
-- name: Aljoscha Nern
-  role: Senior Scientist
-  status: current
-  pillars: [anatomy]
-  line: ""
 
 - name: Pavithraa Seenivasan
-  role: Postdoctoral Scientist
+  role: Postdoctoral Associate
+  note: with the Jayaraman Lab
   status: current
-  pillars: [neurophysiology]
-  line: ""
 
 - name: Shubham Rathore
-  role: Postdoctoral Scientist
+  role: Postdoctoral Associate
   status: current
-  pillars: [behavior]
-  line: ""
 
 - name: Grace Biondi
   role: Graduate Scholar
+  note: Janelia–Johns Hopkins XDBio program
   status: current
-  pillars: [neurophysiology]
-  line: ""
 
 - name: Hannah Marie Santos
   role: Graduate Scholar
+  note: Janelia–Johns Hopkins Neuroscience program
   status: current
-  pillars: [behavior]
-  line: ""
-
-- name: Daniel Chavez-Clemente
-  role: Principal AI Robotics Engineer
-  status: current
-  pillars: [methods]
-  line: ""
 
 - name: Isabel Lehenbauer
   role: Robotics Engineer
   status: current
-  pillars: [methods]
-  line: ""
 
+# From the Janelia members page (October 2026); not in the CV. Confirm.
 - name: Dominic Evans
   role: Visiting Postdoctoral Associate
   status: current
   group: Visiting scientists
-  line: ""
 
 - name: Ali Karimi
   role: Visiting Postdoctoral Associate
   status: current
   group: Visiting scientists
-  line: ""
 
 - name: Elisa de Launoit
   role: Visiting Postdoctoral Associate
   status: current
   group: Visiting scientists
-  line: ""
+
+- name: Daniel Chavez-Clemente
+  role: Principal AI Robotics Engineer
+  status: current
+  group: Collaborators
+
+- name: Frank Loesche
+  role: Senior Engineer, Janelia
+  status: current
+  group: Collaborators
+  links:
+    github: https://github.com/floesche
+
+- name: Judith Hoeller
+  role: Janelia
+  status: current
+  group: Collaborators
 
 - name: Dianne Pereira
   role: Lab Administration Specialist
   status: current
   group: Administration
-  line: ""
 
-- name: Frank Loesche
-  role: Collaborator
-  status: current
-  group: Collaborators
-  line: ""
-  links:
-    github: https://github.com/floesche
-
-- name: Judith Hoeller
-  role: Collaborator
-  status: current
-  group: Collaborators
-  line: ""
-
-# Alumni. years and where_now are optional; add them when known.
+# Alumni, most recent first.
 - name: Chelo Perez Sanchez
-  role: Postdoctoral Scientist
+  role: Postdoctoral Associate, with the Otopalik Lab
+  years: "2024–2026"
+  where_now: Program Specialist, American Chemical Society
   status: alumni
 
 - name: Laura Burnett
-  role: Postdoctoral Scientist
+  role: Postdoctoral Associate
+  years: "2023–2026"
   status: alumni
 
-# Alumni: add entries like the one below (commented out until confirmed).
-# - name: Eyal Gruntman
-#   role: Postdoctoral Scientist
-#   status: alumni
-#   years: "2013–2020"
-#   where_now: ""
+- name: Sanna Koskela
+  role: Postdoctoral Associate
+  years: "2021–2024"
+  where_now: Scientific Operations Manager, Janelia Research Campus
+  status: alumni
+
+- name: Kit Longden
+  role: Postdoctoral Associate, then Research Scientist
+  years: "2014–2024"
+  where_now: Consulting scientist with the lab; visiting scientist, Francis Crick Institute
+  status: alumni
+
+- name: Eyal Gruntman
+  role: Postdoctoral Associate, then Research Scientist
+  years: "2013–2023"
+  where_now: Assistant Professor, University of Toronto Scarborough
+  status: alumni
+
+- name: Omika Wadhwa
+  role: Visiting Master's Student
+  years: "2022–2023"
+  where_now: Graduate Student, Drexel University
+  status: alumni
+
+- name: Nathan Klapoetke
+  role: Postdoctoral Associate, with the Card Lab
+  years: "2015–2022"
+  where_now: Research Scientist, Turaga Lab, Janelia Research Campus
+  status: alumni
+
+- name: Pablo Reimers
+  role: Research Technician, with the Romani Lab
+  years: "2019–2020"
+  where_now: Graduate Student, Harvard
+  status: alumni
+
+- name: Matthew Isaacson
+  role: PhD Student, Janelia–University of Cambridge program
+  years: "2014–2019"
+  where_now: Postdoctoral Associate, Cornell
+  status: alumni
+
+- name: Jessica Eliason
+  role: Graduate Research Fellow, Emory University
+  years: "2015–2018"
+  where_now: Instructor, Loudoun Academies of Science
+  status: alumni
+
+- name: Shiuan-Tze Wu
+  role: Research Technician
+  years: "2013–2017"
+  where_now: Graduate Student, UC San Diego
+  status: alumni
+
+- name: Mai Morimoto
+  role: PhD Student, Janelia–University of Cambridge program
+  years: "2012–2017"
+  where_now: Research Fellow, Imperial College London
+  status: alumni
+
+- name: TJ Florence
+  role: MD/PhD Student, Columbia University, with Charles Zuker
+  years: "2011–2017"
+  where_now: Neurosurgical Resident, UCLA
+  status: alumni
+
+- name: James Strother
+  role: Postdoctoral Associate
+  years: "2011–2015"
+  where_now: Assistant Professor, The Whitney Laboratory, University of Florida
+  status: alumni
+
+- name: Stephen Holtz
+  role: Research Technician
+  years: "2011–2013"
+  where_now: Research Scientist, HHMI, Harvard
+  status: alumni
+
+- name: Dhruv Grover
+  role: Postdoctoral Associate
+  years: "2010–2012"
+  where_now: Assistant Project Scientist, UC San Diego
+  status: alumni
+
+- name: Laura Henderson
+  role: Research Technician
+  years: "2010–2012"
+  where_now: Doctor of Physical Therapy
+  status: alumni
+
+- name: Nikolay Kladt
+  role: Postdoctoral Associate
+  years: "2008–2012"
+  where_now: Head of AI & Data Science, ALTANA, Germany
+  status: alumni
+
+- name: John Tuthill
+  role: PhD Student, Janelia–University of Chicago program
+  years: "2008–2012"
+  where_now: Associate Professor, University of Washington
+  status: alumni
+
+- name: Tyler Ofstad
+  role: MD/PhD Student, UC San Diego, with Charles Zuker
+  years: "2007–2011"
+  where_now: Ophthalmologist, Glacier Eye Clinic
+  status: alumni
+
+- name: Alexandre Dieudonne
+  role: Postdoctoral Associate
+  years: "2007–2008"
+  where_now: Data Scientist, TrueCar
+  status: alumni
+
+- name: Justin Suraci
+  role: Research Technician
+  years: "2007–2008"
+  where_now: Postdoctoral Associate, UC Santa Cruz
+  status: alumni

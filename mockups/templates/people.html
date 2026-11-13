@@ -37,6 +37,7 @@
         {% if m.photo %}<img src="/media/people/{{ m.photo }}" alt="{{ m.name }}" loading="lazy">{% endif %}
         <h3>{{ m.name }}</h3>
         <p class="person-role mono">{{ m.role }}</p>
+        {% if m.note %}<p class="person-note">{{ m.note }}</p>{% endif %}
         {% if m.line %}<p class="person-line">{{ m.line }}</p>{% endif %}
         {% if m.links %}<p class="person-links">{% for k, url in m.links.items() %}<a href="{{ url }}">{{ k }}</a>{% endfor %}</p>{% endif %}
       </li>
@@ -49,7 +50,9 @@
   <section class="people-group">
     <h2 class="group-title">Alumni</h2>
     <ul class="alumni-list">
-      {% for m in alumni %}<li><strong>{{ m.name }}</strong> <span class="mono">{{ m.role }}{% if m.years %}, {{ m.years }}{% endif %}</span>{% if m.where_now %}<span class="alumni-now"> {{ m.where_now }}</span>{% endif %}</li>{% endfor %}
+      {% for m in alumni %}
+      <li><span class="alumni-name">{{ m.name }}</span><span class="alumni-role">{{ m.role }}{% if m.years %}, {{ m.years }}{% endif %}</span>{% if m.where_now %}<span class="alumni-now">Now {{ m.where_now }}</span>{% endif %}</li>
+      {% endfor %}
     </ul>
   </section>
   {% endif %}
