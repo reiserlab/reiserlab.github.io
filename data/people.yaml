@@ -49,8 +49,12 @@
   role: Robotics Engineer
   status: current
 
+- name: Dianne Pereira
+  role: Lab Coordinator
+  status: current
+
 - name: Daniel Chavez-Clemente
-  role: Principal AI Robotics Engineer
+  role: Principal AI Robotics Engineer, Janelia
   status: current
   group: Collaborators
 
@@ -70,11 +74,6 @@
   role: Janelia
   status: current
   group: Collaborators
-
-- name: Dianne Pereira
-  role: Lab Administration Specialist
-  status: current
-  group: Administration
 
 # Alumni, most recent first.
 - name: Chelo Perez Sanchez
