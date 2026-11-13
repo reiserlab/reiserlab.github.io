@@ -85,7 +85,7 @@ themes:
       experiments in which data from one experiment shape the next. Our approach is human-centered and
       AI-accelerated.
     media: theme-scale
-    media_caption: An LED arena tilting around a fly under the two-photon microscope. From Isaacson et al. 2022
+    media_caption: A robot picks a tethered fly from a rack and places it in an LED arena
     papers: [isaacson2022g4, loesche2021treadmill]
     hiring: true
 

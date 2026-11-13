@@ -289,8 +289,14 @@
   license: "publisher copyright, author reuse on lab site"
   quality: good
 
-- file: mockups/media/theme-scale.mp4
+- file: mockups/media/res-displays.mp4
   source: "Isaacson et al. 2022 (bioRxiv, doi:10.1101/2022.08.02.502550), Movie S2, pitching arena; cut from the lab's original file"
   creator: Isaacson M et al.
   license: CC BY 4.0
   attribution: "An LED arena tilting around a fly under the two-photon microscope. From Isaacson et al. 2022."
+
+- file: mockups/media/theme-scale.mp4
+  source: "Robotic Lab Assistant demo, May 2019 (Presentations/movies/Robotic Lab Assistant/Request_01.mpg): a robot arm takes a tethered fly from a rack and places it in an LED arena"
+  creator: Frank Loesche, Reiser Lab
+  license: lab footage, unpublished
+  attribution: "Robotic fly handling. Reiser Lab."
