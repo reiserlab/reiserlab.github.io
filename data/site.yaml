@@ -32,16 +32,24 @@ focus_line: Our work combines connectomics, quantitative behavior, neurophysiolo
 hero:
   question: How does a brain turn seeing into doing?
   lede: We study vision in flies to understand where behavior comes from.
-  set: eyemap          # frame set in media/hero/: <set>-desktop and <set>-mobile
-  frames: 180          # number of frames in each set
+  set: eyet4           # frame set in media/hero/: <set>-desktop and <set>-mobile
+  frames: 196          # number of frames in each set
+  scroll: 250vh        # height of the pinned section; 100vh of it is the screen itself
   credit: Animation by Marisa Dreher, from Zhao et al. 2025
+  first_until: 0.15    # the question stays up for this fraction of the scroll
+  # Captions that appear as the animation plays. from/to are scroll progress (0 to 1); the camera rests
+  # are listed by tools/build_hero_eyet4.py.
   stops:
     - eyebrow: Why flies
       title: A visual system with a complete wiring diagram
       text: Flies use vision for many behaviors, and every neuron and connection in the fly visual system has now been mapped.
+      from: 0.26
+      to: 0.62
     - eyebrow: Now
       title: What does each neuron do?
-      text: We are measuring the activity of the mapped neurons during behavior, and automating our experiments so that we can study thousands of cell types.
+      text: This T4 neuron detects motion in one direction. We are measuring the activity of the mapped neurons during behavior, and automating our experiments so that we can study thousands of cell types.
+      from: 0.80
+      to: 0.985
 
 # Research themes on the home page. Each is a question, answered in two or three sentences.
 # media: base name of a loop in mockups/media/ (mp4 + jpg poster). papers: ids from publications.yaml.

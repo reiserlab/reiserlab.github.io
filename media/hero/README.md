@@ -7,6 +7,17 @@ on-screen text belongs in HTML.
 Made 2026-11-13. Source files, scripts and the rebuild steps are in `media/sources/hero-marisa/`
 (git-ignored); start with `SOURCES.md` there.
 
+## Current hero: `eyet4-desktop` and `eyet4-mobile` (2026-11-14)
+
+196 frames each (12.6 MB and 6.3 MB), assembled by `tools/build_hero_eyet4.py` from the `eyemap-*` sets below
+plus Marisa's label-free T4 frames 1730-1954 (in `media/sources/hero-marisa/`, background lifted from black to
+#171513). Stages by scroll progress: head 0-0.15; into the eye 0.15-0.24; retina and lens row 0.25-0.36; down
+one column 0.37-0.50; Mi1 and medulla columns 0.50-0.63; dissolve 0.64-0.67; one T4 cell turning to show its
+dendrite 0.68-0.79; dendrite on the column grid with its input columns lit 0.79-0.87; preferred-direction
+arrow 0.87-1.0. On desktop the T4 subject is shifted right of center; on phones the T4 frames zoom from the
+whole frame to the dendrite. The set, frame count, scroll length and caption positions are in `data/site.yaml`
+(`hero:`). The `eyemap-*` sets are kept because the build script reads them.
+
 ## Sets
 
 | Folder | Frames | Size | Pixels | Source |
