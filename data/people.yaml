@@ -49,22 +49,6 @@
   role: Robotics Engineer
   status: current
 
-# From the Janelia members page (October 2026); not in the CV. Confirm.
-- name: Dominic Evans
-  role: Visiting Postdoctoral Associate
-  status: current
-  group: Visiting scientists
-
-- name: Ali Karimi
-  role: Visiting Postdoctoral Associate
-  status: current
-  group: Visiting scientists
-
-- name: Elisa de Launoit
-  role: Visiting Postdoctoral Associate
-  status: current
-  group: Visiting scientists
-
 - name: Daniel Chavez-Clemente
   role: Principal AI Robotics Engineer
   status: current
@@ -78,6 +62,11 @@
     github: https://github.com/floesche
 
 - name: Judith Hoeller
+  role: Romani Lab, Janelia
+  status: current
+  group: Collaborators
+
+- name: Jin Yong Park
   role: Janelia
   status: current
   group: Collaborators
