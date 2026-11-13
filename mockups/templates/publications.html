@@ -33,7 +33,7 @@
     <p class="eyebrow">Publications</p>
     <h1 class="h2">Lab publications</h1>
     <p class="section-lede">Our papers since 2003, newest first. Each paper is listed once, with its preprint linked where there is one. Use the buttons to filter by topic.</p>
-    {% if site.scholar or site.orcid %}<p class="section-lede pubs-records">Michael Reiser's full record, with citation counts: {% if site.scholar %}<a href="{{ site.scholar }}">Google Scholar</a>{% endif %}{% if site.scholar and site.orcid %} and {% endif %}{% if site.orcid %}<a href="{{ site.orcid }}">ORCID</a>{% endif %}.</p>{% endif %}
+    {% if site.scholar or site.orcid %}<p class="section-lede pubs-records">Michael Reiser's full publication record: {% if site.scholar %}<a href="{{ site.scholar }}">Google Scholar</a>{% endif %}{% if site.scholar and site.orcid %} and {% endif %}{% if site.orcid %}<a href="{{ site.orcid }}">ORCID</a>{% endif %}.</p>{% endif %}
     <div class="filters" role="group" aria-label="Filter by pillar">
       <button class="chip is-on" data-filter="all">All</button>
       {% for p in site.pillars %}<button class="chip" data-filter="{{ p.key }}">{{ p.name }}</button>{% endfor %}

@@ -1,5 +1,5 @@
 # One entry per person. Required: name, role, status (current | alumni).
-# Optional: group (heading on the People page: Lab, Visiting scientists, Collaborators, Administration;
+# Optional: group (heading on the People page: Lab or Collaborators;
 #           default Lab), note (shown under the role, e.g. a co-mentoring lab), line (one sentence on what
 #           they work on), photo (file in media/people/), links: {scholar, github, orcid, website},
 #           years (e.g. "2019–2024"), where_now (alumni).
