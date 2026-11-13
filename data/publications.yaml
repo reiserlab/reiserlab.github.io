@@ -172,7 +172,7 @@
     video: https://www.youtube.com/@ReiserLab
 
 - id: longden2026mitochondria
-  title: Connectomic analysis of mitochondria in the central brain of Drosophila
+  title: Connectomic Analysis of Mitochondria in the Central Brain of Drosophila
   authors: Longden KD, et al., Reiser MB, Plaza SM, Berg S
   year: 2024
   date: 2024-04-25
@@ -222,8 +222,7 @@
   pillars_auto: true
 
 - id: zhao2024lptn
-  title: A comprehensive neuroanatomical survey of the Drosophila lobula plate tangential neurons with predictions
-    for their optic flow sensitivity
+  title: A comprehensive neuroanatomical survey of the Drosophila Lobula Plate Tangential Neurons with predictions for their optic flow sensitivity
   authors: Zhao A, Nern A, Koskela S, Dreher M, Erginkaya M, Laughland CW, Ludwig HDF, Thomson AG, Hoeller J, Parekh
     R, Romani S, Bock DD, Chiappe E, Reiser MB
   year: 2024
@@ -359,7 +358,7 @@
   pillars_auto: true
 
 - id: isaacson2022g4
-  title: A modular LED display system for visual neuroscience (G4)
+  title: A high-speed, modular display system for diverse neuroscience applications
   authors: Isaacson MD, et al., Reiser MB
   year: 2022
   date: 2022-08-03
@@ -484,7 +483,7 @@
   pillars_auto: true
 
 - id: loesche2021treadmill
-  title: An inexpensive, high-precision, modular spherical treadmill setup optimized for Drosophila experiments
+  title: An Inexpensive, High-Precision, Modular Spherical Treadmill Setup Optimized for Drosophila Experiments
   authors: Loesche F, Reiser MB
   year: 2021
   date: 2021-07-16
@@ -730,7 +729,7 @@
   pillars_auto: true
 
 - id: strother2017emergence
-  title: The emergence of directional selectivity in the visual motion pathway of Drosophila
+  title: The Emergence of Directional Selectivity in the Visual Motion Pathway of Drosophila
   authors: Strother JA, Wu S-T, Wong AM, Nern A, Rogers EM, Le JQ, Rubin GM, Reiser MB
   year: 2017
   date: 2017-04-05

@@ -2,11 +2,29 @@
 # fetched and verified on that date. Re-check deadlines each cycle (JHU: December 3; Cech Fellows: opens
 # November, closes mid-December).
 
+# Open positions. Shown as a strip under the hero, a badge on the Join link, and a card at the top of
+# the Join section. Set url to the Workday posting when it is live; until then the card says when it
+# will post and offers email. Remove an entry (or set closed: true) when the position is filled.
+openings:
+  - title: "Postdoctoral Scientist: Automating Behavior and Neurophysiology Experiments"
+    short: Postdoc, automating behavior and neurophysiology
+    posts_on: 2026-11-14
+    url: ""
+    summary: >
+      Develop and validate methods for automating fly behavior and two-photon neurophysiology experiments,
+      and collect the large, high-quality datasets they make possible. You will build automated pipelines
+      from fly preparation through stimulus delivery, acquisition and quality control, design adaptive
+      protocols in which incoming data select the next experiment, and relate the results to
+      connectome-based models of visual circuits.
+    who: >
+      We welcome candidates from any technical background who are passionate about experimental design and
+      execution; neuroscience, bioengineering or another quantitative field is ideal. Hands-on experience
+      with AI-assisted coding is required. Experience with Drosophila is not.
+
 intro: >
-  We study how the fly visual system turns what the animal sees into what it does, working across anatomy,
-  behavior, neurophysiology, and the methods and instruments needed to connect them, with modeling throughout.
-  Current directions include connectome-guided circuit analysis and the automation and robotics of behavioral
-  and physiological experiments.
+  We are a small, cross-disciplinary group: biologists, engineers and computational scientists working side by
+  side. We build our own tools and share them. Our current focus is scaling up experiments by automating fly
+  handling, behavior and two-photon imaging.
 
 sections:
   - title: Postdocs

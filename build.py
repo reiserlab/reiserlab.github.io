@@ -99,6 +99,11 @@ def load_data() -> dict:
     pubs_all = pubs
     pubs = [p for p in pubs if not p.get("preprint_of")]
 
+    for theme in site.get("themes", []):
+        for pid in theme.get("papers", []):
+            if pid not in by_id:
+                raise BuildError(f"site.yaml theme {theme.get('key')}: unknown paper id {pid}")
+
     for person in people:
         where = f"people.yaml entry {person.get('name', '?')}"
         require(person, ("name", "role", "status"), where)
@@ -121,6 +126,7 @@ def load_data() -> dict:
         "site": site,
         "publications": pubs,
         "publications_all": pubs_all,
+        "pub_index": by_id,
         "selected": [p for p in pubs if p["selected"]],
         "people": people,
         "current": [p for p in people if p["status"] == "current"],

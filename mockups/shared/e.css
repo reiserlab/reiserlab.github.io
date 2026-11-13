@@ -19,14 +19,14 @@
   --hero-muted: rgba(246,241,232,0.85);
   --stop-align: center;
 
-  --serif-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --serif-display: "Newsreader", "Iowan Old Style", Georgia, serif;   /* Fraunces dropped: its quirky f and soft terminals distracted */
   --serif: "Source Serif 4", Georgia, serif;
   --sans: "Source Serif 4", Georgia, serif;      /* body is serif in this language */
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   --wordmark-font: 500 22px/1 var(--serif-display);
   --wordmark-tracking: -0.02em;
   --wordmark-case: none;
-  --display-font: 300 clamp(44px, 6.4vw, 92px)/1.0 var(--serif-display);
+  --display-font: 400 clamp(44px, 6.2vw, 88px)/1.02 var(--serif-display);
   --display-tracking: -0.02em;
   --h2-font: 500 clamp(30px, 3.4vw, 46px)/1.08 var(--serif-display);
   --h2-tracking: -0.015em;
@@ -35,7 +35,7 @@
   --radius: 0px;
 }
 body { font-size: 17.5px; }
-.wm-1 { font-weight: 700; } .wm-2 { font-weight: 300; font-style: italic; }
+.wm-1 { font-weight: 600; } .wm-2 { font-weight: 400; font-style: italic; }
 .nav-links a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
 .eyebrow { font-family: var(--mono); font-weight: 500; letter-spacing: 0.14em; }
 .display em { font-style: italic; font-weight: 400; }
@@ -89,3 +89,18 @@ body { font-size: 17.5px; }
 /* join on the band */
 .join .button { border-color: var(--ink); color: var(--ink); }
 .join .button:hover { background: var(--ink); color: var(--ground); }
+
+/* research themes */
+.themes .section-head { margin-bottom: 12px; }
+.theme { padding: 44px 0; gap: 56px; }
+.theme-q { font: 500 clamp(28px, 3vw, 40px)/1.1 var(--serif-display); letter-spacing: -0.012em; }
+.theme-body { font-size: 18.5px; }
+.theme-papers a { font-weight: 600; }
+
+/* hiring */
+.hiring-strip { background: var(--ink); }
+.hiring-label { color: #e9a58a; }
+.hiring-title { font: 500 21px/1.25 var(--serif-display); }
+.nav-badge { background: var(--accent); }
+.opening { background: var(--ground); border-color: var(--ink); }
+.opening-title { font-family: var(--serif-display); font-weight: 500; }

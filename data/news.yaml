@@ -1,9 +1,16 @@
 # One entry per item. Required: date (YYYY-MM-DD), title. Optional: tag, text (one or two sentences), link.
-# Tags in use: paper, preprint, resource, people, course, talk, award
+# Tags in use: paper, preprint, resource, people, course, talk, award, hiring
+# House rule: no journal names in titles or text (see publications.yaml header).
+
+- date: 2026-11-14
+  tag: hiring
+  title: "We are hiring a postdoctoral scientist to automate behavior and neurophysiology experiments"
+  text: Build automated pipelines for fly behavior and two-photon imaging, and collect the datasets they make possible.
+  link: "#join"
 
 - date: 2026-09-03
   tag: paper
-  title: Two papers in Cell on the male CNS connectome and the organization of visual pathways
+  title: Two new papers on the male CNS connectome and the organization of visual pathways
   text: Hoeller et al. map how visual information travels from the eye into the central brain; Berg et al. describe the complete male CNS connectome and its sexual dimorphism.
   link: https://doi.org/10.1016/j.cell.2026.08.014
 
@@ -15,12 +22,12 @@
 
 - date: 2025-07-23
   tag: paper
-  title: Eye structure shapes neuron function in Drosophila motion vision, in Nature
+  title: New paper on how eye structure shapes neuron function in motion vision
   text: Zhao et al. show how the geometry of the compound eye predicts the tuning of T4 motion detectors.
   link: https://doi.org/10.1038/s41586-025-09276-5
 
 - date: 2025-03-26
   tag: paper
-  title: A complete cell-type inventory of the fly visual system, in Nature
+  title: New paper with a complete cell-type inventory of the fly visual system
   text: Nern et al. catalog every cell type of the optic lobe from the connectome, with a companion Cell Type Explorer.
   link: https://doi.org/10.1038/s41586-025-08746-0

@@ -21,7 +21,7 @@
 <header class="nav">
   <a class="wordmark" href="#top"><span class="wm-1">Reiser</span> <span class="wm-2">Lab</span></a>
   <nav class="nav-links">
-    {% for label, href in site.nav %}<a href="{% if label == "Publications" %}publications/{% else %}#{{ label | lower }}{% endif %}">{{ label }}</a>{% endfor %}
+    {% for label, href in site.nav %}<a href="{% if label == "Publications" %}publications/{% else %}#{{ label | lower }}{% endif %}"{% if label == "Join" and join.openings %} class="nav-hiring"{% endif %}>{{ label }}{% if label == "Join" and join.openings %}<span class="nav-badge">Hiring</span>{% endif %}</a>{% endfor %}
   </nav>
 </header>
 
@@ -31,21 +31,19 @@
     <img class="hero-poster" src="../hero-frames/f_0001.webp" alt="A rendered fruit fly head, seen from the front, with red compound eyes">
     <div class="hero-scrim"></div>
     <div class="hero-stops">
-      <div class="stop" data-from="0.00" data-to="0.16">
+      <div class="stop" data-from="0.00" data-to="0.18">
         <p class="eyebrow">{{ site.institution }}</p>
-        <h1 class="display">What can fly vision teach us about the brain?</h1>
-        <p class="lede">We study the fly visual system to learn where behavior comes from: how a complete wiring diagram, identified neurons and remarkable visual behaviors fit together.</p>
+        <h1 class="display">{{ site.hero.question }}</h1>
+        <p class="lede">{{ site.hero.lede }}</p>
       </div>
-      <div class="stop" data-from="0.26" data-to="0.50">
-        <p class="eyebrow">Anatomy</p>
-        <h2 class="display">Every lens, every cell</h2>
-        <p class="lede">Micro-CT of the eye and electron-microscopy connectomes let us map the whole visual system, one neuron at a time.</p>
+      {% set ranges = [("0.28", "0.52"), ("0.68", "0.97")] %}
+      {% for st in site.hero.stops %}
+      <div class="stop" data-from="{{ ranges[loop.index0][0] }}" data-to="{{ ranges[loop.index0][1] }}">
+        <p class="eyebrow">{{ st.eyebrow }}</p>
+        <h2 class="display display-2">{{ st.title }}</h2>
+        <p class="lede">{{ st.text }}</p>
       </div>
-      <div class="stop" data-from="0.68" data-to="0.97">
-        <p class="eyebrow">Now</p>
-        <h2 class="display">From wiring to function</h2>
-        <p class="lede">We are adding functional depth to the anatomy, and building robots and AI-accelerated instruments to measure and perturb identified neurons at scale.</p>
-      </div>
+      {% endfor %}
     </div>
     <div class="hero-hint" aria-hidden="true">Scroll</div>
   </div>
@@ -55,7 +53,7 @@
 <section class="split">
   <div class="split-plate"><img src="../img/eyemap_lens-directions.jpg" alt="Lens centers and viewing directions mapped on the eye"></div>
   <div class="split-field">
-    <p class="eyebrow eyebrow-light">The lab in one paragraph</p>
+    <p class="eyebrow eyebrow-light">The lab</p>
     <p class="split-text">{{ site.tagline }} {{ site.modeling_line }}</p>
     <p class="split-focus">{{ site.focus_line }}</p>
   </div>
@@ -70,40 +68,53 @@
 </section>
 {% endif %}
 
-{% set vids = {'anatomy': 'tile-anatomy', 'behavior': 'tile-behavior', 'neurophysiology': 'tile-neurophys', 'methods': 'tile-methods'} %}
+{% if join.openings %}{% set o = join.openings[0] %}
+<a class="hiring-strip" href="#join">
+  <span class="hiring-label">We are hiring</span>
+  <span class="hiring-title">{{ o.title }}</span>
+  <span class="hiring-more">Details</span>
+</a>
+{% endif %}
+
 {% if v.layout == 'plates' %}
 <section class="bands" id="research">
-  {% for p in site.pillars %}
-  <a class="band band-{{ p.key }}" href="#research">
+  {% for t in site.themes %}
+  <a class="band band-{{ ['anatomy','behavior','neurophysiology','methods'][loop.index0] }}" href="#research">
     <div class="band-text">
-      <span class="band-num mono">0{{ loop.index }} / 04</span>
-      <h2 class="band-title">{{ p.name }}</h2>
-      <p class="band-line">{{ p.line }}</p>
+      <span class="band-num mono">0{{ loop.index }} / 0{{ site.themes | length }}</span>
+      <h2 class="band-title band-title-q">{{ t.question }}</h2>
+      <p class="band-line">{{ t.text }}</p>
     </div>
-    <video class="loop band-media" muted loop playsinline autoplay preload="metadata" poster="../media/{{ vids[p.key] }}.jpg"><source src="../media/{{ vids[p.key] }}.mp4" type="video/mp4"></video>
+    <video class="loop band-media" muted loop playsinline autoplay preload="metadata" poster="../media/{{ t.media }}.jpg"><source src="../media/{{ t.media }}.mp4" type="video/mp4"></video>
   </a>
   {% endfor %}
 </section>
 {% else %}
-<section class="pillars" id="research">
-  <div class="rail"><span class="rail-label">What we do</span></div>
+<section class="pillars themes" id="research">
+  <div class="rail"><span class="rail-label">Research</span></div>
   <div class="section-body">
   <div class="section-head">
-    <p class="eyebrow">What we do</p>
-    <h2 class="h2">Four ways in</h2>
+    <p class="eyebrow">Research</p>
+    <h2 class="h2">The questions we work on</h2>
   </div>
-  <div class="pillar-grid">
-    {% for p in site.pillars %}
-    <a class="pillar pillar-{{ p.key }}" href="#research">
-      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="../media/{{ vids[p.key] }}.jpg"><source src="../media/{{ vids[p.key] }}.mp4" type="video/mp4"></video>
-      <div class="pillar-text">
-        <span class="pillar-num">0{{ loop.index }}</span>
-        <h3>{{ p.name }}</h3>
-        <p>{{ p.line }}</p>
-      </div>
-    </a>
-    {% endfor %}
-  </div>
+  {% for t in site.themes %}
+  <article class="theme">
+    <figure class="theme-media">
+      <video class="loop" muted loop playsinline autoplay preload="metadata" poster="../media/{{ t.media }}.jpg"><source src="../media/{{ t.media }}.mp4" type="video/mp4"></video>
+      <figcaption>{{ t.media_caption }}</figcaption>
+    </figure>
+    <div class="theme-text">
+      <h3 class="theme-q">{{ t.question }}</h3>
+      <p class="theme-body">{{ t.text }}</p>
+      <ul class="theme-papers">
+        {% for id in t.papers %}{% set p = pub_index[id] %}
+        <li><a href="{{ p.links.doi or p.url }}">{{ p.title }}</a> <span class="mono">{{ p.year }}</span></li>
+        {% endfor %}
+      </ul>
+      {% if t.hiring and join.openings %}<p class="theme-hiring"><a href="#join">We are hiring for this work</a></p>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
   </div>
 </section>
 {% endif %}
@@ -185,9 +196,18 @@
   <div class="section-body">
   <div class="section-head">
     <p class="eyebrow">Join</p>
-    <h2 class="h2">Work with us</h2>
+    <h2 class="h2">{% if join.openings %}We are hiring{% else %}Work with us{% endif %}</h2>
     <p class="section-lede">{{ join.intro }}</p>
   </div>
+  {% for o in join.openings %}
+  <div class="opening" id="opening-{{ loop.index }}">
+    <p class="opening-label">Open position{% if not o.url %} · posting {{ o.posts_on | long_date }}{% endif %}</p>
+    <h3 class="opening-title">{{ o.title }}</h3>
+    <p class="opening-summary">{{ o.summary }}</p>
+    <p class="opening-who">{{ o.who }}</p>
+    <p class="opening-action">{% if o.url %}<a class="button button-solid" href="{{ o.url }}">Read the posting and apply</a>{% else %}<a class="button button-solid" href="mailto:{{ site.email }}?subject=Postdoctoral%20position%3A%20automating%20behavior%20and%20neurophysiology">Write to Michael</a><span class="opening-note">The official posting goes live on {{ o.posts_on | long_date }}; the link will appear here.</span>{% endif %}</p>
+  </div>
+  {% endfor %}
   <div class="join-grid">
     {% for sec in join.sections %}
     <div class="join-item">
