@@ -219,7 +219,7 @@ The failure mode of the old page was not design but staleness (news ended in 201
 
 - **Type.** Fraunces is gone (its quirky *f* and soft terminals distracted). Display type is Newsreader; text is Source Serif 4; labels are JetBrains Mono.
 - **Research framing.** The "Four ways in" pillar tiles are replaced by four questions, each answered in two or three sentences with a loop and linked papers: how neurons compute the direction of motion; how a visual system is organized; how vision guides behavior; which neurons to study next (automation, robotics, AI in the loop). This follows the lab style guide's habit of posing the question the reader should be asking and then answering it, and uses language from the May 2025 research proposal and the November 2026 job ad. Anatomy, behavior, neurophysiology, methods and modeling stay as tags on publications.
-- **Hero.** One question, "Where does behavior come from?", then two captions as the animation plays. All hero copy lives in `data/site.yaml` (`hero:`).
+- **Hero.** One question, "How does a brain turn seeing into doing?" (Michael's pick), with "where behavior comes from" in the line under it, then two captions as the animation plays. All hero copy lives in `data/site.yaml` (`hero:`).
 - **Hiring.** A badge on the Join link, a strip under the lab statement, an opening card at the top of Join, and a news item, all driven by `openings:` in `data/join.yaml`. Setting `url` switches the card from "write to Michael" to "read the posting and apply".
 - **Scroll length.** 200vh, one viewport of scrub.
 - **Sources for copy** (do not publish internal planning details from these): `WORK/SGL_May_2025/research proposal_050625.docx`; `WORK/lab management/Postdoc_Ad_Automation_Nov2026_FINAL_posting.docx` and `..._outreach.docx`; `WORK/Proposals/AI_proposal_2024/AI@HHMI Full_Proposal.pdf` and `RoboticsFinalPreProposal.pdf` (the robotics team proposal, October 2024 and March 2025); `ClaudeCoworkProject/WritingStyle/Reiser_Lab_Writing_Style_Guide.md`. The Fly Circuit Discovery Team summary is an internal discussion draft; only language already in the public job ad is used.
@@ -228,9 +228,9 @@ The failure mode of the old page was not design but staleness (news ended in 201
 
 | # | Step | Owner | State |
 |---|---|---|---|
-| 1 | Confirm wording: hero question, the four themes, the lab statement, the opening card | Michael | open |
-| 2 | Promote mockup E to the site root: home at `/`, publications at `/publications/`, plus People and Resources pages; drop the mockup bar; keep `/mockups/` unlinked and `noindex` | Claude | next |
-| 3 | A figure for every paper: 14 done, 33 being fetched; merge into `data/publications.yaml` and `media/credits.yaml` | Claude | in progress |
+| 1 | Confirm wording: hero question, the four themes, the lab statement, the opening card | Michael | question and themes chosen 2026-11-13; line edits welcome |
+| 2 | Promote mockup E to the site root: home at `/`, publications at `/publications/`, plus People and Resources pages; drop the mockup bar; keep `/mockups/` unlinked and `noindex` | Claude | done 2026-11-13 (live at reiserlab.github.io) |
+| 3 | A figure for every paper (47 of 47), with credits | Claude | done 2026-11-13 |
 | 4 | Hero frames: label-free sequence from Marisa's files (separate session, output in `media/hero/`); launch can proceed on the current frames if this is not ready | Claude | in progress |
 | 5 | Workday link for the postdoc position into `data/join.yaml` when the posting is live | Michael → Claude | waits on posting |
 | 6 | Cloudflare DNS: four A records for `reiserlab.org` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME `www` → `reiserlab.github.io`, all DNS-only | Michael | open |
