@@ -35,6 +35,14 @@ Open `data/people.yaml`. New member: copy an entry, set `status: current`, add a
 
 Open `data/resources.yaml`, copy an entry, pick an existing `group` (or add a new one to `resource_groups` in `data/site.yaml`), fill in `name`, `url`, `line`, and optionally `repo`, `version`, `license`, `image`.
 
+## Open or close a position
+
+Open `data/join.yaml`. Each entry under `openings:` has a `title`, a `summary`, `who`, a `posts_on` date and a `url`. While `url` is empty the card says when the posting goes live and offers email; paste the Workday link into `url` and the button becomes "Read the posting and apply". Delete the entry when the position is filled: the Hiring badge, the strip on the home page and the card all disappear.
+
+## Change the home-page wording
+
+All of it is in `data/site.yaml`: `hero:` (the question and the two captions that appear as the animation plays), `tagline`, `modeling_line` and `focus_line` (the lab statement), and `themes:` (the four research questions, each with its text, its loop and its linked papers). House rules: no journal names anywhere; write the way the lab's papers do (active voice, direct claims for observations, "consistent with" for interpretation, no hype).
+
 ## Build locally (optional)
 
 ```bash

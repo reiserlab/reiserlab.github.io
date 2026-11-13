@@ -2,7 +2,7 @@
 
 New Reiser Lab website: a static site hosted on GitHub Pages from `reiserlab/reiserlab.github.io`, served at https://reiserlab.org.
 
-Status (2026-10-23): scaffold deployed. A placeholder page and three design mockups are live at https://reiserlab.github.io/ (mockups at `/mockups/`). The custom domain is not switched on yet; see docs/plan.md section 2 for the DNS sequence.
+Status (2026-11-13): the site is live at https://reiserlab.github.io/ in design E (warm scientific journal), with Home, Publications, People and Resources. The custom domain is not switched on yet; see docs/plan.md section 10 for the go-live checklist.
 
 ## Build
 
@@ -14,8 +14,9 @@ Builds `site/` from `data/`, `media/`, `templates/` and `static/`, then serves i
 
 ## Layout
 
-- `build.py` — the generator (Python, Jinja2, Pillow). `data/*.yaml` — all content. `templates/` — page templates. `static/` — CSS and JS. `media/` — figures, portraits, loops, and `credits.yaml`.
-- `mockups/` — home-page design mockups: one template, three token sets (`variants.yaml`, `shared/*.css`), the scroll-hero script (`shared/hero.js`), placeholder stills and frames from the eye-map animation. Remove once a direction is chosen.
+- `build.py` — the generator (Python, Jinja2, Pillow). `data/*.yaml` — all content (site settings and home-page wording, publications, people, news, resources, join). `media/` — paper figures, portraits, hero frames, and `credits.yaml`.
+- `mockups/` — templates (`templates/`), styles and scripts (`shared/`), loops (`media/`) and stills (`img/`). The design named by `design:` in `data/site.yaml` is rendered at the site root; all six variants are also rendered under `/mockups/` for reference. The folder name is historical.
+- `tools/merge_figures.py` — merges figure records into the publication data and credits.
 - `docs/` — plan, media plan, research notes, drafts.
 
 - [docs/plan.md](docs/plan.md) — the plan: goals, hosting and DNS, site structure, design direction, technical approach, how to keep it updated, half-day work plan, open decisions.
