@@ -5,7 +5,7 @@ description: The Reiser Lab at HHMI Janelia studies vision in flies to learn how
 design: e
 domain: reiserlab.org
 # Set to true only after the Cloudflare DNS records point at GitHub Pages (see docs/plan.md section 2).
-domain_live: false
+domain_live: true
 tagline: We study how vision works, from single neurons processing light signals to brain-wide circuits that transform visual information into behavior.
 institution: Janelia Research Campus, Howard Hughes Medical Institute
 address: 19700 Helix Drive, Ashburn, Virginia 20147, USA
