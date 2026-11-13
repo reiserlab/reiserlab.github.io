@@ -31,8 +31,8 @@
 <main class="pubs">
   <div class="section-head pubs-head">
     <p class="eyebrow">Publications</p>
-    <h1 class="h2">{{ publications | length }} papers</h1>
-    <p class="section-lede">Everything the lab has published since 2003, newest first, one entry per paper with the preprint linked where there is one. Filter by what the paper is mostly about.</p>
+    <h1 class="h2">Lab publications</h1>
+    <p class="section-lede">Our papers since 2003, newest first. Each paper is listed once, with its preprint linked where there is one. Use the buttons to filter by topic.</p>
     <div class="filters" role="group" aria-label="Filter by pillar">
       <button class="chip is-on" data-filter="all">All</button>
       {% for p in site.pillars %}<button class="chip" data-filter="{{ p.key }}">{{ p.name }}</button>{% endfor %}

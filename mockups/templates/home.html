@@ -58,7 +58,11 @@
 
 {% if v.layout == 'journal' %}
 <section class="split">
-  <div class="split-plate"><img src="{{ P.img }}eyemap_lens-directions-plate.jpg" alt="Lens centers and viewing directions mapped on the eye"></div>
+  <figure class="split-plate">
+    <video class="loop" muted loop playsinline autoplay preload="metadata" poster="{{ P.loops }}statement-eye-t4.jpg"><source src="{{ P.loops }}statement-eye-t4.mp4" type="video/mp4"></video>
+    <img class="split-still" src="{{ P.loops }}statement-eye-t4.jpg" alt="A fly's eye with one small patch of lenses highlighted and an arrow showing the direction of motion that one neuron prefers">
+    <figcaption>The preferred direction of one T4 neuron, traced from its dendrite back to the lenses of the eye. Animation by Marisa Dreher</figcaption>
+  </figure>
   <div class="split-field">
     <p class="eyebrow eyebrow-light">The lab</p>
     <p class="split-text">{{ site.tagline }} {{ site.modeling_line }}</p>
@@ -176,7 +180,7 @@
     </article>
     {% endfor %}
   </div>
-  <p class="more"><a href="{{ P.pubs }}">All {{ publications | length }} publications</a></p>
+  <p class="more"><a href="{{ P.pubs }}">All publications</a></p>
   </div>
 </section>
 
