@@ -232,7 +232,7 @@ The failure mode of the old page was not design but staleness (news ended in 201
 | 2 | Promote mockup E to the site root: home at `/`, publications at `/publications/`, plus People and Resources pages; drop the mockup bar; keep `/mockups/` unlinked and `noindex` | Claude | done 2026-11-13 (live at reiserlab.github.io) |
 | 3 | A figure for every paper (47 of 47), with credits | Claude | done 2026-11-13 |
 | 4 | Hero frames: label-free sequence re-rendered from Marisa's Blender scene, desktop and portrait sets in `media/hero/` (see its README); wired in | Claude | done 2026-11-13 |
-| 5 | Workday link for the postdoc position into `data/join.yaml` when the posting is live | Michael → Claude | waits on posting |
+| 5 | Workday link for the postdoc position into `data/join.yaml` when the posting is live | Michael → Claude | done 2026-11-14 (R-4714) |
 | 6 | Cloudflare DNS: four A records for `reiserlab.org` to 185.199.108.153, .109.153, .110.153, .111.153 and a CNAME `www` → `reiserlab.github.io`, all DNS-only | Michael | done 2026-11-13 |
 | 7 | After `dig reiserlab.org` returns the GitHub addresses: set `domain_live: true`, push, wait for the certificate, enforce HTTPS, verify the domain for the org | Claude | done 2026-11-13 (live at reiserlab.org, HTTPS enforced); verifying the domain for the org is still open |
 | 8 | Pre-launch checks: phone layout, reduced motion, link check, page titles and descriptions, social preview image, favicon, 404 page, credits page | Claude | next |

@@ -3,23 +3,25 @@
 # November, closes mid-December).
 
 # Open positions. Shown as a strip under the hero, a badge on the Join link, and a card at the top of
-# the Join section. Set url to the Workday posting when it is live; until then the card says when it
-# will post and offers email. Remove an entry (or set closed: true) when the position is filled.
+# the Join section. With url set, the card's button opens the posting; with url empty the card says
+# when it will post and offers email. Remove an entry (or set closed: true) when the position is filled.
 openings:
   - title: "Postdoctoral Scientist: Automating Behavior and Neurophysiology Experiments"
     short: Postdoc, automating behavior and neurophysiology
-    posts_on: 2026-11-14
-    url: ""
+    posts_on: 2026-11-13
+    # HHMI Workday requisition R-4714, "Postdoctoral Scientist – Reiser Lab". Summary and who follow the posted ad.
+    url: https://hhmi.wd1.myworkdayjobs.com/External/job/Janelia-Research-Campus/Postdoctoral-Scientist---Reiser-Lab_R-4714
     summary: >
-      Develop and validate methods for automating fly behavior and two-photon neurophysiology experiments,
-      and collect the large, high-quality datasets they make possible. You will build automated pipelines
-      from fly preparation through stimulus delivery, acquisition and quality control, design adaptive
-      protocols in which incoming data select the next experiment, and relate the results to
-      connectome-based models of visual circuits.
+      Develop and validate methods for automating Drosophila behavior and two-photon neurophysiology
+      experiments, with the goal of delivering datasets that answer central questions about how neural
+      circuits orchestrate behavior. You will build automated setups from fly preparation through stimulus
+      delivery, acquisition and quality control, develop adaptive protocols in which incoming data select
+      the next experiment, and have the freedom to pursue the biological questions these datasets open.
     who: >
-      We welcome candidates from any technical background who are passionate about experimental design and
-      execution; neuroscience, bioengineering or another quantitative field is ideal. Hands-on experience
-      with AI-assisted coding is required. Experience with Drosophila is not required.
+      We welcome candidates from any technical background who are curious about brains and behavior and
+      care deeply about experimental design and execution; training in neuroscience, engineering, physics,
+      computer science or another quantitative field is ideal. Hands-on experience with AI-assisted coding
+      is required. Experience with Drosophila is not required.
 
 intro: >
   We are a small, cross-disciplinary group of biologists, engineers and computational scientists. We build
