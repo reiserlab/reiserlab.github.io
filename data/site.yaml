@@ -15,7 +15,7 @@ scholar: https://scholar.google.com/citations?user=yiU3lZcAAAAJ
 orcid: https://orcid.org/0000-0002-4108-4517
 # Visit counting: the GoatCounter account name (the part before .goatcounter.com). Leave empty to switch
 # counting off. Clicks on links that leave the site are counted by mockups/shared/outbound.js.
-goatcounter:
+goatcounter: mbreiser
 
 # Appears as a line under the lab name on the home page.
 pillars:
