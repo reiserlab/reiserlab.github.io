@@ -13,3 +13,8 @@
     </div>
   </div>
 </footer>
+{% if site.goatcounter and not mock %}
+<!-- Visit counting with GoatCounter (no cookies). The account name is `goatcounter` in data/site.yaml. -->
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script defer src="{{ P.assets }}outbound.js"></script>
+{% endif %}

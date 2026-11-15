@@ -85,7 +85,7 @@
 {% endif %}
 
 {% if join.openings %}{% set o = join.openings[0] %}
-<a class="hiring-strip" href="#join">
+<a class="hiring-strip" href="#join" data-goatcounter-click="join: hiring strip" data-goatcounter-title="Hiring strip under the hero">
   <span class="hiring-label">We are hiring</span>
   <span class="hiring-title">{{ o.title }}</span>
   <span class="hiring-more">Details</span>
@@ -127,7 +127,7 @@
         <li><a href="{{ p.links.doi or p.url }}">{{ p.title }}</a> <span class="mono">{{ p.year }}</span></li>
         {% endfor %}
       </ul>
-      {% if t.hiring and join.openings %}<p class="theme-hiring"><a href="#join">We are hiring for this work</a></p>{% endif %}
+      {% if t.hiring and join.openings %}<p class="theme-hiring"><a href="#join" data-goatcounter-click="join: research theme link" data-goatcounter-title="We are hiring for this work">We are hiring for this work</a></p>{% endif %}
     </div>
   </article>
   {% endfor %}
