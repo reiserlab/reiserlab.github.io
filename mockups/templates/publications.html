@@ -7,6 +7,8 @@
 
 <title>Publications · {% if mock %}Mockup {{ variant | upper }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="Publications of the Reiser Lab at HHMI Janelia.">
+{% if canonical and not mock %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ v.fonts }}">

@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import http.server
+import json
 import shutil
 import sys
 from functools import partial
@@ -20,6 +21,7 @@ from pathlib import Path
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
+from markupsafe import Markup
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent
@@ -245,6 +247,52 @@ def load_variants() -> dict:
     return yaml.safe_load((MOCKUPS / "variants.yaml").read_text())
 
 
+# Public pages: (template, output file). The sitemap lists exactly these.
+PAGES = [("home.html", "index.html"), ("publications.html", "publications/index.html"),
+         ("people.html", "people/index.html"), ("resources.html", "resources/index.html")]
+
+
+def page_url(site: dict, out_name: str) -> str:
+    """Full address of a public page, used for the canonical tag and the sitemap."""
+    return f"https://{site['domain']}/" + out_name.removesuffix("index.html")
+
+
+def structured_data(site: dict) -> Markup:
+    """schema.org description of the lab for search engines (JSON-LD, home page only).
+
+    It names the site and ties it to the lab's other pages (Janelia, GitHub, YouTube) so that search
+    engines treat them as the same lab.
+    """
+    home = page_url(site, "index.html")
+    links = site.get("links", {})
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "WebSite", "@id": home + "#website", "url": home, "name": site["title"],
+             "description": site["description"], "publisher": {"@id": home + "#lab"}},
+            {"@type": "ResearchOrganization", "@id": home + "#lab", "name": site["title"], "url": home,
+             "description": site["description"],
+             "image": f"https://{site['domain']}/media/hero/desktop/poster.jpg",
+             "address": site["address"],
+             "parentOrganization": {"@type": "Organization", "name": site["institution"],
+                                    "url": "https://www.janelia.org/"},
+             "member": {"@type": "Person", "name": "Michael Reiser", "jobTitle": "Senior Group Leader",
+                        "sameAs": [u for u in (links.get("janelia_pi"), site.get("scholar"), site.get("orcid")) if u]},
+             "sameAs": [u for u in (links.get("janelia"), links.get("github"), links.get("youtube")) if u]},
+        ],
+    }
+    # "</" cannot appear inside a script element.
+    return Markup(json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))
+
+
+def write_sitemap(site: dict, built: dt.date) -> None:
+    urls = "".join(f"  <url><loc>{page_url(site, out_name)}</loc><lastmod>{built.isoformat()}</lastmod></url>\n"
+                   for _, out_name in PAGES)
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + urls + "</urlset>\n")
+
+
 def render_site(ctx: dict) -> int:
     """The public site: the design named by `design` in site.yaml, rendered at the domain root."""
     variants = load_variants()
@@ -256,13 +304,13 @@ def render_site(ctx: dict) -> int:
     copy_tree(MOCKUPS / "img", OUT / "media" / "img")
     copy_tree(MOCKUPS / "media", OUT / "media" / "loops")
     copy_hero(ctx, OUT / "media" / "hero" / "desktop", OUT / "media" / "hero" / "mobile")
-    pages = [("home.html", "index.html"), ("publications.html", "publications/index.html"),
-             ("people.html", "people/index.html"), ("resources.html", "resources/index.html")]
-    for template_name, out_name in pages:
-        html = env.get_template(template_name).render(variant=key, v=variants[key], P=site_paths(), mock=False, **ctx)
+    for template_name, out_name in PAGES:
+        html = env.get_template(template_name).render(
+            variant=key, v=variants[key], P=site_paths(), mock=False,
+            canonical=page_url(ctx["site"], out_name), structured_data=structured_data(ctx["site"]), **ctx)
         write(OUT / out_name, html)
     write(OUT / "404.html", env.get_template("404.html").render(variant=key, v=variants[key], P=site_paths(), mock=False, **ctx))
-    return len(pages)
+    return len(PAGES)
 
 
 def render_mockups(ctx: dict) -> None:
@@ -300,10 +348,13 @@ def build(include_mockups: bool = True) -> None:
     # earlier would redirect reiserlab.github.io (and every project site under
     # it) to a domain that does not resolve yet.
     domain = ctx["site"].get("domain")
-    if domain and ctx["site"].get("domain_live"):
+    live = bool(domain and ctx["site"].get("domain_live"))
+    if live:
         (OUT / "CNAME").write_text(domain + "\n")
+        write_sitemap(ctx["site"], ctx["built"])
     (OUT / ".nojekyll").write_text("")
-    (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /mockups/\n")
+    (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /mockups/\n"
+                                    + (f"\nSitemap: https://{domain}/sitemap.xml\n" if live else ""))
     print(f"built {n_pages} page(s), {len(ctx['publications'])} publications, "
           f"{len(ctx['current'])} current people, {len(ctx['news'])} news items -> {OUT.relative_to(ROOT)}/")
 

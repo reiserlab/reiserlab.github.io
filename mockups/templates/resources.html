@@ -7,6 +7,8 @@
 
 <title>Resources · {{ site.title }}</title>
 <meta name="description" content="Tools, maps and data shared by the Reiser Lab: Cell Type Explorers, visual pathway galleries, modular LED displays, Fly Lab Gear and code.">
+{% if canonical and not mock %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{{ v.fonts }}">

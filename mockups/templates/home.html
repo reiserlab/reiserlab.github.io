@@ -7,6 +7,10 @@
 
 <title>{% if mock %}Mockup {{ variant | upper }} · {{ v.name }} · {% endif %}{{ site.title }}{% if not mock %} · HHMI Janelia{% endif %}</title>
 <meta name="description" content="{{ site.description }}">
+{% if canonical and not mock %}<link rel="canonical" href="{{ canonical }}">
+{% endif %}
+{% if structured_data and not mock %}<script type="application/ld+json">{{ structured_data }}</script>
+{% endif %}
 <meta property="og:title" content="{{ site.title }}">
 <meta property="og:description" content="{{ site.description }}">
 <meta property="og:image" content="https://{{ site.domain }}{{ P.hero }}poster.jpg">
