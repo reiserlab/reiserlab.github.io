@@ -6,7 +6,7 @@ Verified = fetched that day and confirmed. The draft copy that came out of this 
 
 | Program | URL | Notes |
 |---|---|---|
-| Joint Graduate Program in Neuroscience (Janelia + Johns Hopkins) | https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program | Apply to the JHU Neuroscience PhD (deadline December 3), name 1–4 Janelia group leaders; year 1 in Baltimore, summer rotation at Janelia, then thesis at Janelia. Students are "Graduate Scholars". Contact Erik Snapp. Application details: https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program/application-details |
+| Joint Graduate Program in Neuroscience (Janelia + Johns Hopkins) | https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program | Apply to the JHU Neuroscience PhD (deadline December 1), name 1–4 Janelia group leaders; year 1 in Baltimore, summer rotation at Janelia, then thesis at Janelia. Students are "Graduate Scholars". Contact Erik Snapp. Application details: https://www.janelia.org/you-janelia/students-postdocs/joint-graduate-program/application-details |
 | XDBio (Cross Disciplinary Graduate Program in Biomedical Sciences) | https://www.janelia.org/cross-disciplinary-graduate-program-in-biomedical-sciences-xdbio | Same JHU-then-Janelia structure; applications via https://xdbio.jhmi.edu |
 | Summer undergraduates: HHMI Cech Fellows Program | https://www.hhmi.org/programs/cech-fellows | The old "Janelia Undergraduate Scholars Program" URL returns 403 and all Janelia summer pages redirect here. 2027 cycle: nine weeks (June 14–Aug 12), $12,000 stipend plus housing at Janelia; applications open Nov 10, 2026, close Dec 17, 2026. Applicants are asked not to contact labs. Campus-life page still exists: https://www.janelia.org/you-janelia/students-postdocs/undergraduate-scholars-program/undergraduate-life-at-janelia |
 | Scientific Computing Associates (SCA) | https://www.janelia.org/support-team/scientific-computing/scientific-computing-associates | Confirmed expansion. Early-career programmers embedded with a lab and the Scientific Computing team; 24-month appointment plus optional 12-month extension; open-source portfolio; openings on Workday; contact Stephan Preibisch. |
@@ -33,4 +33,4 @@ Takeaways used in the draft: one short section per career stage; name the exact 
 
 1. Confirm reiserm@janelia.hhmi.org is the address to publish (it is already on the Janelia positions page).
 2. "Postdocs here do not write grants" paraphrases the Janelia page.
-3. Deadlines (JHU December 3; Cech Fellows November–December) must be re-checked each cycle; consider stating them as "early December" and "mid-December" to age better.
+3. Deadlines (JHU December 1; Cech Fellows November–December) must be re-checked each cycle; consider stating them as "early December" and "mid-December" to age better.
